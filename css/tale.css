@@ -3,14 +3,19 @@
 	margin: 0;
 }
 
+html {
+	font-size: 16px;
+	min-width: 320px;
+}
+
 .navbar-brand {
 	padding:0 15px;
 }
-
 .navbar-brand > img {
 	/*overflow: auto;*/
 }
 
+/* *** BOOK NOW BUTTON *** */
 ul.navbar-right > li {
 	margin-top: 3px;
 }
@@ -21,8 +26,140 @@ ul.navbar-right a.btn-primary:hover {
 	color: #333;
 }
 
-#title {
-	border: 2px solid magenta;
-	background: #FFF url("images/GeorgeDiamondLogo.png") no-repeat right top;
-	background-image: url("images/GeorgeDiamondLogo.png");
+/* *** HEADER ELEMENTS *** */
+div.page-header {
+	position: relative;
+	min-height: 420px;
+/*	border: 2px solid magenta;*/
+}
+
+div.page-header #header-holder {
+/*	border: 2px solid blue;*/
+}
+h1,h2 {
+	text-transform: uppercase;
+	color: #333;
+}
+h1 {
+	/*font-size: 2em;*/
+	font-weight: 800;
+}
+h2 {
+	/*font-size: 1.4em;*/
+	font-weight: 600;
+}
+
+div.page-header > img {
+/*	border: 2px solid yellow;*/
+	position: relative;
+	top: 0;
+	margin: 0 auto;
+}
+
+#about-george {
+	font-family: 'Satisfy', cursive;
+/*	border: 2px solid cyan;*/
+	width: 60%;
+	margin-top: 2em;
+}
+
+
+
+#top-news {
+/*	border: 2px solid lime;*/
+	/*bottom: 0;*/
+}
+
+#top-news-1,
+#top-news-2,
+#top-news-3 {
+	background-color: #EEE;
+}
+
+span.hidden-content {
+	display: none;
+}
+
+
+/* media query EXTRA SMALL display (up to 767px) */
+@media (max-width: 767px) {
+	div.page-header #header-holder {
+	}
+
+	h1, h2 {
+		text-align: center;	
+	}
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.2em;
+	}
+	
+	#about-george {
+		width: 100%;
+		text-align: justify;
+		font-size: 1.2em;
+	}
+
+
+	#top-news {
+		position: relative;
+		width: 100%;
+		height: 210px;
+	}
+}
+
+/* media query SMALL display (768-991px) */
+@media (min-width: 768px) {
+	div.page-header {
+	background: #FFF url("/images/background.png") no-repeat right bottom;
+	min-height: 420px;
+	}
+	
+	h1 {
+		font-size: 2.33em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	
+	#about-george {
+		font-size: 1.4em;
+	}
+
+	#top-news {
+		position: relative;
+		width: 60%;
+		height: 210px;
+		/*top: 40px;*/
+	}
+}
+
+/* media query MEDIUM display (992-1199px) */
+@media (min-width: 992px) {
+	h1 {
+		font-size: 2.75em;
+	}
+	h2 {
+		font-size: 1.65em;
+	}
+
+	#about-george {
+		font-size: 1.65em;
+	}
+}
+
+/* media query LARGE display (1220px and obove) */
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 1.8em;
+	}
+
+	#about-george {
+		font-size: 1.8em;
+	}
 }
