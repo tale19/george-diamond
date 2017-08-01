@@ -1,3 +1,28 @@
-h1 {
-	color: red;
+* {
+	border: 0;
+	margin: 0;
+}
+
+.navbar-brand {
+	padding:0 15px;
+}
+
+.navbar-brand > img {
+	/*overflow: auto;*/
+}
+
+ul.navbar-right > li {
+	margin-top: 3px;
+}
+ul.navbar-right a.btn-primary {
+	color: white;
+}
+ul.navbar-right a.btn-primary:hover {
+	color: #333;
+}
+
+#title {
+	border: 2px solid magenta;
+	background: #FFF url("images/GeorgeDiamondLogo.png") no-repeat right top;
+	background-image: url("images/GeorgeDiamondLogo.png");
 }
