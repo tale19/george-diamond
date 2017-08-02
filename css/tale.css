@@ -30,6 +30,7 @@ ul.navbar-right a.btn-primary:hover {
 div.page-header {
 	position: relative;
 	min-height: 420px;
+	margin-top: 80px;
 /*	border: 2px solid magenta;*/
 }
 
@@ -73,12 +74,17 @@ div.page-header > img {
 #top-news-1,
 #top-news-2,
 #top-news-3 {
+	position: relative;
+	padding: 5px;
+	margin-bottom: 10px;
 	background-color: #EEE;
 }
 
-span.hidden-content {
+span.hidden-content,
+#news-collapser {
 	display: none;
 }
+
 
 
 /* media query EXTRA SMALL display (up to 767px) */
@@ -131,7 +137,7 @@ span.hidden-content {
 	#top-news {
 		position: relative;
 		width: 60%;
-		height: 210px;
+		/*height: 210px;*/
 		/*top: 40px;*/
 	}
 }
