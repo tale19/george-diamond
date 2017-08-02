@@ -6,77 +6,114 @@ function main() {
 	}
 
 	// Locate the news span and its parent
-	var span = document.getElementById('thisSpan');
-	var parent = document.getElementById('parent-paragraph');
-	console.log(parent);
-	console.log(span);
-	console.log(span.innerText);
-	console.log(span.innerText.length);
-	console.log(span.childNodes[0]);
+	// function spanLocator() {
+	// 	for (i=2; i<5; i++) {
+	// 		return 'top-news-body-' + i;
+	// 	}
+	// }
 
-	// create substrings from main span (thisSpan)
-	var previewText = span.innerText.substring(0,150);
-	var extraText = span.innerText.substring(150, span.innerText.length);
-	console.log(previewText);
-	console.log(extraText);
-	console.log(span);
-	console.log(extraText.length);
+	// function parentLocator() {
+	// 	for (j=2; j<=3; j++) {
+	// 		return 'parent-paragraph-' + j;
+	// 	}
+	// }
+	
+	// var spanNames = [
+	// 	"top-news-body-1",
+	// 	"top-news-body-2",
+	// 	"top-news-body-3"
+	// ]
+	// var parentNames = [
+	// 	"parent-paragraph-1",
+	// 	"parent-paragraph-2",
+	// 	"parent-paragraph-3"
+	// ]
 
-	// create a new span that will hold the extra text
-	var hiddenContent = document.createElement('span');
-	// console.log(hiddenContent);
-	var extraTextNode = document.createTextNode(extraText);
-	hiddenContent.appendChild(extraTextNode);
-	parent.appendChild(hiddenContent);
+	var span = document.getElementsByClassName('top-news-body');
+	var parent = document.getElementsByClassName('top-news-paragraph');
 
-	// overwrite the whole content of thisSpan with just preview text
-	var previewTextNode = document.createTextNode(previewText);
-	console.log(previewTextNode);
-	span.replaceChild(previewTextNode, span.childNodes[0]);
-	console.log(span);
-	console.log(hiddenContent);
-	$(hiddenContent).addClass('hidden-content');
-	// $(span).addClass('newClass');
+	for (s=0; s<3; s++) {
+		// console.log(span[s]);
+		// console.log(parent[s]);
+		// console.log(span[s]);
+		// console.log(span[s].innerText);
+		// console.log(span[s].innerText.length);
+		// console.log(span[s].childNodes[0]);
 
-	// now create Read More and Read Less
-	var anchorExpander = document.createElement('a');
-	var expanderText = document.createTextNode('Read more...');
-	anchorExpander.appendChild(expanderText);
-	console.log(anchorExpander);
-	parent.appendChild(anchorExpander);
-	$(anchorExpander).attr('id', 'news-expander');
+		// console.log(parent[s]);
+		// console.log(span[s]);
+		// console.log(span[s].innerText);
+		// console.log(span[s].innerText.length);
+		// console.log(span[s].childNodes[0]);
 
-	var anchorCollapser = document.createElement('a');
-	var collapserText = document.createTextNode('Read less...');
-	anchorCollapser.appendChild(collapserText);
-	console.log(anchorCollapser);
-	parent.appendChild(anchorCollapser);
-	$(anchorCollapser).attr('id', 'news-collapser');
+		// create substrings from main span (thisSpan)
+		var previewText = span[s].innerText.substring(0,150);
+		var extraText = span[s].innerText.substring(150, span[s].innerText.length);
+		console.log(previewText);
+		console.log(extraText);
+		console.log(span[s]);
+		console.log(extraText.length);
 
-	// remove automatically generated whitespace 
-	// between thisSpan and hidden-content span:
-	parent.childNodes[4].previousSibling.data = "";
-	console.log(parent.childNodes[4].previousSibling);
+		// create a new span that will hold the extra text
+		var hiddenContent = document.createElement('span');
+		// console.log(hiddenContent);
+		var extraTextNode = document.createTextNode(extraText);
+		hiddenContent.appendChild(extraTextNode);
+		parent[s].appendChild(hiddenContent);
+
+		// overwrite the whole content of thisSpan with just preview text
+		var previewTextNode = document.createTextNode(previewText);
+		console.log(previewTextNode);
+		span[s].replaceChild(previewTextNode, span[s].childNodes[0]);
+		console.log(span[s]);
+		console.log(hiddenContent);
+		$(hiddenContent).addClass('hidden-content');
+		// $(span).addClass('newClass');
+
+		// now create Read More and Read Less
+		var anchorExpander = document.createElement('a');
+		var expanderText = document.createTextNode('Read more...');
+		anchorExpander.appendChild(expanderText);
+		console.log(anchorExpander);
+		parent[s].appendChild(anchorExpander);
+		$(anchorExpander).addClass('news-expander');
+
+		var anchorCollapser = document.createElement('a');
+		var collapserText = document.createTextNode('Read less...');
+		anchorCollapser.appendChild(collapserText);
+		console.log(anchorCollapser);
+		parent[s].appendChild(anchorCollapser);
+		$(anchorCollapser).addClass('news-collapser');
+
+		// remove automatically generated whitespace 
+		// between thisSpan and hidden-content span:
+		parent[s].childNodes[4].previousSibling.data = "";
+		console.log(parent[s].childNodes[4].previousSibling);
 
 
-	// now add functionality to anchor expander/collapser
-	$('#news-expander').click(function() {
-		console.log('klik');
-		console.log($(this.previousSibling));
-		// $(this.nextSibling.nextSibling).toggleClass('hidden-content');
-		$(this.previousSibling).toggleClass('hidden-content');
-		$(this).hide();
-		$('#news-collapser').show();
-	});
+		// now add functionality to anchor expander/collapser
+		$('.news-expander').click(function() {
+			console.log('klik');
+			console.log($(this.previousSibling));
+			$(this.previousSibling).removeClass('hidden-content');
+			// $(this).find('.hidden-content').toggleClass('hidden-content');
+			// $('.hidden-content').toggleClass('hidden-content');
+			$(this.nextSibling).show();
+			$(this).hide();
+		});
 
-	$('#news-collapser').click(function() {
-		console.log('klikić');
-		console.log($(this.previousSibling.previousSibling));
-		// $(this.nextSibling.nextSibling).toggleClass('hidden-content');
-		$(this.previousSibling.previousSibling).toggleClass('hidden-content');
-		$(this).hide();
-		$('#news-expander').show();
-	});
+		$('.news-collapser').click(function() {
+			console.log('klikić');
+			console.log($(this.previousSibling.previousSibling));
+			// $(this.nextSibling.nextSibling).toggleClass('hidden-content');
+			$(this.previousSibling.previousSibling).addClass('hidden-content');
+			// $('.hidden-content').toggleClass('hidden-content');
+			$(this.previousSibling).show();
+			$(this).hide();
+		});
+
+		console.log(parent[2]);
+	}
 }
 
 $(document).ready(main);

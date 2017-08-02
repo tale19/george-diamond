@@ -7,6 +7,14 @@ html {
 	font-size: 16px;
 	min-width: 320px;
 }
+a,
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover {
+	color: darkred;	
+}
 
 .navbar-brand {
 	padding:0 15px;
@@ -69,31 +77,35 @@ div.page-header > img {
 #top-news {
 /*	border: 2px solid lime;*/
 	/*bottom: 0;*/
+	position: relative;
+	margin-bottom: 40px;
 }
 
 #top-news-1,
 #top-news-2,
 #top-news-3 {
 	position: relative;
-	padding: 5px;
+	padding: 0.5em 1em;
 	margin-bottom: 10px;
 	background-color: #EEE;
+	border-radius: 10px;
 }
 
 span.hidden-content,
-#news-collapser {
+.news-collapser {
 	display: none;
 }
 
-#news-expander,
-#news-collapser {
+.news-expander,
+.news-collapser {
 	margin-left: 5px;
 }
+.news-expander:hover,
+.news-collapser:hover {
 
-
-.newClass {
-	background-color: green;
 }
+
+
 
 /* media query EXTRA SMALL display (up to 767px) */
 @media (max-width: 767px) {
@@ -118,9 +130,8 @@ span.hidden-content,
 
 
 	#top-news {
-		position: relative;
 		width: 100%;
-		height: 210px;
+		/*height: 210px;*/
 	}
 }
 
@@ -145,6 +156,7 @@ span.hidden-content,
 	#top-news {
 		position: relative;
 		width: 60%;
+		float: right;
 		/*height: 210px;*/
 		/*top: 40px;*/
 	}
