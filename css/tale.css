@@ -35,14 +35,14 @@ ul.navbar-right a.btn-primary:hover {
 }
 
 /* *** HEADER ELEMENTS *** */
-div.page-header {
+#title {
 	position: relative;
 	min-height: 420px;
 	margin-top: 80px;
 /*	border: 2px solid magenta;*/
 }
 
-div.page-header #header-holder {
+#title #header-holder {
 /*	border: 2px solid blue;*/
 }
 h1,h2 {
@@ -58,7 +58,7 @@ h2 {
 	font-weight: 600;
 }
 
-div.page-header > img {
+#title > img {
 /*	border: 2px solid yellow;*/
 	position: relative;
 	top: 0;
@@ -71,8 +71,6 @@ div.page-header > img {
 	width: 60%;
 	margin-top: 2em;
 }
-
-
 
 #top-news {
 /*	border: 2px solid lime;*/
@@ -105,11 +103,118 @@ span.hidden-content,
 
 }
 
+.jumbotron {
+	position: relative;
+	background-color: #005287;
+	color: antiquewhite;
+}
+.jumbotron .page-header {
+	margin-top: 0;
+}
+.jumbotron h3 {
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 1em;
+}
+.jumbotron p {
+	text-align: justify;
+}
+#jumbotron-shows {
+	position: relative;
+}
+#jumbotron-shows p {
+	margin: 0;
+}
+.jumbotron ul {
+	position: relative;
+	padding: 0;
+	margin-bottom: 35px;
+}
+.jumbotron ul > li {
+	margin-top: 0;
+	font-size: 1.2em;
+	font-style: italic;
+	list-style: none;
+	text-transform: capitalize;
+}
+.jumbotron img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+#jumbotron-shows a {
+	font-weight: 600;
+}
+
+
+
+/* *** FOOTER ELEMENTS *** */
+#footer {
+    bottom: 0;
+/*    height: 420px;  izbriši kad ubaciš sadržaj 
+*/    padding: 0;
+    margin-top: 30px;
+    background-color: #333;
+    color: antiquewhite;
+    /*font-family: "Oswald", sans-serif;*/
+    /*font-size: 12px;*/
+    /*font-weight: normal;*/
+/*    border: 2px solid aqua;*/
+}
+
+#footer p {
+    font-size: 1.2em;
+}
+
+#footer-client {
+    /*height: 320px;*/
+/*    border: 2px solid magenta;*/
+}
+#footer-client > p {
+	font-size: 1em;
+}
+
+#social-media,
+#direct-contact {
+    margin: 40px auto;
+}
+
+#social-media-icons {
+    margin: 0 auto;
+    width: 310px;
+}
+#direct-contact-icons {
+    margin: 0 auto;
+    width: 64px;
+}
+
+#social-media p,
+#direct-contact p {
+    text-align: center;
+}
+
+#social-media a {
+/*    display: inline-block;*/
+    margin: 0px 5px;
+}
+
+#direct-contact a {
+	color: white;
+}
+#direct-contact a img {
+
+}
+#direct-contact a p {
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 10px;
+}
+
 
 
 /* media query EXTRA SMALL display (up to 767px) */
 @media (max-width: 767px) {
-	div.page-header #header-holder {
+	#title #header-holder {
 	}
 
 	h1, h2 {
@@ -133,11 +238,20 @@ span.hidden-content,
 		width: 100%;
 		/*height: 210px;*/
 	}
+
+	.jumbotron p {
+		font-size: 1.25em;
+	}
+	#jumbotron-shows a {
+		display: block;
+		width: 16em;
+		margin: 0 auto;
+	}
 }
 
 /* media query SMALL display (768-991px) */
 @media (min-width: 768px) {
-	div.page-header {
+	#title {
 	background: #FFF url("/images/background.png") no-repeat right bottom;
 	min-height: 420px;
 	}
@@ -159,6 +273,11 @@ span.hidden-content,
 		float: right;
 		/*height: 210px;*/
 		/*top: 40px;*/
+	}
+	
+	.jumbotron img {
+		max-height: 249px;
+		max-width: 244px;
 	}
 }
 
