@@ -85,6 +85,12 @@ span.hidden-content,
 	display: none;
 }
 
+#news-expander,
+#news-collapser {
+	margin-left: 5px;
+}
+
+
 .newClass {
 	background-color: green;
 }
