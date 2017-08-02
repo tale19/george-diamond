@@ -85,7 +85,9 @@ span.hidden-content,
 	display: none;
 }
 
-
+.newClass {
+	background-color: green;
+}
 
 /* media query EXTRA SMALL display (up to 767px) */
 @media (max-width: 767px) {

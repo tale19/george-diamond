@@ -6,22 +6,40 @@ function main() {
 	}
 
 	var span = document.getElementById('thisSpan');
-	// var parent = document.getElementsByClassName('top-news-preview');
-	// var convert = $('#thisSpan'.firstChild);
-	console.log(span);
-	console.log(span.innerText.length);
-	console.log(span.innerText);
+	var parent = document.getElementById('parent-paragraph');
+	// console.log(parent);
+	// console.log(span);
+	// console.log(span.innerText);
+	// console.log(span.innerText.length);
+	// console.log(span.childNodes[0]);
+	var previewText = span.innerText.substring(0,100);
 	var extraText = span.innerText.substring(100, span.innerText.length);
-	span = span.innerText.substring(0,100);
-	console.log(span);
-	console.log(extraText.length);
+	console.log(previewText);
+	console.log(extraText);
+	// console.log(span);
+	// console.log(extraText.length);
 	var hiddenContent = document.createElement('span');
-	console.log(hiddenContent);
-	var node = document.createTextNode(extraText);
-	hiddenContent.appendChild(node);
 	// console.log(hiddenContent);
-	$(span).addClass('')
+	var extraTextNode = document.createTextNode(extraText);
+	hiddenContent.appendChild(extraTextNode);
+
+	var previewTextNode = document.createTextNode(previewText);
+	console.log(previewTextNode);
+	span.replaceChild(previewTextNode, span.childNodes[0]);
+	console.log(span);
+	console.log(hiddenContent);
 	$(hiddenContent).addClass('hidden-content');
+	$(span).addClass('newClass');
+
+	var anchorExpander = document.createElement('a');
+	var expanderText = document.createTextNode('Read more...');
+	anchorExpander.appendChild(expanderText);
+	console.log(anchorExpander);
+	parent.appendChild(anchorExpander);
+	$(parent).attr('id', 'news-expander');
+
+
+
 	// console.log(hiddenContent);
 	// var hiddenText = document.createTextNode(extraText);
 	// hiddenContent.appendChild(extraText);
