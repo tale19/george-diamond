@@ -284,7 +284,7 @@ p.credits ~ p.credits {
 /* media query SMALL display (768-991px) */
 @media (min-width: 768px) {
 	#title {
-	background: #FFF url("images/background.png") no-repeat right bottom;
+	background: #FFF url("/images/background.png") no-repeat right bottom;
 	min-height: 420px;
 	}
 	
