@@ -6,29 +6,6 @@ function main() {
 	}
 
 	// Locate the news span and its parent
-	// function spanLocator() {
-	// 	for (i=2; i<5; i++) {
-	// 		return 'top-news-body-' + i;
-	// 	}
-	// }
-
-	// function parentLocator() {
-	// 	for (j=2; j<=3; j++) {
-	// 		return 'parent-paragraph-' + j;
-	// 	}
-	// }
-	
-	// var spanNames = [
-	// 	"top-news-body-1",
-	// 	"top-news-body-2",
-	// 	"top-news-body-3"
-	// ]
-	// var parentNames = [
-	// 	"parent-paragraph-1",
-	// 	"parent-paragraph-2",
-	// 	"parent-paragraph-3"
-	// ]
-
 	var span = document.getElementsByClassName('top-news-body');
 	var parent = document.getElementsByClassName('top-news-paragraph');
 
@@ -85,8 +62,8 @@ function main() {
 		parent[s].appendChild(anchorCollapser);
 		$(anchorCollapser).addClass('news-collapser');
 
-		// remove automatically generated whitespace 
-		// between thisSpan and hidden-content span:
+		/* remove automatically generated whitespace 
+		between thisSpan and hidden-content span: */
 		parent[s].childNodes[4].previousSibling.data = "";
 		console.log(parent[s].childNodes[4].previousSibling);
 
