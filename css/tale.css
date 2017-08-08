@@ -73,6 +73,11 @@ h2 {
 	margin-top: 2em;
 }
 
+#about-george > span {
+	/*color: aqua;*/
+	/*margin-left: 15px;*/
+}
+
 #top-news {
 /*	border: 2px solid lime;*/
 	/*bottom: 0;*/
