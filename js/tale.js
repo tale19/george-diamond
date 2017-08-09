@@ -1,17 +1,3 @@
-	// Animate header text
-	
-	var text = document.getElementById('about-george').innerText;
-	for (i=0; i < text.length; i++) {
-	var span = document.createElement('span');
-	var node = document.createTextNode(text[i])
-	span.appendChild(node);
-	// span.style.opacity = "0.4";
-	// span.style.color = "blue";
-	console.log(span);
-	}
-
-
-
 function main() {
 	// Animate header text
 	var content = document.getElementById('about-george').innerHTML;
@@ -28,7 +14,7 @@ function main() {
 	var onlySpans = document.getElementById('about-george').innerHTML.substring(contentLength);
 	document.getElementById('about-george').innerHTML = onlySpans;
 	console.log(document.getElementById('about-george'));
-	$('#about-george span').delay(300).hide().fadeIn(1400);
+	$('#about-george span').delay(1).hide().fadeIn(1400);
 
 	// Dynamically show "read more" on top news if text is too long 
 	var showChar = 150;
