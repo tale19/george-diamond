@@ -13,10 +13,36 @@ function main() {
 	}
 	var onlySpans = document.getElementById('about-george').innerHTML.substring(contentLength);
 	document.getElementById('about-george').innerHTML = onlySpans;
-	console.log(document.getElementById('about-george'));
+	// console.log(document.getElementById('about-george'));
 	$('#about-george span').delay(1).hide().fadeIn(1400);
 
+
 	// Dynamically show "read more" on top news if text is too long 
+	var charCount = 250;
+
+	// take date as data
+	var $datum = $('.news-date');
+	$datum.each(function() {
+		$(this).data('newsdate', $(this)); // save each span as data
+	});
+
+	// create preview text
+	var $newsBody = $('.news-body');
+	if ($newsBody.text().length > charCount) {
+		$newsBody.each(function() {
+			var $previewText = $(this).text().substring($(this).find('.news-date:first').text().length + 10, charCount);
+			$(this).html($previewText);
+		});
+
+	// create expander
+
+
+	};
+
+
+
+
+	/*
 	var showChar = 150;
 	var ellipsestext = "...";
 	var moretext = "Read more";
@@ -74,7 +100,7 @@ function main() {
 		$(this).prev().toggle();
 		return false;
 	});
-
+	*/
 
 }
 
