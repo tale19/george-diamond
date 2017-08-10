@@ -78,6 +78,7 @@ h2 {
 	/*margin-left: 15px;*/
 }
 
+/* *** NEWS ELEMENTS *** */
 #top-news {
 	/*border: 2px solid lime;*/
 	/*bottom: 0;*/
@@ -91,6 +92,11 @@ h2 {
 	margin-bottom: 10px;
 	background-color: #EEE;
 	border-radius: 10px;
+}
+
+.news-date {
+	color: steelblue;
+	font-style: italic;
 }
 
 span.hidden-content,
@@ -107,6 +113,7 @@ span.hidden-content,
 
 }
 
+/* *** JUMBOTRON ***/
 .jumbotron {
 	position: relative;
 	background-color: #005287;

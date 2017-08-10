@@ -1,5 +1,5 @@
 function main() {
-	// Animate header text
+	// *** Animate header text ***
 	var content = document.getElementById('about-george').innerHTML;
 	var text = document.getElementById('about-george').innerText;
 	var contentLength = content.length;
@@ -17,30 +17,38 @@ function main() {
 	$('#about-george span').delay(1).hide().fadeIn(1400);
 
 
-	// Dynamically show "read more" on top news if text is too long 
-	var charCount = 250;
-
-	// take date as data
-	var $datum = $('.news-date');
-	$datum.each(function() {
-		$(this).data('newsdate', $(this)); // save each span as data
-	});
-
-	// create preview text
+	// *** Dynamically show "read more" on top news if text is too long ***
+	var charCount = 350;
 	var $newsBody = $('.news-body');
+	// create preview text
 	if ($newsBody.text().length > charCount) {
 		$newsBody.each(function() {
+			$(this).data("original", $(this).html());
+			var $datum = $(this).find('.news-date:first');
 			var $previewText = $(this).text().substring($(this).find('.news-date:first').text().length + 10, charCount);
-			$(this).html($previewText);
+			var $preview = [$datum, $previewText]; // Object + string
+			$(this).html($preview);
+
+			// create expander-collapser
+			var $expandCollapse = $('<a>', {"class":"expand"}); // "" around class make it more compatible with less flexible browsers
+			$expandCollapse.html('...Read More');
+			$(this).append($expandCollapse);
+			console.log($expandCollapse);
+
 		});
-
-	// create expander
-
+		// give functionality to expander-collapser
+		$('.expand').click(function() {
+			var $retrieveFullArticle = $(this).parent().data("original");
+			// var $retrieveFullArticle = [$expandCollapse, $retrieveOriginalArticle];
+			$(this).parent().html($retrieveFullArticle);
+			$(this).removeClass('expand');
+			$(this).addClass('collapser');
+			$(this).html('...Read Less');
+		});
 
 	};
 
-
-
+	
 
 	/*
 	var showChar = 150;
