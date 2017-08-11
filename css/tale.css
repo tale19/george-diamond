@@ -88,6 +88,7 @@ h2 {
 
 .news-article {
 	position: relative;
+	z-index: 1;
 	padding: 0.5em 1em;
 	margin-bottom: 10px;
 	background-color: #EEE;
@@ -99,12 +100,17 @@ h2 {
 	font-style: italic;
 }
 
+.clear {
+	clear: both;
+}
 a.expand {
-
+	display: block;
 }
 
 a.collapse {
-	display: inline;
+	display: block;
+	color: magenta;
+	z-index: 99999;
 }
 
 

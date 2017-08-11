@@ -51,21 +51,25 @@ function main() {
 			// create collapser
 			var $collapser = $('<a>', {"class":"collapse"}); // "" around class make it more compatible with less flexible browsers
 			$collapser.text('...Read Less');
+			var $clearFloat = $('<br/>', {"class":"clear"});
 			console.log($collapser);
-			var $originalWithReadLess = [$retrieveOriginal, $collapser];
+			var $originalWithReadLess = [$retrieveOriginal, $collapser, $clearFloat];
 			console.log($originalWithReadLess);
 			console.log($(this));
 			$(this).parents('.news-body').html($originalWithReadLess);
-			console.log($(this).parents('.news-body'));
+			console.log($(this).parent('.news-body'));
 		});
 
 		// collapse on click
-		$('.collapse').click(function() {
-			// console.log($(this));
-			alert('readi');
-			// $(this).parent().data("truncatedHTML");
-		});
+		// $('.collapse').click(function() {
+		// 	// console.log($(this));
+		// 	alert('readi');
+		// 	// $(this).parent().data("truncatedHTML");
+		// });
 
+		$('a').click(function() {
+			alert('it works!');
+		});
 	};
 
 	
