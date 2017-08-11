@@ -99,19 +99,14 @@ h2 {
 	font-style: italic;
 }
 
-span.hidden-content,
-.news-collapser {
-	display: none;
-}
-
-.news-expander,
-.news-collapser {
-	margin-left: 5px;
-}
-.news-expander:hover,
-.news-collapser:hover {
+a.expand {
 
 }
+
+a.collapse {
+	display: inline;
+}
+
 
 /* *** JUMBOTRON ***/
 .jumbotron {
