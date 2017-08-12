@@ -16,9 +16,16 @@ function main() {
 	// console.log(document.getElementById('about-george'));
 	$('#about-george span').delay(1).hide().fadeIn(1400);
 
+
+
+
+	
+
+
 	// *** Dynamically show "read more" on top news if text is too long ***
 	var charCount = 350;
 	var $newsBody = $('.news-body');
+
 	// create preview
 	if ($newsBody.text().length > charCount) {
 		$newsBody.each(function() {
@@ -41,7 +48,6 @@ function main() {
 			var $previewText = $(this).text().substring($(this).find('.news-date:first').text().length + 11, charCount);
 			var $preview = [$datum, $previewText, $expander]; // Object [span] + string + Object [a.expand]
 			$(this).html($preview);
-
 			$(this).data("truncatedHTML", $(this).html());
 		});
 	};
@@ -58,68 +64,17 @@ function main() {
 		$(this).parents('.news-body').html($truncatedNews);
 	});
 
-	/*
-	var showChar = 150;
-	var ellipsestext = "...";
-	var moretext = "Read more";
-	var lesstext = "Read less";
-	$('.more').each(function() {
-		// var content = $(this).html();
-		var content = this.innerHTML;
-		var text = this.innerText;
-		console.log(text);
- 		// var text = this.innerText;
- 		
-  		var node = document.createElement("P");
-  		var textnode = document.createTextNode("text here");
-  		node.appendChild(textnode);
-		document.getElementById("wrapper").appendChild(node);
-  		node.innerHTML = 'test';
-		console.log(text.length);
-		console.log(content); 
-		console.log(content.includes('</a>' && 'Diamond'));
-		if(text.length > showChar) {
+	// *** Dynamically define container height and set overflow when a news article is expanded ***
+	console.log($('#top-news'));
+	console.log(document.getElementById('top-news'));
 
-			var c = content.substr(0, showChar);
-			var h = content.substr(showChar, content.length - showChar);
+	
 
-				// this checks if var c is in the middle of an element
-				if(c.includes('<') && c.indexOf('</') == -1) {
-					console.log('var c is split in the middle of an element');
-					var pera = text[showChar];
-					var diff = (content.indexOf('</') + 10 + content.indexOf(pera));
-					console.log(diff);
-					console.log(text[showChar]);
-					c = content.substr(0, diff);
-					h = content.substr(diff, content.length - diff);
-					// c = text.substr(0, showChar);
-					// h = text.substr(showChar, text.length - showChar);
-				}
-			console.log(c.length);
+	document.getElementById('top-news').style.height = "" + document.getElementById('top-news').scrollHeight + "px";
+	document.getElementById('top-news').style.overflow = "auto";
 
-			var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
 
-			$(this).html(html);
-		}
-
-	});
-
-	$(".morelink").click(function(){
-		if($(this).hasClass("less")) {
-			$(this).removeClass("less");
-			$(this).html(moretext);
-		} else {
-			$(this).addClass("less");
-			$(this).html(lesstext);
-		}
-		$(this).parent().prev().toggle();
-		$(this).prev().toggle();
-		return false;
-	});
-	*/
 
 }
 
 $(document).ready(main);
-
-// $(document).on('.collapse'(function() {}));
