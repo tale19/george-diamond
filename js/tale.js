@@ -16,63 +16,47 @@ function main() {
 	// console.log(document.getElementById('about-george'));
 	$('#about-george span').delay(1).hide().fadeIn(1400);
 
-
 	// *** Dynamically show "read more" on top news if text is too long ***
 	var charCount = 350;
 	var $newsBody = $('.news-body');
-
 	// create preview
 	if ($newsBody.text().length > charCount) {
 		$newsBody.each(function() {
-			$(this).data("originalHTML", $(this).html());
+
+			// create expander
+			var $expander = $('<a/>', {"class": "expandNews"}); // "" around class make it more compatible with less flexible browsers
+			$expander.text('...Read More');
+			// create collapser
+			var $collapser = $('<a/>', {"class": "collapseNews"}); // "" around class make it more compatible with less flexible browsers
+			$collapser.text('...Read Less');
+
+			// create full view after expansion
+			var $originalHTML = $(this).html();
+			var $fullview = [$originalHTML, $collapser]; // string (HTML) + Object [a.collapse]
+			$(this).data("original", $fullview);
+
+
+			// create preview
 			var $datum = $(this).find('.news-date:first');
 			var $previewText = $(this).text().substring($(this).find('.news-date:first').text().length + 11, charCount);
-			// create expander
-			var $expander = $('<a>', {"class":"expand"}); // "" around class make it more compatible with less flexible browsers
-			$expander.text('...Read More');
-			// create preview
 			var $preview = [$datum, $previewText, $expander]; // Object [span] + string + Object [a.expand]
 			$(this).html($preview);
-			console.log($preview);
-			console.log($(this));
 
-			console.log($expander);
-			console.log($(this).html());
 			$(this).data("truncatedHTML", $(this).html());
-		});
-
-		// expand on click
-		$('.expand').click(function() {
-			console.log($(this).parent());
-			var $retrieveOriginal = $(this).parent().data("originalHTML");
-			console.log($retrieveOriginal);
-
-			console.log($(this).parents('.news-body'));
-			// create collapser
-			var $collapser = $('<a>', {"class":"collapse"}); // "" around class make it more compatible with less flexible browsers
-			$collapser.text('...Read Less');
-			var $clearFloat = $('<br/>', {"class":"clear"});
-			console.log($collapser);
-			var $originalWithReadLess = [$retrieveOriginal, $collapser, $clearFloat];
-			console.log($originalWithReadLess);
-			console.log($(this));
-			$(this).parents('.news-body').html($originalWithReadLess);
-			console.log($(this).parent('.news-body'));
-		});
-
-		// collapse on click
-		// $('.collapse').click(function() {
-		// 	// console.log($(this));
-		// 	alert('readi');
-		// 	// $(this).parent().data("truncatedHTML");
-		// });
-
-		$('a').click(function() {
-			alert('it works!');
 		});
 	};
 
-	
+	// expand on click
+	$('.expandNews').click(function() {
+		var $retrieveOriginal = $(this).parent().data("original");
+		$(this).parents('.news-body').html($retrieveOriginal);
+	});
+
+	// collapse on click
+	$(document).on("click", ('.collapseNews'), function(){
+		alert('proradi govno');
+
+	});
 
 	/*
 	var showChar = 150;
@@ -137,3 +121,5 @@ function main() {
 }
 
 $(document).ready(main);
+
+// $(document).on('.collapse'(function() {}));
