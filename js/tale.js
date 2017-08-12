@@ -47,15 +47,15 @@ function main() {
 	};
 
 	// expand on click
-	$('.expandNews').click(function() {
+	$(document).on("click", ('.expandNews'), function() {
 		var $retrieveOriginal = $(this).parent().data("original");
 		$(this).parents('.news-body').html($retrieveOriginal);
 	});
 
 	// collapse on click
 	$(document).on("click", ('.collapseNews'), function(){
-		alert('proradi govno');
-
+		$truncatedNews = $(this).parents('.news-body').data("truncatedHTML");
+		$(this).parents('.news-body').html($truncatedNews);
 	});
 
 	/*
