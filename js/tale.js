@@ -3,6 +3,8 @@ function main() {
 	var content = document.getElementById('about-george').innerHTML;
 	var text = document.getElementById('about-george').innerText;
 	var contentLength = content.length;
+	var aboutGeorgeHeight = document.getElementById('about-george').clientHeight;
+	document.getElementById('about-george').style.height = "" + aboutGeorgeHeight + "px";
 	for (i=0; i < text.length; i++) {
 	  var span = document.createElement('span');
 	  var node = document.createTextNode(text[i]);
