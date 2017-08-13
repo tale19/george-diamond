@@ -58,6 +58,11 @@ h2 {
 	/*font-size: 1.4em;*/
 	font-weight: 600;
 }
+h3 {
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 1em;
+}
 
 #title > img {
 /*	border: 2px solid yellow;*/
@@ -264,7 +269,6 @@ p.credits ~ p.credits {
 		font-size: 1.2em;
 	}
 
-
 	#top-news {
 		width: 100%;
 	}
@@ -308,9 +312,27 @@ p.credits ~ p.credits {
 	#about-george {
 		font-size: 1.4em;
 	}
+	
+	#top-news-image {
+		width: 40%;
+		/* height needs to be set as an exact value via js */
+		float: left;
+		padding-right: 15px;
+	    white-space: nowrap;
+    	text-align: center; 
+    	margin: 1em 0;
+	}
+	.helper {
+	    display: inline-block;
+	    height: 100%;
+	    vertical-align: middle;
+	}
+	#top-news-image img {
+    	vertical-align: middle;
+    	width: 100%;
+	}
 
 	#top-news {
-		position: relative;
 		width: 60%;
 		float: right;
 		/*height: 210px;*/
