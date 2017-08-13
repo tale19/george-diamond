@@ -315,12 +315,13 @@ p.credits ~ p.credits {
 	
 	#top-news-image {
 		width: 40%;
+		/*background-color: magenta;*/
 		/* height needs to be set as an exact value via js */
 		float: left;
 		padding-right: 15px;
-	    white-space: nowrap;
-    	text-align: center; 
-    	margin: 1em 0;
+	    /*white-space: nowrap;*/
+    	/*text-align: center; */
+    	/*margin: 1em 0;*/
 	}
 	.helper {
 	    display: inline-block;

@@ -3,7 +3,6 @@ function main() {
 	var content = document.getElementById('about-george').innerHTML;
 	var text = document.getElementById('about-george').innerText;
 	var contentLength = content.length;
-
 	for (i=0; i < text.length; i++) {
 	  var span = document.createElement('span');
 	  var node = document.createTextNode(text[i]);
@@ -15,11 +14,6 @@ function main() {
 	document.getElementById('about-george').innerHTML = onlySpans;
 	// console.log(document.getElementById('about-george'));
 	$('#about-george span').delay(1).hide().fadeIn(1400);
-
-
-
-
-	
 
 
 	// *** Dynamically show "read more" on top news if text is too long ***
@@ -67,12 +61,9 @@ function main() {
 	// *** Dynamically define container height and set overflow when a news article is expanded ***
 	console.log($('#top-news'));
 	console.log(document.getElementById('top-news'));
-
-	
-
 	document.getElementById('top-news').style.height = "" + document.getElementById('top-news').scrollHeight + "px";
 	document.getElementById('top-news').style.overflow = "auto";
-
+	document.getElementById('top-news-image').style.height = "" + document.getElementById('top-news').scrollHeight + "px";
 
 
 }
