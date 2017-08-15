@@ -3,7 +3,7 @@ function main() {
 	var content = document.getElementById('about-george').innerHTML;
 	var text = document.getElementById('about-george').innerText;
 	var contentLength = content.length;
-	var aboutGeorgeHeight = document.getElementById('about-george').clientHeight;
+	var aboutGeorgeHeight = document.getElementById('about-george').scrollHeight;
 	document.getElementById('about-george').style.height = "" + aboutGeorgeHeight + "px";
 	for (i=0; i < text.length; i++) {
 	  var span = document.createElement('span');
@@ -21,7 +21,6 @@ function main() {
 	// *** Dynamically show "read more" on top news if text is too long ***
 	var charCount = 350;
 	var $newsBody = $('.news-body');
-
 	// create preview
 	if ($newsBody.text().length > charCount) {
 		$newsBody.each(function() {
@@ -60,7 +59,7 @@ function main() {
 		$(this).parents('.news-body').html($truncatedNews);
 	});
 
-	// *** Dynamically define container height and set overflow when a news article is expanded ***
+	// Dynamically define container height and set overflow when a news article is expanded
 	console.log($('#top-news'));
 	console.log(document.getElementById('top-news'));
 	document.getElementById('top-news').style.height = "" + document.getElementById('top-news').scrollHeight + "px";
@@ -68,6 +67,40 @@ function main() {
 	document.getElementById('top-news-image').style.height = "" + document.getElementById('top-news').scrollHeight + "px";
 
 
+	// *** Jumbotron listed items appearing one after another on scroll ***
+	var amazingShowsHeight = document.getElementById('amazing-shows-list').scrollHeight;
+	document.getElementById('amazing-shows-list').style.height = "" + amazingShowsHeight + "px";
+	var $amazingShows = $('#amazing-shows-list li');
+
+	$(window).scroll(function(){
+	  	// This is then function used to detect if the element is scrolled into view
+	  	function elementScrolled(elem) {
+	    var docViewTop = $(window).scrollTop();
+	    var docViewBottom = docViewTop + $(window).height();
+	    var elemTop = $(elem).offset().top;
+	    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+	  	}
+
+		// This is where we use the function to detect if "$amazingShows" is scrolled into view, and when it is add the class ".animated" to the <p> child element
+		if(elementScrolled($amazingShows)) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
+			// Your function here
+			$amazingShows.each(function(i) {
+				$(this).delay(150 * i).animate({left: '15px'}, 400);
+			});
+
+			$amazingShows.each(function(i) {
+				$(this).delay(150 * i).animate({left: '0px'}, 400);
+			});	  
+		}
+	});
+
+
+	// $amazingShows.hover(function() {
+	// 	$(this).toggle("slide");
+	// });
+	console.log($amazingShows);
+	// console.log($('#jumbotron-shows').children()[1]);
+	// $('#jumbotron-shows').children('li').hide().fadein(1200);
 }
 
 $(document).ready(main);

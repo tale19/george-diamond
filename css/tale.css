@@ -83,6 +83,7 @@ h3 {
 	/*margin-left: 15px;*/
 }
 
+
 /* *** NEWS ELEMENTS *** */
 #top-news {
 	/*border: 2px solid lime;*/
@@ -119,8 +120,8 @@ a.collapse {
 }
 
 
-/* *** JUMBOTRON ***/
-.jumbotron {
+/* *** BOOKING BOX (jumbotron) ***/
+#booking-box {
 	position: relative;
 	background-color: #005287;
 	color: antiquewhite;
@@ -128,12 +129,12 @@ a.collapse {
 #jumbotron-title {
 	margin-top: 0;
 }
-.jumbotron h3 {
+#booking-box h3 {
 		font-size: 2em;
 		text-align: center;
 		margin-bottom: 1em;
 }
-.jumbotron p {
+#booking-box p {
 	text-align: justify;
 }
 #jumbotron-shows {
@@ -142,19 +143,34 @@ a.collapse {
 #jumbotron-shows p {
 	margin: 0;
 }
-.jumbotron ul {
+#amazing-shows {
+	position: relative;
+}
+#booking-box ul {
 	position: relative;
 	padding: 0;
 	margin-bottom: 35px;
 }
-.jumbotron ul > li {
-	margin-top: 0;
+#booking-box ul > li {
+	display: block;
+	position: relative;
+	margin: 0;
 	font-size: 1.2em;
-	font-style: italic;
-	list-style: none;
+	/*font-style: italic;*/
+	/*list-style: none;*/
+	/*content: "\E049";*/
 	text-transform: capitalize;
 }
-.jumbotron img {
+#booking-box ul > li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    margin: 4px 5px 0;
+    content: "\E080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    /*float: left;*/
+    /*margin-top: 4px;*/
+}
+#booking-box img {
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -273,7 +289,7 @@ p.credits ~ p.credits {
 		width: 100%;
 	}
 
-	.jumbotron p {
+	#booking-box p {
 		font-size: 1.25em;
 	}
 	#jumbotron-shows a {
@@ -308,6 +324,9 @@ p.credits ~ p.credits {
 	h2 {
 		font-size: 1.4em;
 	}
+	h3 {
+		font-size: 2em;
+	}
 	
 	#about-george {
 		font-size: 1.4em;
@@ -330,7 +349,7 @@ p.credits ~ p.credits {
 	}
 	#top-news-image img {
     	vertical-align: middle;
-    	width: 100%;
+    	max-width: 100%;
     	max-height: 100%;
 	}
 
@@ -341,7 +360,7 @@ p.credits ~ p.credits {
 		/*top: 40px;*/
 	}
 	
-	.jumbotron img {
+	#booking-box img {
 		max-height: 249px;
 		max-width: 244px;
 	}
@@ -355,9 +374,17 @@ p.credits ~ p.credits {
 	h2 {
 		font-size: 1.65em;
 	}
+	h3 {
+		font-size: 2.36em;
+	}
 
 	#about-george {
 		font-size: 1.65em;
+	}
+
+	#top-news-image img {
+    	max-width: 75%;
+    	max-height: 75%;
 	}
 }
 
@@ -368,6 +395,9 @@ p.credits ~ p.credits {
 	}
 	h2 {
 		font-size: 1.8em;
+	}
+	h3 {
+		font-size: 2.76em;
 	}
 
 	#about-george {
