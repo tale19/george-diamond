@@ -1,4 +1,6 @@
 function main() {
+	function noop() {};	// this function does nothing
+
 	// *** Animate header text ***
 	var content = document.getElementById('about-george').innerHTML;
 	var text = document.getElementById('about-george').innerText;
@@ -82,15 +84,18 @@ function main() {
 	  	}
 
 		// This is where we use the function to detect if "$amazingShows" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-		if(elementScrolled($amazingShows)) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
+		if(elementScrolled($amazingShows) && !($amazingShows.hasClass('animated'))) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
 			// Your function here
 			$amazingShows.each(function(i) {
 				$(this).delay(150 * i).animate({left: '15px'}, 400);
+				$(this).delay(150 * i).animate({left: '0px'}, 400);
+				$(this).addClass('animated');
 			});
 
-			$amazingShows.each(function(i) {
-				$(this).delay(150 * i).animate({left: '0px'}, 400);
-			});	  
+			// $amazingShows.each(function bar(i) {
+			// 	$(this).delay(150 * i).animate({left: '0px'}, 400, noop());
+			// });
+			// bar = noop;
 		}
 	});
 
