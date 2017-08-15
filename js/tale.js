@@ -1,55 +1,46 @@
 function main() {
 	function noop() {};	// this function does nothing
 
-
-  	function elementScrolled(elem) {
+  	// This is then function used to detect if the element is scrolled into view
+	function elementScrolled(elem) {
 		var docViewTop = $(window).scrollTop();
-	 	var docViewBottom = docViewTop + $(window).height();
-	 	var elemTop = $(elem).offset().top;
-	 	var elemBottom = $(elem).offset().top + $(elem).height();
-	 	console.log(docViewTop);
-	 	console.log(docViewBottom);
-		console.log(elemTop);
-		console.log(elemBottom);
- 		return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+		var docViewBottom = docViewTop + $(window).height();
+		var elemTop = $(elem).offset().top;
+		return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
   	}
 
 
 	// *** Animate header text ***
 	var $aboutGeorge = $('#about-george');
-	// This is then function used to detect if the element is scrolled into view
-	var content = document.getElementById('about-george').innerHTML;
-	var text = document.getElementById('about-george').innerText;
-	var contentLength = content.length;
-	var aboutGeorgeHeight = document.getElementById('about-george').scrollHeight;
-	document.getElementById('about-george').style.height = "" + aboutGeorgeHeight + "px";
-	var animateHeaderText = function(){
-		$aboutGeorge.each(function(i) {
-			for (i=0; i < text.length; i++) {
-				var span = document.createElement('span');
-				var node = document.createTextNode(text[i]);
-				span.appendChild(node);
-				document.getElementById('about-george').appendChild(span);
-				document.getElementById('about-george').innerHTML[i] = span;
-			}
-			var onlySpans = document.getElementById('about-george').innerHTML.substring(contentLength);
-			document.getElementById('about-george').innerHTML = onlySpans;
-			// console.log(document.getElementById('about-george'));
-			$('#about-george span').delay(1).hide().fadeIn(1400);
-			console.log(this);
-			$(this).addClass('animationExecuted');
-		});
+	function executeHeaderAnimation() {
+		var content = document.getElementById('about-george').innerHTML;
+		var text = document.getElementById('about-george').innerText;
+		var contentLength = content.length;
+		var aboutGeorgeHeight = document.getElementById('about-george').scrollHeight;
+		document.getElementById('about-george').style.height = "" + aboutGeorgeHeight + "px";
+		for (i=0; i < text.length; i++) {
+		  var span = document.createElement('span');
+		  var node = document.createTextNode(text[i]);
+		  span.appendChild(node);
+		  document.getElementById('about-george').appendChild(span);
+		  document.getElementById('about-george').innerHTML[i] = span;
+		}
+		var onlySpans = document.getElementById('about-george').innerHTML.substring(contentLength);
+		document.getElementById('about-george').innerHTML = onlySpans;
+		console.log(document.getElementById('about-george'));
+		$('#about-george span').delay(1).hide().fadeIn(1700);
+		$aboutGeorge.addClass('animationExecutedOnce');
 	}
-				// This is where we use the function to detect if "$aboutGeorge" is scrolled into view, and when it is add the class ".animationExecuted" to the <span> elements
-	if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecuted'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
-		// Your function here
-		animateHeaderText();
+
+	if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
+		executeHeaderAnimation();
 	}
-	$(window).scroll(animateHeaderText);
 
-  	console.log(elementScrolled($aboutGeorge));
-
-
+	$(window).scroll(function() {
+		if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
+			executeHeaderAnimation();
+		}
+	});
 
 	// *** Dynamically show "read more" on top news if text is too long ***
 	var charCount = 350;
@@ -105,29 +96,17 @@ function main() {
 	document.getElementById('amazing-shows-list').style.height = "" + amazingShowsHeight + "px";
 	var $amazingShows = $('#amazing-shows-list li');
 
-	// $(window).scroll(function(){
-	//   	// This is then function used to detect if the element is scrolled into view
-	//   	function elementScrolled(elem) {
-	//     var docViewTop = $(window).scrollTop();
-	//     var docViewBottom = docViewTop + $(window).height();
-	//     var elemTop = $(elem).offset().top;
-	//     return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
-	//   	}
-
-	// 	// This is where we use the function to detect if "$amazingShows" is scrolled into view, and when it is add the class ".animationExecuted" to the <li> elements
-	// 	if(elementScrolled($amazingShows) && !($amazingShows.hasClass('animationExecuted'))) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
-	// 		// Your function here
-	// 		$amazingShows.each(function(i) {
-	// 			$(this).delay(150 * i).animate({left: '15px'}, 400);
-	// 			$(this).delay(150 * i).animate({left: '0px'}, 400);
-	// 			$(this).addClass('animationExecuted');
-	// 		});
-	// 	}
-	// });
-
-
-	console.log($amazingShows);
-
+	$(window).scroll(function(){
+		// This is where we use the function to detect if "$amazingShows" is scrolled into view, and when it is add the class ".animationExecutedOnce" to the <p> child element
+		if(elementScrolled($amazingShows) && !($amazingShows.hasClass('animationExecutedOnce'))) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
+			// Your function here
+			$amazingShows.each(function(i) {
+				$(this).delay(150 * i).animate({left: '15px'}, 400);
+				$(this).delay(150 * i).animate({left: '0px'}, 400);
+				$(this).addClass('animationExecutedOnce');
+			});
+		}
+	});
 }
 
 $(document).ready(main);
