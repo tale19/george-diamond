@@ -11,15 +11,50 @@ function main() {
 
 
 	// *** Animate header text ***
+	var $heading = $('#header-holder');
+	console.log($heading);
 	var $aboutGeorge = $('#about-george');
 	var spellAnimation = bodymovin.loadAnimation({
-		delay: 9500,
 		container: document.getElementById('spell-animation-container'),
 		renderer: 'svg',
 		loop: false,
 		autoplay: false,
 		path: 'https://raw.githubusercontent.com/abrahamrkj/facebook-spell/master/data.json'
 	});
+
+	// animate heading (h1, h2)
+	var $h1 = $('h1');
+	var $h1text = $h1.text();
+	var $h2 = $('h2');
+	var $h2text = $h2.text();
+	var h1length = $('h1').text().length;
+	var h2length = $('h2').text().length;
+	function animateh1() {
+		// first, change all text into spans
+		for (var i = 0 in $h1text) {
+			var $span = $('<span/>', {"class": "h1-span"}); // "" around class make it more compatible with less flexible browsers
+			$span.text($h1text[i]);
+			$h1.append($span);
+		}
+		var $onlySpans = $('h1').html().substring(h1length);
+		$h1.html($onlySpans);
+
+		// now do the animation
+		
+	}
+
+	function animateh2() {
+		// first, change all text into spans
+		for (var i = 0 in $h2text) {
+			var $span = $('<span/>', {"class": "h2-span"}); // "" around class make it more compatible with less flexible browsers
+			$span.text($h2text[i]);
+			$h2.append($span);
+		}
+		var $onlySpans = $('h2').html().substring(h2length);
+		$h2.html($onlySpans);
+	}
+	animateh1();
+	animateh2();
 
 	function executeHeaderTextAnimation() {
 		var content = document.getElementById('about-george').innerHTML;
@@ -37,11 +72,18 @@ function main() {
 		var onlySpans = document.getElementById('about-george').innerHTML.substring(contentLength);
 		document.getElementById('about-george').innerHTML = onlySpans;
 		console.log(document.getElementById('about-george'));
-		$('#about-george span').delay(1).hide().fadeIn(1700);
+		$('#about-george span').hide().fadeIn(1700);
 		$aboutGeorge.addClass('animationExecutedOnce');
 	}
-	
-	spellAnimation.addEventListener("complete", executeHeaderTextAnimation);
+	function test() {
+		console.log('kurac');
+	}
+
+	function oba() {
+		executeHeaderTextAnimation();
+		test();
+	}
+	spellAnimation.addEventListener("complete", oba);
 
 	if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
 		spellAnimation.play();

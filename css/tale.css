@@ -54,10 +54,16 @@ h1 {
 	/*font-size: 2em;*/
 	font-weight: 800;
 }
+	h1 span {
+		/*color: darkred;*/
+	}
 h2 {
 	/*font-size: 1.4em;*/
 	font-weight: 600;
 }
+	h2 span {
+		/*color: darkgreen;*/
+	}
 h3 {
 	text-align: center;
 	font-weight: 600;
@@ -73,7 +79,6 @@ h3 {
 
 #about-george {
 	position: relative;
-	font-family: 'Satisfy', cursive;
 /*	border: 2px solid cyan;*/
 	width: 60%;
 	margin-top: 2em;
@@ -84,7 +89,8 @@ h3 {
 	z-index: 10;
 }
 #about-george > span {
-	color: aqua;
+	font-family: 'Satisfy', cursive;
+	/*color: aqua;*/
 	/*margin-left: 15px;*/
 }
 
