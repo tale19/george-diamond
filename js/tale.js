@@ -14,14 +14,14 @@ function main() {
 	var $aboutGeorge = $('#about-george');
 	var spellAnimation = bodymovin.loadAnimation({
 		delay: 9500,
-		container: document.getElementById('about-george'),
+		container: document.getElementById('spell-animation-container'),
 		renderer: 'svg',
 		loop: false,
 		autoplay: false,
 		path: 'https://raw.githubusercontent.com/abrahamrkj/facebook-spell/master/data.json'
 	});
 
-	function executeHeaderAnimation() {
+	function executeHeaderTextAnimation() {
 		var content = document.getElementById('about-george').innerHTML;
 		var text = document.getElementById('about-george').innerText;
 		var contentLength = content.length;
@@ -40,17 +40,17 @@ function main() {
 		$('#about-george span').delay(1).hide().fadeIn(1700);
 		$aboutGeorge.addClass('animationExecutedOnce');
 	}
+	
+	spellAnimation.addEventListener("complete", executeHeaderTextAnimation);
 
 	if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
 		spellAnimation.play();
-		spellAnimation.addEventListener("complete", executeHeaderAnimation);
-		// executeHeaderAnimation();
+		// executeHeaderTextAnimation();
 	}
 
 	$(window).scroll(function() {
 		if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
 			spellAnimation.play();
-			executeHeaderAnimation();
 		}
 	});
 
