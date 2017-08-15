@@ -12,6 +12,15 @@ function main() {
 
 	// *** Animate header text ***
 	var $aboutGeorge = $('#about-george');
+	var spellAnimation = bodymovin.loadAnimation({
+		delay: 9500,
+		container: document.getElementById('about-george'),
+		renderer: 'svg',
+		loop: false,
+		autoplay: false,
+		path: 'https://raw.githubusercontent.com/abrahamrkj/facebook-spell/master/data.json'
+	});
+
 	function executeHeaderAnimation() {
 		var content = document.getElementById('about-george').innerHTML;
 		var text = document.getElementById('about-george').innerText;
@@ -33,14 +42,20 @@ function main() {
 	}
 
 	if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
-		executeHeaderAnimation();
+		spellAnimation.play();
+		spellAnimation.addEventListener("complete", executeHeaderAnimation);
+		// executeHeaderAnimation();
 	}
 
 	$(window).scroll(function() {
 		if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
+			spellAnimation.play();
 			executeHeaderAnimation();
 		}
 	});
+
+
+
 
 	// *** Dynamically show "read more" on top news if text is too long ***
 	var charCount = 350;
