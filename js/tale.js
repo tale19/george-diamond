@@ -80,8 +80,6 @@ function main() {
 		});
 
 	}
-	animateh1();
-	animateh2();
 
 	function executeHeaderTextAnimation() {
 		var content = document.getElementById('about-george').innerHTML;
@@ -106,13 +104,15 @@ function main() {
 		console.log('kurac');
 	}
 
-	function oba() {
+	function animateEntireHeading() {
+		animateh1();
+		animateh2();
 		executeHeaderTextAnimation();
-		test();
+		$heading.children().addClass('animationExecutedOnce');
 	}
-	spellAnimation.addEventListener("complete", oba);
+	spellAnimation.addEventListener("complete", animateEntireHeading);
 
-	if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
+	if(elementScrolled($aboutGeorge) && elementScrolled($heading) && !($aboutGeorge.hasClass('animationExecutedOnce')) && !($heading).hasClass('animationExecutedOnce')) {
 		spellAnimation.play();
 		// executeHeaderTextAnimation();
 	}
@@ -122,7 +122,9 @@ function main() {
 			spellAnimation.play();
 		}
 	});
-
+	console.log($heading.children());
+	console.log($h1);
+	console.log($h2);
 
 
 
