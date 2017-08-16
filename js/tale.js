@@ -29,6 +29,13 @@ function main() {
 	var $h2text = $h2.text();
 	var h1length = $('h1').text().length;
 	var h2length = $('h2').text().length;
+	// function tesss() {
+	// 	for (var i=120; i<255; i++) {
+	// 		return Math.floor(Math.random()) * i;
+	// 	}
+	// }
+
+	
 	function animateh1() {
 		// first, change all text into spans
 		for (var i = 0 in $h1text) {
@@ -39,8 +46,19 @@ function main() {
 		var $onlySpans = $('h1').html().substring(h1length);
 		$h1.html($onlySpans);
 
-		// now do the animation
-		
+		// now do the animation (random color for each letter)
+		$('h1').find('span').each(function() {
+			var rgb = [] // create an array to hold three random numbers from 0 to 256
+			for (var i = 0; i <= 2; i++) {
+				var randomNumber = Math.floor(Math.random() * 257);
+				rgb.push(randomNumber);
+			}
+			var randomColor = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")"; // create a string
+			
+			var colors = [] // create an array to hold one new random color on each iteration
+			colors.push(randomColor);
+			$(this).css('color', colors);
+		});
 	}
 
 	function animateh2() {
@@ -52,6 +70,15 @@ function main() {
 		}
 		var $onlySpans = $('h2').html().substring(h2length);
 		$h2.html($onlySpans);
+
+		// now, do your animation (jumping letters)
+		console.log($('h2').find('span'));
+		$('h2').find('span').each(function(i) {
+			$(this).delay(150 * i).animate({top: '-5px'}, 400);
+			$(this).delay(150 * i).animate({top: '0'}, 400);
+			$(this).addClass('animationExecutedOnce');
+		});
+
 	}
 	animateh1();
 	animateh2();
@@ -159,7 +186,7 @@ function main() {
 			// Your function here
 			$amazingShows.each(function(i) {
 				$(this).delay(150 * i).animate({left: '15px'}, 400);
-				$(this).delay(150 * i).animate({left: '0px'}, 400);
+				$(this).delay(150 * i).animate({left: '0'}, 400);
 				$(this).addClass('animationExecutedOnce');
 			});
 		}
