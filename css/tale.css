@@ -62,11 +62,18 @@ h2 {
 	/*font-size: 1.4em;*/
 	font-weight: 600;
 }
-	h2 span {
+	h1.gradient,
+	h2.gradient {
+		/*font-size: 72px;*/
+		background: -webkit-linear-gradient(#ddd, #b2046d);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	/*h2 span {*/
 		/*color: darkgreen;*/
 		/*display: block;*/
-		position: relative;
-	}
+	/*	position: relative;
+	}*/
 h3 {
 	text-align: center;
 	font-weight: 600;
@@ -93,7 +100,7 @@ h3 {
 }
 #about-george > span {
 	font-family: 'Satisfy', cursive;
-	/*color: aqua;*/
+	color: #b2046d;
 	/*margin-left: 15px;*/
 }
 

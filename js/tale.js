@@ -38,46 +38,63 @@ function main() {
 	
 	function animateh1() {
 		// first, change all text into spans
-		for (var i = 0 in $h1text) {
-			var $span = $('<span/>', {"class": "h1-span"}); // "" around class make it more compatible with less flexible browsers
-			$span.text($h1text[i]);
-			$h1.append($span);
-		}
-		var $onlySpans = $('h1').html().substring(h1length);
-		$h1.html($onlySpans);
+		// for (var i = 0 in $h1text) {
+		// 	var $span = $('<span/>', {"class": "h1-span"}); // "" around class make it more compatible with less flexible browsers
+		// 	$span.text($h1text[i]);
+		// 	$h1.append($span);
+		// }
+		// var $onlySpans = $('h1').html().substring(h1length);
+		// $h1.html($onlySpans);
 
-		// now do the animation (random color for each letter)
-		$('h1').find('span').each(function() {
-			var rgb = [] // create an array to hold three random numbers from 0 to 256
-			for (var i = 0; i <= 2; i++) {
-				var randomNumber = Math.floor(Math.random() * 257);
-				rgb.push(randomNumber);
-			}
-			var randomColor = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")"; // create a string
+		// // now do the animation (random color for each letter)
+		// $('h1').find('span').each(function() {
+		// 	var rgb = [] // create an array to hold three random numbers from 0 to 256
+		// 	for (var i = 0; i <= 2; i++) {
+		// 		var randomNumber = Math.floor(Math.random() * 257);
+		// 		rgb.push(randomNumber);
+		// 	}
+		// 	var randomColor = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")"; // create a string
 			
-			var colors = [] // create an array to hold one new random color on each iteration
-			colors.push(randomColor);
-			$(this).css('color', colors);
-		});
+		// 	var colors = [] // create an array to hold one new random color on each iteration
+		// 	colors.push(randomColor);
+		// 	$(this).css('color', colors);
+		// });
+
+		$h1.addClass('gradient');	
 	}
 
-	function animateh2() {
-		// first, change all text into spans
-		for (var i = 0 in $h2text) {
-			var $span = $('<span/>', {"class": "h2-span"}); // "" around class make it more compatible with less flexible browsers
-			$span.text($h2text[i]);
-			$h2.append($span);
-		}
-		var $onlySpans = $('h2').html().substring(h2length);
-		$h2.html($onlySpans);
+		// if ($h2text.string() != "") {
+		// 	alert('radi');
 
+	function animateh2() {
+		// first, change all WORDS into spans
+		// // console.log($h2text);
+
+		// for (var i = 0 in $h2text) {
+		// 	var $span = $('<span/>', {"class": "h2-span"}); // "" around class make it more compatible with less flexible browsers
+		// 	var $headingWord;
+		// 	// while () {
+		// 	// 	alert('radi');
+		// 	// }
+		// 	// $span.text($headingWord[i]);
+		// 	$h2.append($span);
+		// }
+		// var $onlySpans = $('h2').html().substring(h2length);
+		// $h2.html($onlySpans);
+		// console.log($h2);
+		// console.log($h2text);
+
+		// // 
+		// }
 		// now, do your animation (jumping letters)
-		console.log($('h2').find('span'));
-		$('h2').find('span').each(function(i) {
-			$(this).delay(150 * i).animate({top: '-5px'}, 400);
-			$(this).delay(150 * i).animate({top: '0'}, 400);
-			$(this).addClass('animationExecutedOnce');
-		});
+		// console.log($('h2').find('span'));
+		// $('h2').find('span').each(function(i) {
+		// 	$(this).delay(150 * i).animate({top: '-5px'}, 400);
+		// 	$(this).delay(150 * i).animate({top: '0'}, 400);
+		// 	$(this).addClass('animationExecutedOnce');
+		// });
+
+		$h2.addClass('gradient');
 
 	}
 
@@ -99,9 +116,6 @@ function main() {
 		console.log(document.getElementById('about-george'));
 		$('#about-george span').hide().fadeIn(1700);
 		$aboutGeorge.addClass('animationExecutedOnce');
-	}
-	function test() {
-		console.log('kurac');
 	}
 
 	function animateEntireHeading() {
