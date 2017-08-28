@@ -100,7 +100,7 @@ h3 {
 }
 #about-george > span {
 	font-family: 'Satisfy', cursive;
-	color: #b2046d;
+	/*color: #b2046d;*/
 	/*margin-left: 15px;*/
 }
 
@@ -384,6 +384,18 @@ p.credits ~ p.credits {
 	#booking-box img {
 		max-height: 249px;
 		max-width: 244px;
+	}
+
+	#social-media {
+		float: left;
+	}
+
+	#direct-contact {
+		float: right;
+	}
+
+	#footer-client hr {
+		clear: both;
 	}
 }
 
