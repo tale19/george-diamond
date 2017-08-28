@@ -228,52 +228,55 @@ a.collapse {
 #direct-contact-details {
 	max-width: 240px;
 	margin: 0 auto;
-	border: 1px solid blue;
+/*	border: 1px solid blue;*/
 	/*display: table;*/
 	position: relative;
 	align-content: center;
 }
 
 .direct-contact-row {
-	display: block;
+	display: table;
 	position: relative;
-	width: auto;
-	margin: 0 auto;
-	border: 1px solid lime;
+	/*width: 100%;*/
+	margin: 15px auto;
+/*	border: 1px solid lime;*/
 	/*padding: 2px auto;*/
 }
 
 .direct-contact-icon {
-	display: inline-block;
+	display: table-cell;
+	vertical-align: middle;
+	/*position: relative;*/
 	margin-right: 10px;
-	border: 1px solid yellow;
+/*	border: 1px solid yellow;*/
 	fill: #fffca5;
 }
 
 #direct-contact-details a,
 #direct-contact-details span {
-	border: 1px solid yellow;
-	top: 0;
-	position: absolute;
-	display: inline-block;
+	display: table-cell;
+/*	border: 1px solid yellow;*/
+	/*text-align: center;*/
+	/*top: 0;*/
+	/*position: relative;*/
 	vertical-align: middle;
 	/*bottom: 25px;*/
 }
 
 #social-media-icons {
-	border: 1px solid aqua;
+/*	border: 1px solid aqua;*/
 }
 
 #social-media-icons a img {
 	display: block;
 	margin: 0 auto;
-	border: 1px solid magenta;
+/*	border: 1px solid magenta;*/
 	/*width: 100%;*/
 	/*margin-left: 24px;*/
 }
 
 .social-media-icon {
-	border: 1px solid green;
+/*	border: 1px solid green;*/
 }
 
 /*#social-media-icons > div > span {
@@ -282,6 +285,36 @@ a.collapse {
 	width: 100%;
 	margin: 0 auto;
 }*/
+
+.copyright {
+	text-align: center;
+	color: #888;
+}
+
+#footer-creator {
+	margin-top: 20px;
+	position: relative;
+	/*border: 1px solid magenta;*/
+	/*left: 0;*/
+}
+
+#footer-creator a,
+#footer-creator b {
+	z-index: 1;
+	position: relative;
+}
+
+#creator-background {
+	position: absolute;
+	height: 40px;
+	z-index: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #b7882a;
+	border-top-right-radius: 60px;
+	/*width: 40%;*/
+
+}
 
 
 /* media query EXTRA SMALL display (up to 767px) */
@@ -332,11 +365,23 @@ a.collapse {
 		margin: 0 auto;
 	}
 
+	#direct-contact-details hr {
+		border-color: #888;
+		margin: 0 auto;
+	}
+
 	#social-media-icons {
 		max-width: 320px;
 		margin: 0 auto;
 	}
 
+	#footer-client > hr {
+		margin-top: 60px;
+	}
+
+	#creator-background {
+		min-width: 240px;
+	}
 
 /*	p.credits {
 		text-align: center;
@@ -403,6 +448,10 @@ a.collapse {
 	#booking-box img {
 		max-height: 249px;
 		max-width: 244px;
+	}
+
+	#creator-background {
+		min-width: 35%;
 	}
 }
 
