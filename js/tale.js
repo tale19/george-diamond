@@ -38,29 +38,29 @@ function main() {
 	
 	function animateh1() {
 		// first, change all text into spans
-		// for (var i = 0 in $h1text) {
-		// 	var $span = $('<span/>', {"class": "h1-span"}); // "" around class make it more compatible with less flexible browsers
-		// 	$span.text($h1text[i]);
-		// 	$h1.append($span);
-		// }
-		// var $onlySpans = $('h1').html().substring(h1length);
-		// $h1.html($onlySpans);
+		for (var i = 0 in $h1text) {
+			var $span = $('<span/>', {"class": "h1-span"}); // "" around class make it more compatible with less flexible browsers
+			$span.text($h1text[i]);
+			$h1.append($span);
+		}
+		var $onlySpans = $('h1').html().substring(h1length);
+		$h1.html($onlySpans);
 
-		// // now do the animation (random color for each letter)
-		// $('h1').find('span').each(function() {
-		// 	var rgb = [] // create an array to hold three random numbers from 0 to 256
-		// 	for (var i = 0; i <= 2; i++) {
-		// 		var randomNumber = Math.floor(Math.random() * 257);
-		// 		rgb.push(randomNumber);
-		// 	}
-		// 	var randomColor = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")"; // create a string
+		// now do the animation (random color for each letter)
+		$('h1').find('span').each(function() {
+			var rgb = [] // create an array to hold three random numbers from 0 to 256
+			for (var i = 0; i <= 2; i++) {
+				var randomNumber = Math.floor(Math.random() * 257);
+				rgb.push(randomNumber);
+			}
+			var randomColor = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")"; // create a string
 			
-		// 	var colors = [] // create an array to hold one new random color on each iteration
-		// 	colors.push(randomColor);
-		// 	$(this).css('color', colors);
-		// });
+			var colors = [] // create an array to hold one new random color on each iteration
+			colors.push(randomColor);
+			$(this).css('color', colors);
+		});
 
-		$h1.addClass('gradient');	
+		// $h1.addClass('gradient');	
 	}
 
 		// if ($h2text.string() != "") {
@@ -120,7 +120,7 @@ function main() {
 
 	function animateEntireHeading() {
 		animateh1();
-		animateh2();
+		// animateh2();
 		executeHeaderTextAnimation();
 		$heading.children().addClass('animationExecutedOnce');
 	}
@@ -132,7 +132,7 @@ function main() {
 	}
 
 	$(window).scroll(function() {
-		if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elemsScrolled == true)
+		if(elementScrolled($aboutGeorge) && !($aboutGeorge.hasClass('animationExecutedOnce'))) {	// if $aboutGeorge is scrolled into view (if elementScrolled == true)
 			spellAnimation.play();
 		}
 	});
@@ -192,21 +192,21 @@ function main() {
 
 
 	// *** Jumbotron listed items appearing one after another on scroll ***
-	var amazingShowsHeight = document.getElementById('amazing-shows-list').scrollHeight;
-	document.getElementById('amazing-shows-list').style.height = "" + amazingShowsHeight + "px";
-	var $amazingShows = $('#amazing-shows-list li');
+	// var amazingShowsHeight = document.getElementById('amazing-shows-list').scrollHeight;
+	// document.getElementById('amazing-shows-list').style.height = "" + amazingShowsHeight + "px";
+	// var $amazingShows = $('#amazing-shows-list li');
 
-	$(window).scroll(function(){
-		// This is where we use the function to detect if "$amazingShows" is scrolled into view, and when it is add the class ".animationExecutedOnce" to the <p> child element
-		if(elementScrolled($amazingShows) && !($amazingShows.hasClass('animationExecutedOnce'))) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
-			// Your function here
-			$amazingShows.each(function(i) {
-				$(this).delay(150 * i).animate({left: '15px'}, 400);
-				$(this).delay(150 * i).animate({left: '0'}, 400);
-				$(this).addClass('animationExecutedOnce');
-			});
-		}
-	});
+	// $(window).scroll(function(){
+	// 	// This is where we use the function to detect if "$amazingShows" is scrolled into view, and when it is add the class ".animationExecutedOnce" to the <p> child element
+	// 	if(elementScrolled($amazingShows) && !($amazingShows.hasClass('animationExecutedOnce'))) {	// if $amazingShows is scrolled into view (if elemsScrolled == true)
+	// 		// Your function here
+	// 		$amazingShows.each(function(i) {
+	// 			$(this).delay(150 * i).animate({left: '15px'}, 400);
+	// 			$(this).delay(150 * i).animate({left: '0'}, 400);
+	// 			$(this).addClass('animationExecutedOnce');
+	// 		});
+	// 	}
+	// });
 
 
     // Replace all SVG images with inline SVG
