@@ -151,9 +151,9 @@ a.collapse {
 	margin-top: 0;
 }
 #booking-box h3 {
-		font-size: 2em;
-		text-align: center;
-		margin-bottom: 1em;
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 1em;
 }
 #booking-box p {
 	text-align: justify;
@@ -177,9 +177,6 @@ a.collapse {
 	position: relative;
 	margin: 0;
 	font-size: 1.2em;
-	/*font-style: italic;*/
-	/*list-style: none;*/
-	/*content: "\E049";*/
 	text-transform: capitalize;
 }
 #booking-box ul > li:before {
@@ -188,8 +185,6 @@ a.collapse {
     content: "\E080";
     font-family: 'Glyphicons Halflings';
     font-size: 9px;
-    /*float: left;*/
-    /*margin-top: 4px;*/
 }
 #booking-box img {
 	position: absolute;
@@ -205,15 +200,10 @@ a.collapse {
 /* *** FOOTER ELEMENTS *** */
 #footer {
     bottom: 0;
-/*    height: 420px;  izbriši kad ubaciš sadržaj 
-*/    padding: 0;
+    padding: 0;
     margin-top: 30px;
     background-color: #333;
     color: antiquewhite;
-    /*font-family: "Oswald", sans-serif;*/
-    /*font-size: 12px;*/
-    /*font-weight: normal;*/
-/*    border: 2px solid aqua;*/
 }
 #footer a:hover {
 	color: antiquewhite;
@@ -248,7 +238,7 @@ a.collapse {
 	vertical-align: middle;
 	/*position: relative;*/
 	margin-right: 10px;
-/*	border: 1px solid yellow;*/
+	/*border: 1px solid yellow;*/
 	fill: #fffca5;
 }
 
@@ -276,15 +266,19 @@ a.collapse {
 }
 
 .social-media-icon {
-/*	border: 1px solid green;*/
+	/*border: 1px solid green;*/
+	padding: 0;
 }
 
-/*#social-media-icons > div > span {
-	display: inline-block;
-	border: 1px solid yellow;
-	width: 100%;
-	margin: 0 auto;
-}*/
+#social-media-icons > div > span {
+	display: block; /* može i inline-block sa width: 100%; */
+	text-align: center;
+	font-style: italic;
+	/*border: 1px solid yellow;*/
+	margin-top: 5px;
+	/*width: 100%;*/
+	/*margin: 0 auto;*/
+}
 
 .copyright {
 	text-align: center;
@@ -298,10 +292,13 @@ a.collapse {
 	/*left: 0;*/
 }
 
-#footer-creator a,
-#footer-creator b {
+#footer-creator .container {
 	z-index: 1;
 	position: relative;
+}
+
+#footer-creator .container > a {
+	color: #9bbbff;
 }
 
 #creator-background {
@@ -310,7 +307,7 @@ a.collapse {
 	z-index: 0;
 	bottom: 0;
 	left: 0;
-	background-color: #b7882a;
+	background-color: #666;
 	border-top-right-radius: 60px;
 	/*width: 40%;*/
 
@@ -369,14 +366,19 @@ a.collapse {
 		border-color: #888;
 		margin: 0 auto;
 	}
+	
+	#social-media {
+		margin-top: 60px;
 
-	#social-media-icons {
-		max-width: 320px;
-		margin: 0 auto;
 	}
 
 	#footer-client > hr {
 		margin-top: 60px;
+	}
+
+	#social-media-icons {
+		max-width: 320px;
+		margin: 0 auto;
 	}
 
 	#creator-background {

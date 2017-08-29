@@ -27,8 +27,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href="bio.html">Bio</a></li>
+        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="bio.html">Bio</a></li>
         <li><a href="shows.html">Shows</a></li>
         <li><a href="news.html">News</a></li>
         <li class="dropdown">
@@ -47,57 +47,76 @@
 </nav>
 <div class="container">
 <div id="title" class="page-header">
-	<div id="header-holder">
-		<h1>Magic of George Diamond</h1>
-		<h2>A show that has toured the entire world</h2>
-	</div>
-	<img src="images/background.png" alt="Background image" class="img-responsive visible-xs">
-	<div id="about-george">
-		George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.
-	</div>
+  <div id="header-holder">
+    <h1>Magic of George Diamond</h1>
+    <h2>A show that has toured the entire world</h2>
+  </div>
+  <img src="images/background.png" alt="Background image" class="img-responsive visible-xs">
+  <div id="about-george">
+    George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.
+  <div id="spell-animation-container"></div>
+  </div>
 </div>
 </div> <!-- header's container -->
 
 <div id="footer" class="container-fluid">
   <div id="footer-client" class="container">
-    <div id="social-media">
-      <p>Follow us on social media:</p>
-      <div id="social-media-icons">
-        <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><img src="images/iconmonstr-facebook-white-64.png" /></a>
-        <a href="https://twitter.com/mrgeorgediamond" target="_blank"><img src="images/iconmonstr-twitter-white-64.png" /></a>
-        <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><img src="images/iconmonstr-instagram-white-64.png" /></a>
-        <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><img src="images/iconmonstr-youtube-white-64.png" /></a>
-      </div>  <!-- social media icons -->
-    </div>   <!-- social media -->
-    <div id="direct-contact">
-      <p>Or contact us directly:</p>
-      <div id="direct-contact-icons">
-        <a href="tel:+381641969699" title="Tap to call +381 (0)64 196 96 99 (Serbia)">
-          <img src="images/iconmonstr-phone-white-64.png" />
-          <p>Call</p>
-        </a>
-        <a href="mailto:george.kaurin@gmail.com" title="Send an email to george.kaurin@gmail.com">
-          <img src="images/iconmonstr-email-white-64.png" />
-          <p>Email</p>
-        </a>
-      </div>
-    </div>
+    <div class="row">
+      <div id="direct-contact" class="col-sm-6">
+        <h3>Contact</h3>
+        <div id="direct-contact-details">
+          <hr class="visible-xs">
+          <div class="direct-contact-row">
+            <img class="direct-contact-icon svg" src="images/iconmonstr-email-4.svg"> <a href="mailto:george.kaurin@gmail.com" title="Send an email to george.kaurin@gmail.com">george.kaurin@gmail.com </a>
+          </div>
+          <hr class="visible-xs">
+          <div class="direct-contact-row">
+            <img class="direct-contact-icon svg" src="images/iconmonstr-phone-1.svg"> <a href="tel:+381641969699" title="Call +381 (0)64 196 96 99 (Serbia)">+381 (0)64 196 96 99 </a>
+          </div>
+          <hr class="visible-xs">
+          <div class="direct-contact-row">
+            <img class="direct-contact-icon svg" src="images/iconmonstr-location-1.svg"> <span><b>Belgrade, Serbia</b></span>
+          </div>
+          <hr class="visible-xs">
+        </div> <!-- direct contact details -->
+      </div> <!-- direct contact -->
+      <div id="social-media" class="col-sm-6">
+        <h3>Follow</h3>
+        <div id="social-media-icons">
+          <div class="col-xs-3 social-media-icon">
+            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><img src="images/iconmonstr-facebook-white-48.png" /></a>
+            <span>Facebook</span>
+          </div>
+          <div class="col-xs-3 social-media-icon">
+            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><img src="images/iconmonstr-twitter-white-48.png" /></a>
+            <span>Twitter</span>
+          </div>
+          <div class="col-xs-3 social-media-icon">
+            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><img src="images/iconmonstr-instagram-white-48.png" /></a>
+            <span>Instagram</span>
+          </div>
+          <div class="col-xs-3 social-media-icon">
+            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><img src="images/iconmonstr-youtube-white-48.png" /></a>
+            <span>YouTube</span>
+          </div>
+        </div>  <!-- social media icons -->
+      </div>   <!-- social media -->
+    </div> <!-- row -->
     <hr>
-    <p class="credits">
-    <b>&copy; 2017 Magic of George Diamond </b><br>
-    <a href="mailto:george.kaurin@gmail.com" title="Send an email to george.kaurin@gmail.com">george.kaurin@gmail.com </a><br>
-    <a href="tel:+381641969699" title="Tap to call +381 (0)64 196 96 99 (Serbia)">+381 (0)64 196 96 99 </a><br>
-    Belgrade, Serbia
+    <p class="copyright">
+      <b>&copy; 2017 Magic of George Diamond </b><br>
     </p>    
-    <p class="credits">
-    <b>Site created by Stefan Tatić </b><br>
-    <a href="mailto:stefan.tatic@yahoo.com" title="Send an email to stefan.tatic@yahoo.com">stefan.tatic@yahoo.com </a><br>
-    <a href="tel:+381695103399" title="Tap to call +381 69 510 33 99 (Serbia)">+381 (0)69 510 33 99 </a><br>
-    Belgrade, Serbia
-    </p>    
-  </div> <!-- footer container -->
+  </div> <!-- footer client container -->
+  <div id="footer-creator">
+    <div id="creator-background"></div>
+    <div class="container">
+      <b>Site created by Stefan Tatić </b><br>
+      <a href="mailto:stefan.tatic@yahoo.com" title="Send an email to stefan.tatic@yahoo.com">stefan.tatic@yahoo.com </a>
+    </div>
+  </div> <!-- footer creator -->
 </div> <!-- footer full -->
-<script type="text/javascript" src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/tale.js"></script>
 </body>
