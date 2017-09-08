@@ -4,7 +4,7 @@
 }
 
 body {
-	background: url('/images/welcome-background.jpg') no-repeat top right;
+	background: url('../images/welcome-background.jpg') no-repeat top right;
 }
 
 #wrapper {
