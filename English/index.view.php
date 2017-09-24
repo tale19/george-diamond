@@ -6,7 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+
+
 <link rel="stylesheet" type="text/css" href="../css/tale.css">
 </head>
 
@@ -69,12 +72,18 @@
   <div class="news-article">
     <h4 class="top-news-headline">The article on TV Pink's internet portal</h4>
     <div class="news-body">
-    <p>
+    <!-- <p>
       <span class="news-date">22nd June 2017 - </span>Amazingly well done! George Diamond surpasses all his previous performances leaving judges in amazement! - says the title of the article published on TV Pink's internet portal. The article describes the shock and disbelief among the judges  upon seeing George's act calling him one of the most talented illusionists in the whole region who has managed to shock millions of TV viewers again and stating that his performances are talked about weeks after each episode he took part in!  Click <a href="http://pink.rs/showbiz/28411/zapanjujuce-dobro-dzordz-dajmond-nadmasio-prethodne-nastupe-i-ziri-ostavio-u-cudu-video">here</a> to read the article, or click on the photo on the left to see it as PDF.
     </p>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget massa nec massa consectetur euismod vel in nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est mauris, venenatis quis ultricies sed, commodo sed ante. Duis ornare cursus ipsum, ut semper ipsum bibendum nec. Pellentesque luctus, nisi eu dictum consectetur, tellus lacus sodales velit, luctus tempor lorem turpis eu magna. Aenean varius condimentum est id tristique. Nullam imperdiet odio sed neque congue cursus. Proin semper in tortor vel feugiat. Nulla ut blandit nisl, eu congue nisl.
-    </p>       
+    </p>        -->
+
+  <?php 
+    echo $statement->fetchAll(PDO::FETCH_OBJ)[0]->content;
+    
+
+  ?>
   </div> <!-- news body -->
   </div> <!-- news article -->
   
