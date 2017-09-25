@@ -3,31 +3,31 @@ function main() {
 	var charCount = 350;
 	var $newsBody = $('.news-body');
 	// create preview
-	if ($newsBody.text().length > charCount) {
-		$newsBody.each(function() {
 
-			// create expander
-			var $expander = $('<a/>', {"class": "expandNews"}); // "" around class make it more compatible with less flexible browsers
-			$expander.text('...Read More');
-			// create collapser
-			var $collapser = $('<a/>', {"class": "collapseNews"}); // "" around class make it more compatible with less flexible browsers
-			$collapser.text('...Read Less');
+	$newsBody.each(function(){
 
-			// create full view after expansion
-			var $originalHTML = $(this).html();
-			var $fullview = [$originalHTML, $collapser]; // string (HTML) + Object [a.collapse]
-			$(this).data("original", $fullview);
+		if ($(this).text().length > charCount) {
+				// create expander
+				var $expander = $('<a/>', {"class": "expandNews"}); // "" around class make it more compatible with less flexible browsers
+				$expander.text('...Read More');
+				// create collapser
+				var $collapser = $('<a/>', {"class": "collapseNews"}); // "" around class make it more compatible with less flexible browsers
+				$collapser.text('...Read Less');
+
+				// create full view after expansion
+				var $originalHTML = $(this).html();
+				var $fullview = [$originalHTML, $collapser]; // string (HTML) + Object [a.collapse]
+				$(this).data("original", $fullview);
 
 
-			// create preview
-			var $datum = $(this).find('.news-date:first');
-			var $previewText = $(this).text().substring($(this).find('.news-date:first').text().length + 11, charCount);
-			var $preview = [$datum, $previewText, $expander]; // Object [span] + string + Object [a.expand]
-			$(this).html($preview);
-			$(this).data("truncatedHTML", $(this).html());
-		});
-	};
-
+				// create preview
+				var $datum = $(this).find('.news-date:first');
+				var $previewText = $(this).text().substring($(this).find('.news-date:first').text().length + 9, charCount);
+				var $preview = [$datum, $previewText, $expander]; // Object [span] + string + Object [a.expand]
+				$(this).html($preview);
+				$(this).data("truncatedHTML", $(this).html());
+		};
+	});
 	// expand on click
 	$(document).on("click", ('.expandNews'), function() {
 		var $retrieveOriginal = $(this).parent().data("original");
