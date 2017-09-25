@@ -32,5 +32,5 @@ $statement->execute();
 require 'index.view.php';
 
 
-var_dump($statement->fetchAll(PDO::FETCH_OBJ)[0]->content);
+// var_dump($statement->fetchAll(PDO::FETCH_OBJ)[0]->content);
 
