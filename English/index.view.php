@@ -43,8 +43,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/Srpski/index.html">Srpski</a></li>
-        <li><a href="/English/index.html">English</a></li>
+        <li><a href="Srpski/index.php">Srpski</a></li>
+        <li><a href="English/index.php">English</a></li>
         <li><a href="#" type="button" class="btn btn-primary hidden-xs">Book now!</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -59,7 +59,6 @@
   <img src="../images/background.png" alt="Background image" class="img-responsive visible-xs">
   <div id="about-george">
     George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.
-  <div id="spell-animation-container"></div>
   </div>
 </div>
 </div> <!-- header's container -->
@@ -191,7 +190,6 @@
   </div> <!-- footer creator -->
 </div> <!-- footer full -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>

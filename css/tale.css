@@ -96,14 +96,10 @@ h3 {
 /*	border: 2px solid cyan;*/
 	width: 60%;
 	margin-top: 2em;
-}
-#spell-animation-container {
-	position: absolute;
-	bottom: 0;
-	z-index: 10;
-}
-#about-george > span {
 	font-family: 'Satisfy', cursive;
+}
+
+#about-george > span {
 	/*color: #b2046d;*/
 	/*margin-left: 15px;*/
 }
