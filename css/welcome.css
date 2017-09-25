@@ -4,6 +4,9 @@
 }
 
 body {
+	background: none;
+}
+body.animated {
 	background: url('../images/welcome-background.jpg') no-repeat top right;
 }
 
@@ -20,15 +23,18 @@ body {
 	/*border: 2px solid aqua;*/
 	display: table-cell;
 	vertical-align: middle;
+	height: 70vh;
 }
 
 #language-box {
-	/*border: 1px solid blue;*/
+	/*position: absolute;*/
+	/*border*/: 1px solid blue;
+	bottom: 0;
+	padding: 5%;
 	margin: 5% auto;
 	background-color: rgba(255,255,255,.25);
-}
-#language-box.hidden {
-	/*display: none;*/ /* already defined in bootstrap */
+	border-radius: 5px;
+	/*height: -60;*/
 }
 
 .language {
@@ -57,13 +63,13 @@ body {
 }
 
 #spell-animation-container {
-	position: relative;
+	position: absolute;
+	bottom: 0;
 	display: block;
-	width: 200px;
-	min-height: 30vh;
 	margin: 0 auto;
+	/*width: 200px;*/
 	z-index: 99;
-	border: 1px solid magenta;
+	/*border: 1px solid magenta;*/
 /*	
 	top: 1100px;
 	z-index: 999999;
@@ -84,13 +90,14 @@ h3 {
 	font-size: 1em;
 }
 #copyright {
-	/*position: absolute;*/
-	border: 1px solid lightblue;
+	bottom: 0;
+	/*position: relative;*/
+	/*border: 1px solid magenta;*/
 	display: table-row;
 	text-align: center;
 	color: #555;
 /*	vertical-align: bottom;*/	
-	/*height: 20vh;*/
+	/*height: 30vh;*/
 }
 
 #copyright .container {

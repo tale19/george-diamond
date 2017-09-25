@@ -1,9 +1,19 @@
 function welcome() {
 
-	// *** Animate header text ***
+	// *** Show styling after animation loads ***
+	var $body = $('body');
 	var $spellBox = $('#spell-animation-container');
 	var $languageBox = $('#language-box');
+
+	// First, set animation container's height equal to language box height to fix footer position 
+	var $languageBoxHeight = $languageBox.height();
 	console.log($languageBox);
+	console.log($spellBox);
+	// $spellBox.height('324px'); // doesn't work because it catches language box's height which is zero at start (hidden)
+
+
+
+	console.log($languageBoxHeight);
 	var spellAnimation = bodymovin.loadAnimation({
 		container: document.getElementById('spell-animation-container'),
 		renderer: 'svg',
@@ -14,17 +24,7 @@ function welcome() {
 
 	// animate heading (h1, h2)
 	var $h1 = $('h1');
-	var $h1text = $h1.text();
 	var $h2 = $('h2');
-	var $h2text = $h2.text();
-	var h1length = $('h1').text().length;
-	var h2length = $('h2').text().length;
-	// function tesss() {
-	// 	for (var i=120; i<255; i++) {
-	// 		return Math.floor(Math.random()) * i;
-	// 	}
-	// }
-
 	
 	function animateh1() {
 		// $h1.addClass('gradient');	
@@ -34,14 +34,15 @@ function welcome() {
 		
 	}
 
-	function animateEntireHeading() {
+	function executeAnimation() {
 		animateh1();
 		animateh2();
-		$languageBox.removeClass('hidden');
+		$languageBox.removeClass('invisible');
 		$spellBox.addClass('hidden');
+		$body.addClass('animated');
 	}
 
-	spellAnimation.addEventListener("complete", animateEntireHeading);
+	spellAnimation.addEventListener("complete", executeAnimation);
 
 	spellAnimation.play();
 	// executeHeaderTextAnimation();
