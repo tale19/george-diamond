@@ -29,6 +29,7 @@ $statement = $pdo->prepare('select * from news where id = 4');
 
 $statement->execute();
 
+// print_r(expression)
 require 'index.view.php';
 
 

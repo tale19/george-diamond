@@ -43,8 +43,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="Srpski/index.php">Srpski</a></li>
-        <li><a href="English/index.php">English</a></li>
+        <li><a href="../Srpski/index.html">Srpski</a></li>
+        <li><a href="index.php">English</a></li>
         <li><a href="#" type="button" class="btn btn-primary hidden-xs">Book now!</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -80,8 +80,6 @@
 
   <?php 
     echo $statement->fetchAll(PDO::FETCH_OBJ)[0]->content;
-    
-
   ?>
   </div> <!-- news body -->
   </div> <!-- news article -->
@@ -179,15 +177,9 @@
     <hr>
     <p class="copyright">
       <b>&copy; 2017 Magic of George Diamond </b><br>
+      <b>Site created by <a href="mailto:stefan.tatic@yahoo.com" title="Send an email to stefan.tatic@yahoo.com">Stefan Tatić</a></b>
     </p>    
   </div> <!-- footer client container -->
-  <div id="footer-creator">
-    <div id="creator-background"></div>
-    <div class="container">
-      <b>Site created by Stefan Tatić </b><br>
-      <a href="mailto:stefan.tatic@yahoo.com" title="Send an email to stefan.tatic@yahoo.com">stefan.tatic@yahoo.com </a>
-    </div>
-  </div> <!-- footer creator -->
 </div> <!-- footer full -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>

@@ -1,0 +1,32 @@
+#testic {
+	border: 1px solid magenta;
+}
+#about-george-diamond img {
+	float: left;
+	max-width: 33%;
+	height: auto;
+	margin: 0 15px 15px 0;
+}
+
+#credits img {
+	float: right;
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 15px 15px;
+}
+
+h4 {
+	font-style: italic;
+}
+
+#credits ul {
+	/*float: left;*/
+
+}
+
+/* media query EXTRA SMALL display (up to 767px) */
+@media (max-width: 767px) {
+	#about-george-diamond img {
+		max-width: 50%;
+	}
+}
