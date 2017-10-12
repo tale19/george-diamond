@@ -5,17 +5,39 @@
 	max-height: 370px;
 	margin: 0 15px 15px 0;
 }
+#title {
+	/*background-color: transparent;*/
+}
+body {
+	background: url('../images/background-black.jpg') no-repeat center;
+	background-attachment: fixed;
+	/*position: fixed;*/
+}
+
+#content {
+	color: #aaa;
+}
 
 #credits .row {
 	border: 1px solid lime;
 }
 
+#credits .slika {
+	border: 1px solid magenta;
+}
+
+#credits .tekst {
+	border: 1px solid darkblue;
+}
+
 #credits img {
+	border-radius: 5px;
 	float: right;
+	width: auto;
 	max-width: 100%;
 	/*max-height: 100%;	*/
 	/*margin: 0 0 15px 15px;*/
-	margin-bottom: 10px;
+	margin: 10px auto;
 }
 
 h4 {

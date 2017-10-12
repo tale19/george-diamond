@@ -401,7 +401,7 @@ a.collapse {
 /* media query SMALL display (768-991px) */
 @media (min-width: 768px) {
 	#title {
-	background: #FFF url("../images/background.png") no-repeat right bottom;
+	background: url("../images/background.png") no-repeat right bottom;
 	min-height: 420px;
 	}
 	
