@@ -202,7 +202,7 @@ a.collapse {
     bottom: 0;
     padding: 0;
     margin-top: 30px;
-    background-color: #333;
+    background-color: #0f0f0f;
     color: antiquewhite;
 }
 #footer a:hover {
@@ -401,8 +401,9 @@ a.collapse {
 /* media query SMALL display (768-991px) */
 @media (min-width: 768px) {
 	#title {
-	background: url("../images/background.png") no-repeat right bottom;
+	/*background: url("../images/bio-young.webp") no-repeat right;*/
 	min-height: 420px;
+	color: #CCC;
 	}
 	
 	h1 {

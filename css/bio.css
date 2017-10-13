@@ -1,3 +1,14 @@
+body {
+	background: url('../images/background-black.jpg') no-repeat center;
+	background-attachment: fixed;
+	padding-top: 70px;
+	/*position: fixed;*/
+}
+
+h3 {
+	margin-top: 70px;
+}
+
 #about-george-diamond img {
 	float: left;
 	max-width: 33%;
@@ -6,30 +17,46 @@
 	margin: 0 15px 15px 0;
 }
 #title {
+	margin: 0 auto;
+	/*padding: 80px 40px;*/
 	/*background-color: transparent;*/
-}
-body {
-	background: url('../images/background-black.jpg') no-repeat center;
-	background-attachment: fixed;
-	/*position: fixed;*/
+	background: #16181c url('../images/bio-young.png') no-repeat right;
 }
 
 #content {
-	color: #aaa;
+	color: #FFF;
+}
+
+#credits h4 {
+	margin-top: 40px;
 }
 
 #credits .row {
-	border: 1px solid lime;
+/*	border: 1px solid lime;*/
 }
 
 #credits .slika {
-	border: 1px solid magenta;
+/*	border: 1px solid magenta;*/
 }
 
-#credits .tekst {
-	border: 1px solid darkblue;
+#credits .tekst-levo,
+#credits .tekst-desno {
+/*	border: 1px solid magenta;*/
+}
+#credits .tekst-levo ul,
+#credits .tekst-desno ul {
+	list-style: none;
+/*	border: 1px solid yellow;*/
+	padding: 0px; /* reset indentation */
 }
 
+#credits .tekst-desno {
+	text-align: left;
+}
+
+#credits .tekst-levo {
+	text-align: right;
+}
 #credits img {
 	border-radius: 5px;
 	float: right;

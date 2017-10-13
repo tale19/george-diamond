@@ -7,14 +7,14 @@
 <title>Home | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/tale.css">
 <link rel="stylesheet" type="text/css" href="../css/bio.css">
 
 
-<link rel="stylesheet" type="text/css" href="../css/tale.css">
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -24,34 +24,34 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a id="navbar-logo" class="navbar-brand" href="index.html"><img src="../images/GeorgeDiamondLogo.png" height="50px"></a>
-      <a href="tel:+381641969699" type="button" id="bookNow" class="btn btn-primary visible-xs">Book now!</a>
+      <a id="navbar-logo" class="navbar-brand navbar-btn" href="index.html"><img src="../images/GeorgeDiamondLogo.png" height="50px"></a>
+      <a href="tel:+381641969699" type="button" id="bookNow" class="btn btn-primary visible-xs navbar-btn">Book now!</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.php">Home</a></li>
-        <li class="active"><a href="bio.html">Bio <span class="sr-only">(current)</span></a></li>
-        <li><a href="shows.html">Shows</a></li>
-        <li><a href="news.html">News</a></li>
+        <li><a href="index.php" class="navbar-btn">Home</a></li>
+        <li class="active"><a href="bio.html" class="navbar-btn">Bio <span class="sr-only">(current)</span></a></li>
+        <li><a href="shows.html" class="navbar-btn">Shows</a></li>
+        <li><a href="news.html" class="navbar-btn">News</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="photos.html">Photos</a></li>
-            <li><a href="videos.html">Videos</a></li>
+            <li><a href="photos.html" class="navbar-btn">Photos</a></li>
+            <li><a href="videos.html" class="navbar-btn">Videos</a></li>
           </ul>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../Srpski/index.html">Srpski</a></li>
-        <li><a href="index.php">English</a></li>
-        <li><a href="#" type="button" class="btn btn-primary hidden-xs">Book now!</a></li>
+        <li><a href="../Srpski/index.html" type="button" class="btn navbar-btn">Srpski</a></li>
+        <!-- <li><a href="index.php" type="button" class="btn navbar-btn">English</a></li> -->
+        <li><a href="#" type="button" class="btn btn-primary hidden-xs navbar-btn">Book now!</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="container">
-<div id="title" class="container-fluid">
+<div id="title" class="page-header container-fluid">
+  <div class="container">
   <div id="header-holder">
     <h1>Magic of George Diamond</h1>
     <h2>A show that has toured the entire world</h2>
@@ -60,8 +60,8 @@
   <div id="about-george">
     George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.
   </div>
+  </div>
 </div>
-</div> <!-- header's container -->
 <div id="content">
 
 <h3>About George Diamond</h3>
@@ -79,7 +79,8 @@
 <div id="credits" class="container-fluid">
 <h3>Credits</h3>
   <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
+  <div class="col-sm-6 tekst-levo"></div>
+    <div class="col-sm-6 tekst-desno">
       <h4>Cruise Ships:</h4>
       <ul>
         <li>M/V Star Pisces, Star Cruises, Hong Kong cruises</li>
@@ -88,13 +89,7 @@
         <li>M/V Costa Concordia, Costa Cruises (Costa Crociere), Mediterranean cruises</li>
         <li>M/V Costa Marina, Costa Cruises (Costa Crociere), Mediterranean / Baltic / Norvegian cruises</li>
       </ul>
-    </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-starCruises.webp">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
+
       <h4>Hotels &amp; Resorts</h4>
       <ul>
         <li>Inter-Continental, Belgrade, Serbia</li>
@@ -113,14 +108,13 @@
         <li>Crowne Plaza Belgrade, Serbia</li>
         <li>Hotel Mona, Serbia</li>
       </ul>
+
     </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-young.webp">
-    </div>
-  </div> <!-- row -->
+  </div>
+
 
   <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
+    <div class="col-sm-6 tekst-levo hidden-xs">
       <h4>Variety &amp; Cabaret:</h4>
       <ul>
         <li>Cabaret Rose, Belgrade, Serbia</li>
@@ -140,25 +134,19 @@
         <li>Casino Club Coloseum, Bosnia Herzegovina</li>
         <li>Casino Di Venezia Ca’ Noghera, Italy</li>
       </ul>
-    </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-talenat.webp">
-    </div>
-  </div> <!-- row -->
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
-      <h4>Theme Parks</h4>
+      <h4>Theme Parks and Circuses</h4>
       <ul>
         <li>Around the World Theme Park, Kaoshiung Hsien, Taiwan</li>
         <li>Dunia Fantasi Theme Park, Impyan Jaya Ancol Fun Island, Jakarta, Indonesia </li>
-      </ul>
-
-      <h4>Circus</h4>
-      <ul>
         <li>Circus Corona, Serbia</li>
       </ul>
+    </div>
+    <div class="col-sm-6 tekst-desno hidden-xs"></div>
+  </div> <!-- row -->
 
+  <div class="row">
+    <div class="col-sm-6 tekst-levo"></div>
+    <div class="col-sm-6 tekst-desno">
       <h4>Special Appearances:</h4>
       <ul>  
         <li>Uno City – United Nations Open House Day, Vienna, Austria</li>
@@ -168,14 +156,6 @@
         <li>Supernatural Festival, Belgrade, Serbia</li>
         <li>Layali Alwatan Festival – Kuwait</li>
       </ul>
-    </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-concordia.webp">
-    </div>
-  </div> <!-- row -->
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
       <h4>Corporate shows</h4>
       <ul>
         <li>CDM – Swiss Diamond Corporation, Oranjemund, Namibia</li>
@@ -186,13 +166,10 @@
         <li>Shows in shopping malls such as IAPM (Shanghai, China), IPM, New Jade Center, TPMM (Hong Kong), etc.</li>
       </ul>
     </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-bigDutchman.webp">
-    </div>
   </div> <!-- row -->
 
   <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
+    <div class="col-sm-6 tekst-levo">
       <h4>TV &amp; Film</h4>
       <ul>
         <li>Appearance on Namibian National Television, Windhoek, Namibia</li>
@@ -203,14 +180,6 @@
         <li>Alwatan TV, Kuwait</li>
         <li>Serbia’s Got Talent (Superfinalist)</li>
       </ul>
-    </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-talent.webp">
-    </div>
-  </div> <!-- row -->
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 tekst">
       <h4>Magic &amp; Arts Projects</h4>
       <ul>
         <li>Multimedial project “Ilusionismo” sponsored by the Ministry of Culture And Media, Belgrade, Serbia</li>
@@ -223,9 +192,7 @@
         <li>Special effects design and consultancy, special appearance for the “Mission Impossible” Candid Camera Show by “Rikoset Production” for TV Pink, Belgrade, Serbia</li>
       </ul>
     </div>
-    <div class="hidden-xs col-sm-4 slika">
-      <img src="../images/bio-dance.webp">
-    </div>
+    <div class="col-sm-6 tekst-desno"></div>
   </div> <!-- row -->
 </div> <!-- container -->
   
