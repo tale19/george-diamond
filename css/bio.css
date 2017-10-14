@@ -1,8 +1,5 @@
 body {
-	background: url('../images/background-black.jpg') no-repeat center;
-	background-attachment: fixed;
-	padding-top: 70px;
-	/*position: fixed;*/
+
 }
 
 h3 {
@@ -17,10 +14,11 @@ h3 {
 	margin: 0 15px 15px 0;
 }
 #title {
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	/*padding: 80px 40px;*/
+	/*border: 2px solid blue;*/
 	/*background-color: transparent;*/
-	background: #16181c url('../images/bio-young.png') no-repeat right;
+
 }
 
 #content {
@@ -51,11 +49,11 @@ h3 {
 }
 
 #credits .tekst-desno {
-	text-align: left;
+	/*text-align: left;*/
 }
 
 #credits .tekst-levo {
-	text-align: right;
+	/*text-align: right;*/
 }
 #credits img {
 	border-radius: 5px;

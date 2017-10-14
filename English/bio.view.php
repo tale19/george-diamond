@@ -15,54 +15,11 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a id="navbar-logo" class="navbar-brand navbar-btn" href="index.html"><img src="../images/GeorgeDiamondLogo.png" height="50px"></a>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="tel:+381641969699" type="button" id="book-now-xs" class="btn btn-primary visible-xs navbar-btn">Book now!</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="index.php" class="navbar-btn">Home</a></li>
-        <li class="active"><a href="bio.html" class="navbar-btn">Bio <span class="sr-only">(current)</span></a></li>
-        <li><a href="shows.html" class="navbar-btn">Shows</a></li>
-        <li><a href="news.html" class="navbar-btn">News</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="photos.html" class="navbar-btn">Photos</a></li>
-            <li><a href="videos.html" class="navbar-btn">Videos</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="../Srpski/index.html" type="button" class="btn navbar-btn">Srpski</a></li>
-        <!-- <li><a href="index.php" type="button" class="btn navbar-btn">English</a></li> -->
-        <li><a href="#" type="button" id="book-now-lg" class="btn btn-primary navbar-btn hidden-xs">Book now!</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
-</nav> <!-- navbar -->
-<div id="title" class="page-header container-fluid">
-  <div class="container">
-  <div id="header-holder">
-    <h1>Magic of George Diamond</h1>
-    <h2>A show that has toured the entire world</h2>
-  </div>
-  <!-- <img src="../images/background.png" alt="Background image" class="img-responsive visible-xs"> -->
-  <div id="about-george">
-    George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.
-  </div>
-  </div>
-</div>
+<?php 
+  require 'navbar.view.php';
+  require 'page-header.view.php';
+?>
+
 <div id="content">
 
 <h3>About George Diamond</h3>
@@ -77,11 +34,10 @@
 </div>
 
 
-<div id="credits" class="container-fluid">
+<div id="credits" class="container">
 <h3>Credits</h3>
   <div class="row">
-  <div class="col-sm-6 tekst-levo"></div>
-    <div class="col-sm-6 tekst-desno">
+  <div class="col-sm-6 tekst-levo">
       <h4>Cruise Ships:</h4>
       <ul>
         <li>M/V Star Pisces, Star Cruises, Hong Kong cruises</li>
@@ -109,13 +65,8 @@
         <li>Crowne Plaza Belgrade, Serbia</li>
         <li>Hotel Mona, Serbia</li>
       </ul>
-
-    </div>
   </div>
-
-
-  <div class="row">
-    <div class="col-sm-6 tekst-levo hidden-xs">
+    <div class="col-sm-6 tekst-desno">
       <h4>Variety &amp; Cabaret:</h4>
       <ul>
         <li>Cabaret Rose, Belgrade, Serbia</li>
@@ -142,12 +93,11 @@
         <li>Circus Corona, Serbia</li>
       </ul>
     </div>
-    <div class="col-sm-6 tekst-desno hidden-xs"></div>
-  </div> <!-- row -->
+  </div>
+
 
   <div class="row">
-    <div class="col-sm-6 tekst-levo"></div>
-    <div class="col-sm-6 tekst-desno">
+    <div class="col-sm-6 tekst-levo">
       <h4>Special Appearances:</h4>
       <ul>  
         <li>Uno City – United Nations Open House Day, Vienna, Austria</li>
@@ -167,10 +117,7 @@
         <li>Shows in shopping malls such as IAPM (Shanghai, China), IPM, New Jade Center, TPMM (Hong Kong), etc.</li>
       </ul>
     </div>
-  </div> <!-- row -->
-
-  <div class="row">
-    <div class="col-sm-6 tekst-levo">
+    <div class="col-sm-6 tekst-desno">
       <h4>TV &amp; Film</h4>
       <ul>
         <li>Appearance on Namibian National Television, Windhoek, Namibia</li>
@@ -193,71 +140,15 @@
         <li>Special effects design and consultancy, special appearance for the “Mission Impossible” Candid Camera Show by “Rikoset Production” for TV Pink, Belgrade, Serbia</li>
       </ul>
     </div>
-    <div class="col-sm-6 tekst-desno"></div>
   </div> <!-- row -->
 </div> <!-- container -->
   
 </div> <!-- content -->
 
+<?php 
+  require 'footer.view.php';
+ ?>
 
-
-
-
-
-
-
-
-
-<div id="footer" class="container-fluid">
-  <div id="footer-client" class="container">
-    <div class="row">
-      <div id="direct-contact" class="col-sm-6">
-        <h3>Contact</h3>
-        <div id="direct-contact-details">
-          <hr class="visible-xs">
-          <div class="direct-contact-row">
-            <img class="direct-contact-icon svg" src="../images/iconmonstr-email-4.svg"> <a href="mailto:george.kaurin@gmail.com" title="Send an email to george.kaurin@gmail.com">george.kaurin@gmail.com </a>
-          </div>
-          <hr class="visible-xs">
-          <div class="direct-contact-row">
-            <img class="direct-contact-icon svg" src="../images/iconmonstr-phone-1.svg"> <a href="tel:+381641969699" title="Call +381 (0)64 196 96 99 (Serbia)">+381 (0)64 196 96 99 </a>
-          </div>
-          <hr class="visible-xs">
-          <div class="direct-contact-row">
-            <img class="direct-contact-icon svg" src="../images/iconmonstr-location-1.svg"> <span><b>Belgrade, Serbia</b></span>
-          </div>
-          <hr class="visible-xs">
-        </div> <!-- direct contact details -->
-      </div> <!-- direct contact -->
-      <div id="social-media" class="col-sm-6">
-        <h3>Follow</h3>
-        <div id="social-media-icons">
-          <div class="col-xs-3 social-media-icon">
-            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><img src="../images/iconmonstr-facebook-white-48.png" /></a>
-            <span>Facebook</span>
-          </div>
-          <div class="col-xs-3 social-media-icon">
-            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><img src="../images/iconmonstr-twitter-white-48.png" /></a>
-            <span>Twitter</span>
-          </div>
-          <div class="col-xs-3 social-media-icon">
-            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><img src="../images/iconmonstr-instagram-white-48.png" /></a>
-            <span>Instagram</span>
-          </div>
-          <div class="col-xs-3 social-media-icon">
-            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><img src="../images/iconmonstr-youtube-white-48.png" /></a>
-            <span>YouTube</span>
-          </div>
-        </div>  <!-- social media icons -->
-      </div>   <!-- social media -->
-    </div> <!-- row -->
-    <hr>
-    <p class="copyright">
-      <b>&copy; 2017 Magic of George Diamond </b><br>
-      <b>Site created by <a href="mailto:stefan.tatic@yahoo.com" title="Send an email to stefan.tatic@yahoo.com">Stefan Tatić</a></b>
-    </p>    
-  </div> <!-- footer client container -->
-</div> <!-- footer full -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>

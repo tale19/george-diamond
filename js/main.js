@@ -1,5 +1,12 @@
 function main() {
 
+	// Dynamically add class .active to mark current page in the navbar
+	// var url = window.location;
+ //    $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+ //    $('ul.nav a').filter(function() {
+ //         return this.href == url;
+ //    }).parent().addClass('active');
+
     // Replace all SVG images with inline SVG
 	jQuery('img.svg').each(function(){
 	    var $img = jQuery(this);

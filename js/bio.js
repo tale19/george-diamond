@@ -7,4 +7,4 @@ $slika.each(function() {
 	console.log($visina);
 }); 
 
-$('body').particleground();
+// $('body').particleground();
