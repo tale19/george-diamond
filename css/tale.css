@@ -30,11 +30,12 @@ a:hover {
 
 
 /* *** BOOK NOW BUTTONS *** */
-.navbar a.btn-primary {
+.navbar a.btn-primary.navbar-btn {
 	background-color: darkred;
 	border-color: darkred;
 }
-#book-now-lg {
+#book-now-lg,
+#book-now-lg:hover {
 	color: white; /* overrides Bootstrap default font color for large Book Now button */
 }
 
