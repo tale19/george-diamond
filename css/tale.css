@@ -16,8 +16,51 @@ a:hover {
 	color: darkred;	
 }
 
+/* ***	NAVBAR ELEMENTS  *** */
 
-/* *** HEADER ELEMENTS *** */
+.navbar-brand {
+	/*background-color: #0f0f0f;*/
+	padding: 0;
+}
+
+.navbar-toggle {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+
+/* *** BOOK NOW BUTTONS *** */
+.navbar a.btn-primary {
+	background-color: darkred;
+	border-color: darkred;
+}
+#book-now-lg {
+	color: white; /* overrides Bootstrap default font color for large Book Now button */
+}
+
+/** EXTRA SMALL DEVICES (MOBILES AND TABLETS) */
+@media (max-width: 767px ) {
+	.navbar-brand img {
+		/*max-height: 100%;*/
+		margin-left: 15px;
+	}
+	
+	#book-now-xs {
+		width: 7em;
+		margin: 0 auto;
+		margin-top: 16px;
+		margin-bottom: 16px;	
+	}
+
+	#book-now-xs:hover {
+		color: white;
+		background-color: transparent;
+	}
+}
+
+
+
+/* *** 	HEADER ELEMENTS	 *** */
 #title {
 	position: relative;
 	min-height: 420px;
@@ -299,6 +342,7 @@ a.collapse {
 /* media query EXTRA SMALL display (up to 767px) */
 @media (max-width: 767px) {
 	#header-holder {
+
 	}
 
 	h1, h2 {
