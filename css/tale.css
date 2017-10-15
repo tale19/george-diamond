@@ -9,11 +9,15 @@ html {
 }
 
 body {
-	background: url('../images/background-black.jpg') no-repeat center;
+	/*background: url('../images/background-black.jpg') no-repeat center;*/
+	background: url('../images/background-stars.jpeg') no-repeat center;
 	background-attachment: fixed;
-	padding-top: 70px;
+	padding-top: 67px;
 }
-
+	@media (min-width: 768px) {
+		body {padding-top: 69px;}
+	}
+	/* body padding keeps the page header next to fixed navbar, preventing the background from protruding /**/
 
 a,
 a:hover {
@@ -21,15 +25,24 @@ a:hover {
 	cursor: pointer;
 }
 a:hover {
-	color: darkred;	
+	color: antiquewhite;	
 }
 
-
-
-.nav.navbar-nav > li > a.active {
-	background-color: #080808;
-}
 /* ***	NAVBAR ELEMENTS  *** */
+
+.navbar-inverse {
+	background-color: #001423;
+	/*border-bottom: 1px solid #003E6B;*/
+}
+
+.nav.navbar-nav > li.active > a {
+	background-color: #003E6B;
+}
+	@media (min-width: 768px) {
+		.nav.navbar-nav > li.active > a {
+			border-radius: 5px;
+		}
+	}
 
 .navbar-brand {
 	/*background-color: #0f0f0f;*/
@@ -53,7 +66,10 @@ a:hover {
 	margin-top: 16px;
 	margin-bottom: 16px;
 }
-
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #003E6B;
+}
 
 /* *** BOOK NOW BUTTONS *** */
 .navbar a.btn-primary.navbar-btn {
@@ -93,6 +109,7 @@ a:hover {
 	position: relative;
 	min-height: 420px;
 	margin: 0 auto;
+	border-top: 1px solid white;
 }
 
 #title #header-holder {
@@ -132,7 +149,12 @@ h2 {
 h3 {
 	text-align: center;
 	font-weight: 600;
+	margin-top: 70px;
 	margin-bottom: 1em;
+}
+
+#content {
+	color: #FFF;
 }
 
 #title {
@@ -164,11 +186,10 @@ h3 {
 
 .news-article {
 	position: relative;
-	z-index: 1;
 	padding: 0.5em 1em;
 	margin-bottom: 10px;
-	background-color: #EEE;
 	border-radius: 10px;
+	background-color: rgba(255,255,255,0.1);
 }
 
 .news-date {
@@ -193,14 +214,15 @@ a.collapse {
 /* *** BOOKING BOX (jumbotron) ***/
 #booking-box {
 	position: relative;
-	background-color: #005287;
+	/*background-color: inherit;*/
+	border: 1px solid #001423;
+	background-color: rgba(255,255,255,0.1);
 	color: antiquewhite;
 }
-#jumbotron-title {
-	margin-top: 0;
-}
+
 #booking-box h3 {
 	font-size: 2em;
+	margin-top: 0;
 	text-align: center;
 	margin-bottom: 1em;
 }
@@ -215,6 +237,15 @@ a.collapse {
 }
 #amazing-shows {
 	position: relative;
+}
+#amazing-shows a {
+	color: antiquewhite;
+	background-color: #001423;
+}
+#amazing-shows a:hover {
+	color: #001423;
+	background-color: antiquewhite;
+	border-color: #001423;
 }
 #booking-box ul {
 	position: relative;
@@ -252,8 +283,10 @@ a.collapse {
     padding: 0;
     margin-top: 80px;
     /*background: #0f0f0f url('../images/background-sparkle.jpg') center no-repeat;*/
-    background-color: #0f0f0f;
+    /*background-color: #0f0f0f;*/
+    background-color: #001423;
     color: antiquewhite;
+    border-top: 1px solid white;
 }
 #footer a:hover {
 	color: antiquewhite;
