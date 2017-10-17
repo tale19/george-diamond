@@ -11,6 +11,7 @@ html {
 body {
 	/*background: url('../images/background-black.jpg') no-repeat center;*/
 	background: url('../images/background-stars.jpeg') no-repeat center;
+	/*background-color: gray;*/
 	background-attachment: fixed;
 	padding-top: 67px;
 }
