@@ -29,7 +29,7 @@
   <div class="news-article">
     <h4 class="top-news-headline"><?= $third[0]->title; ?></h4>
     <div class="news-body">
-      <span class="news-date"><?= $third[0]->date;?> - </span>
+      <span class="news-date"><?= $formattedDate;?> - </span>
       <?= $third[0]->content;?>
   </div> <!-- news body -->
   </div> <!-- news article -->

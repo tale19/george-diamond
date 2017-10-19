@@ -1,5 +1,4 @@
 <?php 
-
 /**
 * 
 */
@@ -17,7 +16,7 @@ class QueryBuilder
 	{
 		$statement = $this->pdo->prepare("select * from {$tableName} where id = {$row}");
 		$statement->execute();
-		return $statement->fetchAll(PDO::FETCH_OBJ);
+		return $statement->fetchAll(PDO::FETCH_CLASS, 'News');
 	}
 
 
