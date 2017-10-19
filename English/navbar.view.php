@@ -1,5 +1,4 @@
 <?php 
-  // $active = 'active';
   $urlPortion = ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
   // var_dump($urlPortion);
  ?>

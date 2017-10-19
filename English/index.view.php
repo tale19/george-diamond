@@ -26,7 +26,7 @@
   <span class="helper"></span><img src="../images/news-default.png">
 </div>
 <div id="top-news">
-  <div class="news-article">
+  <div class="top-news-article">
     <h4 class="top-news-headline"><?= $third[0]->title; ?></h4>
     <div class="news-body">
       <span class="news-date"><?= $formattedDate;?> - </span>
@@ -34,7 +34,7 @@
   </div> <!-- news body -->
   </div> <!-- news article -->
   
-  <div class="news-article">
+  <div class="top-news-article">
     <h4 class="top-news-headline">George Diamond in the Superfinals of Serbia's Got Talent TV Show!</h4>
     <div class="news-body">
     <p>
@@ -46,7 +46,7 @@
    </div> <!-- news body -->
   </div> <!-- news article -->
   
-  <div class="news-article">
+  <div class="top-news-article">
     <h4 class="top-news-headline">Another show at Crowne Plaza</h4>
     <div class="news-body">
     <p>

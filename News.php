@@ -18,7 +18,7 @@ class News
 	// $date = new DateTime($originalDateFormat);	
 	public function formatDate()
 	{
-		$date = new DateTime($this->date);
-		return $date->format('jS M Y');
+		$asdf = new DateTime($this->date);
+		return $asdf->format('jS M Y');
 	}
 }

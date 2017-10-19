@@ -10,8 +10,8 @@ html {
 
 body {
 	/*background: url('../images/background-black.jpg') no-repeat center;*/
-	/*background: url('../images/background-stars.jpeg') no-repeat center;*/
-	background-color: gray;
+	background: url('../images/background-stars.jpeg') no-repeat center;
+	/*background-color: gray;*/
 	background-attachment: fixed;
 	padding-top: 67px;
 }
@@ -185,7 +185,7 @@ h3 {
 	margin-bottom: 40px;
 }
 
-.news-article {
+.top-news-article {
 	position: relative;
 	padding: 0.5em 1em;
 	margin-bottom: 10px;
