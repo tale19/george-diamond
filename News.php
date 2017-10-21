@@ -15,10 +15,7 @@ class News
 	// 	$this->content = $content;
 	// }
 
-	// $date = new DateTime($originalDateFormat);	
-
 	// *** GETTERS ***
-
 	public function getId()
 	{
 		return $this->id;
@@ -31,11 +28,18 @@ class News
 	
 	public function getDate()
 	{
-		return new DateTime($this->date);
+		return new DateTime($this->date); // returns DateTime Object right away instead of a string that is then passed to another method to create the DateTime Object. This is also more flexible because we can access this Object from various documents and use it (e.g. just set different format in Serbian index.view.php)
 	}
 
-		public function getContent()
+	public function getContent()
 	{
 		return $this->content;
 	}
+
+
+	// another way is through magic function __get(), but it won't work for date, because it won't return DatTime Object, but a string in MySQL format. Either way, magic method is convenient because it doesn't require to set a method for each property.
+	public function __get($key) {
+		return $this->$key;
+	}
+
 }

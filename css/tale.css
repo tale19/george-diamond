@@ -10,8 +10,8 @@ html {
 
 body {
 	/*background: url('../images/background-black.jpg') no-repeat center;*/
-	background: url('../images/background-stars.jpeg') no-repeat center;
-	/*background-color: gray;*/
+	/*background: url('../images/background-stars.jpeg') no-repeat center;*/
+	background-color: gray;
 	background-attachment: fixed;
 	padding-top: 67px;
 }
@@ -247,6 +247,7 @@ a.collapse {
 .news-preview-image-container img {
 	display: block;
 	margin: 10px auto 0;
+	border-radius: 3px;
 	max-height: 80%;
 	max-width: 100%;
 } 
@@ -325,6 +326,7 @@ a.news-preview-expander:hover {
 
 /* *** BOOKING BOX (jumbotron) ***/
 #booking-box {
+	margin-top: 80px;
 	position: relative;
 	/*background-color: inherit;*/
 	border: 1px solid #001423;
@@ -350,13 +352,13 @@ a.news-preview-expander:hover {
 #amazing-shows {
 	position: relative;
 }
-#amazing-shows a {
-	color: antiquewhite;
+#amazing-shows a:first-child {
+	color: magenta;
 	background-color: #001423;
 }
-#amazing-shows a:hover {
+#amazing-shows a:first-child:hover {
 	color: #001423;
-	background-color: antiquewhite;
+	background-color: magenta;
 	border-color: #001423;
 }
 #booking-box ul {
