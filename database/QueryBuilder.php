@@ -4,7 +4,7 @@
 */
 class QueryBuilder
 {
-	// public $pdo;
+	protected $pdo;
 	// public $tableName;
 	// public $row;
 

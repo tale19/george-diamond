@@ -3,10 +3,10 @@
 
 class News
 {
-	public $id;
-	public $title;
-	public $date;
-	public $content;
+	protected $id;
+	protected $title;
+	protected $date;
+	protected $content;
 	// function __construct($id, $title, $date, $content)
 	// {
 	// 	$this->id = $id;
@@ -16,9 +16,26 @@ class News
 	// }
 
 	// $date = new DateTime($originalDateFormat);	
-	public function formatDate()
+
+	// *** GETTERS ***
+
+	public function getId()
 	{
-		$asdf = new DateTime($this->date);
-		return $asdf->format('jS M Y');
+		return $this->id;
+	}
+	
+	public function getTitle()
+	{
+		return $this->title;
+	}
+	
+	public function getDate()
+	{
+		return new DateTime($this->date);
+	}
+
+		public function getContent()
+	{
+		return $this->content;
 	}
 }
