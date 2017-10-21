@@ -1,7 +1,6 @@
 <?php 
 
 require '../bootstrap.php';
-
 require '../News.php';
 
 $topNews = [
@@ -9,10 +8,7 @@ $topNews = [
 	$query->selectRow('news2', 2, News::class)[0],
 	$query->selectRow('news2', 1, News::class)[0]
 ];
-
-$allNews = $query->selectAll('news2', News::class);
-var_dump($allNews);
-
+// var_dump($topNews);
 
 // $third = $query->selectRow('news2', 3, News::class)[0]; // [0] at the end: $third = $third[0];
 // var_dump($third);

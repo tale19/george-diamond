@@ -9,5 +9,5 @@ require '../Database/QueryBuilder.php';
 // *** since we're using "$pdo" just here, we can inline it: ***
 
 $query = new QueryBuilder(
-	Connection::make()
+	Connection::make($config['database'])
 );
