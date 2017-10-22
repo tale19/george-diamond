@@ -26,22 +26,22 @@ require 'navbar.view.php';
     <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-preview-article">
       <h4 class="news-preview-headline"><?= $news->__get('title'); ?></h4>
       <span class="news-preview-date"><?= $news->getDate()->format('D, jS M Y'); ?></span>
-      <div class="news-preview-content">
-        <?= $news->__get('content'); ?>
-      </div> <!-- .news-preview-content -->
-      <a href="article.php?id=<?=$news->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
-    </article> <!-- news-article -->
-    <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
-      <div class="news-preview-image-container">
-        <img src="../images/news/<?= $news->__get('imgname'); ?>">
-        <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
-      </div>  <!-- news preview image conatainer -->
       <div class="news-share">
         <span>Share this news</span> <span>FB</span>
         <span>Tw</span>
         <span>viber</span>
         <span>wtsapp</span>
       </div>  <!-- news share -->
+      <div class="news-preview-content">
+        <?= $news->__get('content'); ?>
+      </div> <!-- .news-preview-content -->
+      <a href="article.php?id=<?=$news->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
+    </article> <!-- news-article -->
+    <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
+      <div class="news-image-container">
+        <img src="../images/news/<?= $news->__get('imgname'); ?>">
+        <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
+      </div>  <!-- news preview image conatainer -->
     </div>  <!-- .news-preview-misc -->
   </div> <!-- news content, row -->
   <?php endforeach; ?>
@@ -62,6 +62,6 @@ require 'navbar.view.php';
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/news.js"></script>
+<!-- <script type="text/javascript" src="../js/news.js"></script> -->
 </body>
 </html>

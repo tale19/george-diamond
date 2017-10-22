@@ -20,35 +20,33 @@
 
 <div class="container">
 
-  <div class="news-content row">
+  <div class="news-article-box row">
     <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-article">
-      <h4 class="news-headline"><?= $article->__get('title'); ?></h4>
-      <div class="news-body">
+      <div class="news-content">
         <p><span class="news-date"><?= $article->getDate()->format('D, jS M Y'); ?></span></p>
         <?= $article->__get('content'); ?>
       </div> <!-- news body -->
-        <a href="/articles/full-news.php?id=" class="news-preview-expander"><span>Read full article</span></a>
-    </article> <!-- news-article -->
-    <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-misc">
-      <div class="news-preview-image-container">
-        <img src="../images/news/news-dummy-2.webp">
-        <span class="news-preview-image-caption">Caption caption caption</span>
-      </div>
-    </div>
       <div class="news-share">
         <span>Share this news</span> <span>FB</span>
         <span>Tw</span>
         <span>viber</span>
         <span>wtsapp</span>
+      </div> <!-- .news-share -->
+    </article> <!-- news-article -->
+    <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-misc">
+      <div class="news-image-container">
+        <img src="../images/news/news-dummy-2.webp">
+        <span class="news-image-caption">Caption caption caption</span>
       </div>
     </div>
-  </div> <!-- news content, row -->
+  </div>  <!-- .news-content.row -->
+</div> <!-- .container -->
 
 
 
 <div style="bottom:0; margin-top:50px; text-align: center; background-color: red;">Comment box</div>
 
-</div> <!-- container-fluid -->
+</div> <!-- #content -->
 
 
   

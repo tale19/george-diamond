@@ -7,7 +7,7 @@ $topNews = [
 	$query->selectDescending('news2', News::class)[0],
 	$query->selectDescending('news2', News::class)[1],
 	// $query->selectDescending('news2', News::class)[2]
-	$query->selectRow('news2', 5, News::class)[0],
+	$query->selectRow('news2', 3, News::class)[0],
 ];
 // var_dump($topNews);
 
