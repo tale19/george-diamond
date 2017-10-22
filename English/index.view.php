@@ -46,24 +46,29 @@
 </div>  <!-- jumbotron container -->
 
 <h3>Latest news</h3>
-<div class="container">
-<div id="top-news-image-container" class="hidden-xs">
-  <span class="helper"></span><img src="../images/news-default.png">
-</div>
-<div id="top-news">
 
-<?php foreach ($topNews as $topNewsPreview) : ?>
-  <article class="top-news-article">
-    <h4 class="top-news-headline"><?= $topNewsPreview->__get('title'); ?></h4> <!-- "ordinary" getter is also valid: $topNewsPreview->getId(); -->
-    <span class="top-news-date"><?=$topNewsPreview->getDate()->format('jS M Y');?></span>
-    <div class="top-news-content">
-      <?= $topNewsPreview->getContent();?>
-    </div> <!-- .top-news-content -->
-    <a href="article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
-  </article> <!-- top-news-article -->
-<?php endforeach; ?>
-    
-</div> <!-- #top-news -->
+<div class="container">
+
+  <div id="top-news-image-container" class="hidden-xs">
+    <span class="helper"></span><img src="../images/news-default.png">
+  </div>
+
+
+  <div id="top-news">
+
+  <?php foreach ($topNews as $topNewsPreview) : ?>
+    <article class="top-news-article">
+      <h4 class="top-news-headline"><?= $topNewsPreview->__get('title'); ?></h4> <!-- "ordinary" getter is also valid: $topNewsPreview->getId(); -->
+      <span class="top-news-date"><?=$topNewsPreview->getDate()->format('jS M Y');?></span>
+      <div class="top-news-content">
+        <?= $topNewsPreview->getContent();?>
+      </div> <!-- .top-news-content -->
+      <a href="article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
+    </article> <!-- top-news-article -->
+  <?php endforeach; ?>
+      
+  </div> <!-- #top-news -->
+
 </div> <!-- .container -->
 
 </div> <!-- #content -->

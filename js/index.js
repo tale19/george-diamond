@@ -43,8 +43,8 @@ function main() {
 	// Dynamically define container height and set overflow when a news article is expanded
 	console.log($('#top-news'));
 	console.log(document.getElementById('top-news'));
-	document.getElementById('top-news').style.height = document.getElementById('top-news').scrollHeight + "px";
-	document.getElementById('top-news').style.overflow = "auto";
+	// document.getElementById('top-news').style.height = document.getElementById('top-news').scrollHeight + "px";
+	// document.getElementById('top-news').style.overflow = "auto";
 	document.getElementById('top-news-image-container').style.height = document.getElementById('top-news').scrollHeight + "px";
 
 
@@ -67,4 +67,4 @@ function main() {
 
 }
 
-$(document).ready(main());
+$(document).ready(main);

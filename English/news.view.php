@@ -31,7 +31,7 @@ require 'navbar.view.php';
       </div> <!-- .news-preview-content -->
       <a href="article.php?id=<?=$news->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
     </article> <!-- news-article -->
-    <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-misc">
+    <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
       <div class="news-preview-image-container">
         <img src="../images/news/<?= $news->__get('imgname'); ?>">
         <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
@@ -42,7 +42,7 @@ require 'navbar.view.php';
         <span>viber</span>
         <span>wtsapp</span>
       </div>  <!-- news share -->
-    </div>  <!-- news misc -->
+    </div>  <!-- .news-preview-misc -->
   </div> <!-- news content, row -->
   <?php endforeach; ?>
 
@@ -62,5 +62,6 @@ require 'navbar.view.php';
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/news.js"></script>
 </body>
 </html>
