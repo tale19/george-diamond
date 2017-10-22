@@ -7,6 +7,8 @@ class News
 	protected $title;
 	protected $date;
 	protected $content;
+	protected $imgname;
+	protected $caption;
 	// function __construct($id, $title, $date, $content)
 	// {
 	// 	$this->id = $id;
@@ -34,6 +36,16 @@ class News
 	public function getContent()
 	{
 		return $this->content;
+	}
+
+	public function getImgName()
+	{
+		return $this->imgname;
+	}
+
+	public function getCaption()
+	{
+		return $this->caption;
 	}
 
 

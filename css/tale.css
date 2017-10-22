@@ -10,10 +10,11 @@ html {
 
 body {
 	/*background: url('../images/background-black.jpg') no-repeat center;*/
-	/*background: url('../images/background-stars.jpeg') no-repeat center;*/
-	background-color: gray;
+	background: url('../images/background-stars.jpeg') no-repeat center;
+	/*background-color: gray;*/
 	background-attachment: fixed;
 	padding-top: 67px;
+	color: #CCC;
 }
 	@media (min-width: 768px) {
 		body {padding-top: 69px;}
@@ -45,8 +46,10 @@ a:hover {
 		}
 	}
 
-.navbar-brand {
+.navbar > .container > .navbar-header > .navbar-brand {
 	/*background-color: #0f0f0f;*/
+	width: 70px;
+	/*border: 1px solid lime;*/
 	padding: 0;
 	margin-left: 15px;
 	margin-right: 10px;
@@ -175,71 +178,139 @@ h3 {
 	width: 60%;
 	margin-top: 2em;
 	font-family: 'Satisfy', cursive;
+	/*color: antiquewhite;*/
 }
+
+
+
 
 /* *** NEWS ELEMENTS *** */
+.top-news-date,	
+.news-preview-date {
+	color: #ED9911;
+	font-style: italic;
+}
+
+.top-news-article,
+.news-preview-box {
+	position: relative;
+	padding: 0.5em 1em;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.1);
+}
+
+.news-preview-expander {
+	text-align: center;
+	background-color: #001423;
+	/*box-shadow: 20px -20px 110px 5px rgba(0,20,35,.9);*/
+	border-radius: 5px;
+}
+.news-preview-expander span {
+	display: block;
+	font-style: italic;
+	font-weight: 600;
+	margin-top: 4px;
+	color: white;
+}
+a.news-preview-expander:hover {
+	background-color: darkred;
+}
+
 
 	/* *** HOMEPAGE TOP 3 NEWS *** */
-.news-preview-expander {
-	position: absolute;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background-color: #001423;
-	box-shadow: 20px -20px 110px 5px rgba(0,20,35,.9);
-	height: 2em;
-	text-align: center;
+.container { 
+border: 1px solid red;
 }
 #top-news {
-	/*border: 2px solid lime;*/
-	/*bottom: 0;*/
 	position: relative;
 	margin-bottom: 40px;
 }
 
-.top-news-article {
-	position: relative;
-	padding: 0.5em 1em;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	background-color: rgba(255,255,255,0.1);
+#top-news .news-preview-expander {
+	display: block;
+	width: 10em;
+	padding: 2px 5px;
+	margin: 0 auto;
+	margin-top: 15px;
+	bottom: 0;
 }
 
-.news-date {
-	color: #ED9911;
-	font-style: italic;
+
+
+
+@media (min-width: 768px) {
+	#top-news-image-container {
+		width: 40%;
+		/* height needs to be set as an exact value via js */
+		float: left;
+		padding-right: 15px;
+	    /*white-space: nowrap;*/
+    	/*text-align: center; */
+    	/*margin: 1em 0;*/
+	}
+	.helper {
+	    display: inline-block;
+	    height: 100%;
+	    vertical-align: middle;
+	}
+	#top-news-image-container img {
+    	vertical-align: middle;
+    	max-width: 100%;
+    	max-height: 100%;
+	}
+
+	#top-news {
+		width: 60%;
+		float: right;
+		/*height: 210px;*/
+		/*top: 40px;*/
+	}
+}
+@media (min-width: 992px) {
+	#top-news-image-container img {
+    	max-width: 75%;
+    	max-height: 75%;
+	}
+}
+@media (min-width: 1200px) {
+	#top-news-image-container img {
+    	max-width: 95%;
+    	max-height: 95%;
+	}
+}
+
+
+
+.top-news-content {
+	height: 120px;
+	overflow: hidden;
+
 }
 
 .clear {
 	clear: both;
 }
-a.expand {
-	display: block;
-}
 
-a.collapse {
-	display: block;
-	z-index: 99999;
-}
 
 	/* *** NEWS PREVIEW (PAGINATOR) *** */
 
-.news-content {
+.news-preview-box {
+	/*border: 2px solid magenta;*/
 	/*position: relative;*/
+	position: relative;
 	margin-bottom: 60px;
 	height: 250px;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 
 .news-misc,
-.news-article {
-	/*border: 2px solid green;*/
+.news-preview-article {
+	/*border: 1px solid green;*/
 	height: 100%;
 }
-.news.article {
-	border-left: 1px solid yellow;
+article.news-preview-article {
+	
 }
 .news-preview-image-container {
 	height: 85%;
@@ -268,29 +339,31 @@ a.collapse {
 	max-height: 15%;
 	/*margin-bottom: 10px;*/
 }
-.news-body {
+.news-preview-content {
 	position: relative;
+	max-height: 85%;
+	overflow: hidden;
+	padding-bottom: 30px;
+	/*text-overflow: ellipsis;*/
 }
-
-.news-preview-expander span {
-	display: block;
-	font-style: italic;
-	font-weight: 600;
-	margin-top: 4px;
-	color: white;
+.news-preview-box .news-preview-expander {
 	/*position: absolute;*/
-}
-a.news-preview-expander:hover {
-	background-color: darkred;
+	display: block;
+	bottom: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2em;
+	width: 11em;
+	text-align: center;
 }
 @media (max-width: 767px) {
-	.news-content {
-		margin-top: 40px;
+	.news-preview-box {
+		margin: 50px 10px;
 		height: unset;
 		overflow-y: unset;
 	}
 	.news-misc,
-	.news-article {
+	.news-preview-article {
 		height: auto;
 	}
 	.news-misc {
@@ -302,26 +375,23 @@ a.news-preview-expander:hover {
 	}
 	.news-preview-image-container img {
 		display: block;
-		margin: 10px auto 0;
-		width: auto;
-		/*height: auto;*/
 		max-height: 250px;
-		/*max-width: 100%;*/
 	} 
 	.news-share {
 		position: relative;
 		margin-top: 20px;
 	}
-	.news-article {
-		max-height: 250px;
-		margin-bottom: 25px;
+	.news-preview-article {
+		height: 200px;
+		margin-bottom: 15px;
 		overflow: hidden;
-	}
-	.news-body p {
-		/*text-overflow: ellipsis;*/
-		
+		/*background-color: yellow;*/
 	}
 }
+
+
+
+
 
 
 /* *** BOOKING BOX (jumbotron) ***/
@@ -530,10 +600,6 @@ a.news-preview-expander:hover {
 		font-size: 1.2em;
 	}
 
-	#top-news {
-		width: 100%;
-	}
-
 	#booking-box p {
 		font-size: 1.25em;
 	}
@@ -608,33 +674,6 @@ a.news-preview-expander:hover {
 		font-size: 1.4em;
 	}
 	
-	#top-news-image {
-		width: 40%;
-		/* height needs to be set as an exact value via js */
-		float: left;
-		padding-right: 15px;
-	    /*white-space: nowrap;*/
-    	/*text-align: center; */
-    	/*margin: 1em 0;*/
-	}
-	.helper {
-	    display: inline-block;
-	    height: 100%;
-	    vertical-align: middle;
-	}
-	#top-news-image img {
-    	vertical-align: middle;
-    	max-width: 100%;
-    	max-height: 100%;
-	}
-
-	#top-news {
-		width: 60%;
-		float: right;
-		/*height: 210px;*/
-		/*top: 40px;*/
-	}
-	
 	#booking-box img {
 		max-height: 249px;
 		max-width: 244px;
@@ -659,11 +698,6 @@ a.news-preview-expander:hover {
 
 	#about-george {
 		font-size: 1.65em;
-	}
-
-	#top-news-image img {
-    	max-width: 75%;
-    	max-height: 75%;
 	}
 }
 

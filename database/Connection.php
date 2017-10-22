@@ -1,6 +1,7 @@
 <?php 
 
-	require '../config.php';
+require '../config.php';
+
 class Connection
 {
 	public static function make($configDB)

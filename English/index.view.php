@@ -47,38 +47,26 @@
 
 <h3>Latest news</h3>
 <div class="container">
-<div id="top-news-image" class="hidden-xs">
+<div id="top-news-image-container" class="hidden-xs">
   <span class="helper"></span><img src="../images/news-default.png">
 </div>
 <div id="top-news">
-  <div class="top-news-article">
-    <h4 class="top-news-headline"><?= $topNews[0]->__get('title'); ?></h4> <!-- instead of magic method, "ordinary" getter method is also valid: $third->getId(); -->
-    <div class="news-body">
-      <span class="news-date"><?=$topNews[0]->getDate()->format('jS M Y');?></span>
-      <?= $topNews[0]->getContent();?>
-      </div> <!-- news body -->
-  </div> <!-- news article -->
-  
-  <div class="top-news-article">
-    <h4 class="top-news-headline"><?= $topNews[1]->__get('title'); ?></h4> <!-- instead of magic method, "ordinary" getter method is also valid: $third->getId(); -->
-    <div class="news-body">
-      <span class="news-date"><?=$topNews[1]->getDate()->format('jS M Y');?></span>
-      <?= $topNews[1]->getContent();?>
-      </div> <!-- news body -->
-  </div> <!-- news article -->
-  
-  <div class="top-news-article">
-    <h4 class="top-news-headline"><?= $topNews[2]->__get('title'); ?></h4> <!-- instead of magic method, "ordinary" getter method is also valid: $third->getId(); -->
-    <div class="news-body">
-      <span class="news-date"><?=$topNews[2]->getDate()->format('jS M Y');?></span>
-      <?= $topNews[2]->getContent();?>
-      </div> <!-- news body -->
-  </div> <!-- news article -->
-  
-</div> <!-- top news -->
-</div> <!-- top news container -->
 
-</div> <!-- content -->
+<?php foreach ($topNews as $topNewsPreview) : ?>
+  <article class="top-news-article">
+    <h4 class="top-news-headline"><?= $topNewsPreview->__get('title'); ?></h4> <!-- "ordinary" getter is also valid: $topNewsPreview->getId(); -->
+    <span class="top-news-date"><?=$topNewsPreview->getDate()->format('jS M Y');?></span>
+    <div class="top-news-content">
+      <?= $topNewsPreview->getContent();?>
+    </div> <!-- .top-news-content -->
+    <a href="article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
+  </article> <!-- top-news-article -->
+<?php endforeach; ?>
+    
+</div> <!-- #top-news -->
+</div> <!-- .container -->
+
+</div> <!-- #content -->
 
 <?php require 'footer.view.php'; ?>
 
