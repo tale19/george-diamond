@@ -203,7 +203,7 @@ h3 {
 
 .news-preview-expander {
 	display: block;
-	width: 10em;
+	width: 9em;
 	padding: 7px 5px;
 	margin: 0 auto;
 	margin-top: 15px;
@@ -218,9 +218,7 @@ h3 {
 	font-style: italic;
 	font-weight: 600;
 }
-a.news-preview-expander:hover {
-	background-color: darkred;
-}
+
 
 @media (max-width: 767px) {
 	.news-preview-expander {
@@ -306,7 +304,7 @@ a.news-preview-expander:hover {
 	margin-top: 10px;
 	/*position: relative;*/
 	height: 150px;
-	overflow-y: hidden;
+	overflow: hidden;
 	/*padding-bottom: 30px;*/
 }
 
@@ -318,18 +316,21 @@ a.news-preview-expander:hover {
 .news-image-container img {
 	display: block;
 	margin: 10px auto 0;
-	border-radius: 3px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	max-height: 80%;
 	max-width: 100%;
 } 
 .news-preview-image-caption,
 .news-image-caption {
 	display: block;
-	max-height: 20%;
 	overflow-y: hidden;
-	/*background-color: #9b9b9b;*/
+	padding: 0.5em 1em;
 	text-align: center;
 	font-style: italic;
+	background-color: rgba(155,155,155,.5);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 .news-share {
 	/*border: 1px solid yellow;*/
@@ -342,6 +343,10 @@ a.news-preview-expander:hover {
 	margin-bottom: 15px;
 }
 @media (max-width: 767px) {
+	h4 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
 
 	.news-preview-box {
 		height: 350px;
@@ -358,8 +363,12 @@ a.news-preview-expander:hover {
 	}
 
 	.news-image-container {
-		/*height: 150px;*/
-		margin-top: 50px;
+		display: block;
+		margin: 10px auto 20px;
+		max-width: 80%;
+	} 
+	.news-image-container img {
+		width: 100%;
 	}
 }
 

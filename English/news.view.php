@@ -32,13 +32,17 @@ require 'navbar.view.php';
         <span>viber</span>
         <span>wtsapp</span>
       </div>  <!-- news share -->
+      <div class="news-image-container visible-xs">
+        <img src="../images/news/<?= $news->__get('imgname'); ?>">
+        <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
+      </div>  <!-- news preview image conatainer -->
       <div class="news-preview-content">
         <?= $news->__get('content'); ?>
       </div> <!-- .news-preview-content -->
-      <a href="article.php?id=<?=$news->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
+      <a href="article.php?id=<?=$news->__get('id'); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
     </article> <!-- news-article -->
     <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
-      <div class="news-image-container">
+      <div class="news-image-container hidden-xs">
         <img src="../images/news/<?= $news->__get('imgname'); ?>">
         <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
       </div>  <!-- news preview image conatainer -->

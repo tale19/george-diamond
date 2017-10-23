@@ -63,7 +63,7 @@
       <div class="top-news-content">
         <?= $topNewsPreview->getContent();?>
       </div> <!-- .top-news-content -->
-      <a href="article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander"><span>Read full article</span></a>
+      <a href="article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
     </article> <!-- top-news-article -->
   <?php endforeach; ?>
       
