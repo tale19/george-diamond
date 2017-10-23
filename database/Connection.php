@@ -1,7 +1,5 @@
 <?php 
 
-require '../config.php';
-
 class Connection
 {
 	public static function make($configDB)
@@ -12,7 +10,7 @@ class Connection
 				$configDB['RDBMS'] . ':host = ' . $configDB['host'] . '; dbname=' . $configDB['dbname'], 
 				$configDB['username'], 
 				$configDB['password'], 
-				$configDB['options'][0]
+				$configDB['options']
 				);
 		} catch (PDOException $exc) {
 			die($exc->getMessage());
