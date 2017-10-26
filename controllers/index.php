@@ -1,7 +1,5 @@
 <?php 
 
-require '../bootstrap.php';
-require '../News.php';
 
 $topNews = [
 	$query->selectDescending('news2', News::class)[0],
@@ -23,6 +21,4 @@ $topNews = [
 
 // var_dump($date);
 
-require 'index.view.php';
-
-
+require '/views/en/index.view.php';

@@ -1,7 +1,7 @@
 <?php 
 $config = require 'config.php';
-require '../database/Connection.php';
-require '../Database/QueryBuilder.php';
+require 'core/database/Connection.php';
+require 'core/Database/QueryBuilder.php';
 
 // $pdo = Connection::make();
 // $query = new QueryBuilder($pdo);
