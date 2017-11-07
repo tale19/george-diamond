@@ -1,6 +1,7 @@
 <?php 
 
 return [
+	'url' => 'http://localhost/george-diamond/',
 	'database' => [
 		'RDBMS' => 'mysql',
 		'host' => '127.0.0.1',

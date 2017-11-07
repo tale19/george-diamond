@@ -1,5 +1,3 @@
 <?php 
-require 'bio.view.php';
-
-
+require 'views/en/bio.view.php';
  ?>

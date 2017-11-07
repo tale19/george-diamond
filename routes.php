@@ -1,9 +1,12 @@
 <?php 
 
 $router->define([
-	'index' => 'controllers/index.php',
-	'' => 'controllers/index.php',
-	'about' => 'controllers/about.php',
-	'about/culture' => 'controllers/about-culture.php',
-	'contact' => 'controllers/contact.php'
+	'' => 'controllers/en/index.php',
+	'home' => 'controllers/en/index.php',
+	'bio' => 'controllers/en/bio.php',
+	'shows' => 'controllers/en/shows.php',
+	'news' => 'controllers/en/news.php',
+	// 'article.php?id=' . $allNews->getId() => 'controllers/en/bio.php',
+	'photos' => 'controllers/en/photos.php',
+	'videos' => 'controllers/en/videos.php'
 ]);

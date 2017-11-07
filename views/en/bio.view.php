@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bio | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../css/tale.css">
-<link rel="stylesheet" type="text/css" href="../css/bio.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/tale.css">
+<link rel="stylesheet" type="text/css" href="css/bio.css">
 <!-- <link rel="stylesheet" type="text/css" href="../css/navbar.css"> -->
 
 
@@ -16,15 +16,15 @@
 
 <body>
 <?php 
-  require 'navbar.view.php';
-  require 'page-header.view.php';
+  require 'partials/navbar.view.php';
+  require 'partials/page-header.view.php';
 ?>
 
 <div id="content">
 
 <h3>About George Diamond</h3>
 <div id="about-george-diamond" class="container">
-  <img src="../images/bio-poster.webp" class="img-responsive">
+  <img src="images/bio-poster.webp" class="img-responsive">
   <p>George's interest in magic came at very young age - when he was only 5 years old. He started practicing magic, being tutored by some of the former Yugoslavia's leading magicians, and he came up with his first professional stage act when he was only 15.</p>
   <p>In his vast international career, he has been performing in many countries around the world - on cruise ships, variety theaters, production shows, cabaret, circus, theme parks, as well as in many international festivals and corporate events. Venues he has performed at range from state of Art theaters on a cruise ships, casinos and resorts, smaller, more intimate places, such as restaurants and hotels to shopping malls, various companies' headquarters and embassies.</p>
   <p>Besides performing illusions and stage magic, he offers two very special acts that have brought him numerous bookings worldwide. His Quickchange Act featuring beautiful and very visual quick costume changes as well as his solo Chinese Mask Change act - amazing, visual, and, in the western countries - still a very rare form of Chinese traditional magical artistry.</p>
@@ -146,13 +146,13 @@
 </div> <!-- content -->
 
 <?php 
-  require 'footer.view.php';
+  require 'partials/footer.view.php';
  ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/bio.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/bio.js"></script>
 <!-- <script type="text/javascript" src="../js/jquery.particleground.js"></script> -->
 </body>
 </html>

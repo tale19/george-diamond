@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $article->__get('title'); ?></title>
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../css/tale.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/tale.css">
 </head>
 <body>
 <?php 
@@ -35,7 +35,7 @@
     </article> <!-- news-article -->
     <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-misc">
       <div class="news-image-container">
-        <img src="../images/news/news-dummy-2.webp">
+        <img src="images/news/news-dummy-2.webp">
         <span class="news-image-caption">Caption caption caption</span>
       </div>
     </div>
@@ -55,7 +55,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

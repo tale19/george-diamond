@@ -1,13 +1,15 @@
 <?php 
 
+
+$uri = ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
 require 'core/bootstrap.php';
-require 'core/Router.php';
 $router = new Router;
+
 require 'routes.php';
+// die(var_dump($_SERVER['REQUEST_URI']));
+// die(var_dump($uri));
 
+require $router->direct($uri);
 
-
-
-require 'model/News.php';
-require 'controllers/en/index.php';
+// require 'controllers/en/index.php';
 

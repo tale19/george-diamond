@@ -1,20 +1,27 @@
 <?php  
 
-
 /**
 * 
 */
 class Router
 {
 	
-	// function __construct(argument)
-	// {
-	// 	# code...
-	// }
+	protected $routes = [];
 
-	public function define()
+	public function define($routes)
 	{
-		# code...
+		$this->routes = $routes;
+	}
+
+	public function direct($uri)
+	{
+		if(array_key_exists($uri, $this->routes)) 
+		{
+			return $this->routes[$uri];
+		}
+
+		throw new Exception("No path for this URI");
+		
 	}
 
 

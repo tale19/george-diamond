@@ -6,17 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-
-<link rel="stylesheet" type="text/css" href="../css/tale.css">
-<link rel="stylesheet" type="text/css" href="../css/navbar.css">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/navbar.css">
 
 </head>
 
 <body>
 <?php 
-  require 'navbar.view.php';
-  require 'page-header.view.php';
+  require 'views/en/partials/navbar.view.php';
+  require 'views/en/partials/page-header.view.php';
  ?>
 
 <div id="content">
@@ -40,7 +39,7 @@
       </ul>
       <a href="#" type="button" class="btn btn-default">Find out more</a>
       <a href="#" type="button" class="btn btn-default btn-primary">Book your show!</a>
-      <img src="../images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
+      <img src="images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
     </div>
   </div>  <!-- jumbotron -->
 </div>  <!-- jumbotron container -->
@@ -50,7 +49,7 @@
 <div class="container">
 
   <div id="top-news-image-container" class="hidden-xs">
-    <span class="helper"></span><img src="../images/news-default.png">
+    <span class="helper"></span><img src="images/news-default.png">
   </div>
 
 
@@ -63,7 +62,7 @@
       <div class="top-news-content">
         <?= $topNewsPreview->getContent();?>
       </div> <!-- .top-news-content -->
-      <a href="article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
+      <a href="<?=$config['url']?>article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
     </article> <!-- top-news-article -->
   <?php endforeach; ?>
       
@@ -73,7 +72,7 @@
 
 </div> <!-- #content -->
 
-<?php require 'footer.view.php'; ?>
+<?php require 'views/en/partials/footer.view.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>

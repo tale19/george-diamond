@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>News | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../css/tale.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/tale.css">
 </head>
 
 <body>
 <?php 
-require 'page-header.view.php';
-require 'navbar.view.php'; 
+require 'views/en/partials/navbar.view.php'; 
+require 'views/en/partials/page-header.view.php';
 ?>
 
 <div id="content">
@@ -33,17 +33,17 @@ require 'navbar.view.php';
         <span>wtsapp</span>
       </div>  <!-- news share -->
       <div class="news-image-container visible-xs">
-        <img src="../images/news/<?= $news->__get('imgname'); ?>">
+        <img src="images/news/<?= $news->__get('imgname'); ?>">
         <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
       </div>  <!-- news preview image conatainer -->
       <div class="news-preview-content">
         <?= $news->__get('content'); ?>
       </div> <!-- .news-preview-content -->
-      <a href="article.php?id=<?=$news->__get('id'); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
+      <a href="article.php?id=<?=$news->getId(); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
     </article> <!-- news-article -->
     <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
       <div class="news-image-container hidden-xs">
-        <img src="../images/news/<?= $news->__get('imgname'); ?>">
+        <img src="images/news/<?= $news->__get('imgname'); ?>">
         <span class="news-preview-image-caption"><?= $news->__get('caption'); ?></span>
       </div>  <!-- news preview image conatainer -->
     </div>  <!-- .news-preview-misc -->
@@ -60,12 +60,12 @@ require 'navbar.view.php';
 
   
 
-<?php require 'footer.view.php'; ?>
+<?php require 'views/en/partials/footer.view.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <!-- <script type="text/javascript" src="../js/news.js"></script> -->
 </body>
 </html>

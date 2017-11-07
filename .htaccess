@@ -1,12 +1,6 @@
-# Allows mod_rewrite to work
-Options FollowSymLinks
-
-# Turn on Rewrite Engine
-RewriteEngine On
-RewriteBase /
-
-# Redirect all requests to index.php
+# Allows mod_rewrite to work 
+Options +SymLinksIfOwnerMatch 
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . index.php

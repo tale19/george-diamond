@@ -1,9 +1,7 @@
 <?php 
-
-
-require '../bootstrap.php';
-require '../News.php';
+// die(var_dump(strrchr($_SERVER['REQUEST_URI'], 'article/')));
+// var_dump($router);
 $article = $query->selectRow('news2', $_GET['id'], News::class)[0];
 
-require 'article.view.php';
+require 'views/en/article.view.php';
 
