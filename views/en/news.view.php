@@ -13,7 +13,6 @@
 <body>
 <?php 
 require 'views/en/partials/navbar.view.php'; 
-require 'views/en/partials/page-header.view.php';
 ?>
 
 <div id="content">

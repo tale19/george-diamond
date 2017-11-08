@@ -18,6 +18,7 @@
   require 'views/en/partials/page-header.view.php';
  ?>
 
+
 <div id="content">
 
 <div class="container">
