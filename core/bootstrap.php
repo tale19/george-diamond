@@ -1,9 +1,9 @@
 <?php 
 $config = require 'config.php';
-require 'model/News.php';
 require 'core/database/Connection.php';
 require 'core/Database/QueryBuilder.php';
 require 'core/Router.php';
+require 'models/News.php';
 
 // $pdo = Connection::make();
 // $query = new QueryBuilder($pdo);
