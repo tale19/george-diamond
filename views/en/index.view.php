@@ -17,7 +17,17 @@
   require 'views/en/partials/navbar.view.php';
   require 'views/en/partials/page-header.view.php';
  ?>
-
+<div id="intro">
+  <h3>WHO IS GEORGE DIAMOND?</h3>
+</div>
+<!-- <div class="separator">
+  <img src="images/row-separator.png">
+</div> -->
+<section class="container-fluid">
+  <div class="container">
+    <span>George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.</span>
+  </div>
+</section>
 
 <div id="content">
 

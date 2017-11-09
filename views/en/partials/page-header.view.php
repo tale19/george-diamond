@@ -1,4 +1,4 @@
-<div id="title" class="page-header container-fluid">
+<div id="title" class="page-header">
   <div class="container">
     <div id="header-holder">
       <h1>Magic of George Diamond</h1>
