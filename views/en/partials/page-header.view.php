@@ -8,6 +8,8 @@
     <div id="superfinalist">
       <div class="image-holder">
         <img src="images/talenat-logo.png">  
+        <!-- <img src="images/talenat-logo.jpg">   -->
+        <!-- <img src="images/talenat-george.webp">   -->
       </div>
       <span>Serbia's Got Talent &trade; 2017 superfinalist</span>
     </div> <!-- #superfinalist -->

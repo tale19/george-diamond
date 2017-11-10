@@ -13,6 +13,7 @@ body {
 	/*background: url('../images/background-stars.jpeg') no-repeat center;*/
 	/*background: url('../images/background-dark-stars.jpeg') no-repeat center;*/
 	/*background-color: magenta;*/
+	/*font-family: 'Roboto', sans-serif;*/
 	background-attachment: fixed;
 	padding-top: 67px;
 	color: #CCC;
@@ -239,7 +240,7 @@ h3 {
 	}
 
 	#superfinalist {
-		width: 60%;
+		width: 40%;
 		margin-top: 130px;
 		font-size: 1.4em;
 	}
@@ -257,7 +258,7 @@ h3 {
 	}
 
 	#superfinalist {
-		width: 50%;
+		width: 40%;
 		margin-top: 100px;
 		font-size: 1.65em;
 	}
@@ -279,23 +280,27 @@ h3 {
 		font-size: 1.8em;
 	}
 }
+
+/* *** INTRO SECTION (ABOUT GEROGE) *** */
+
 #intro {
 	display: table;
 	margin-top: 120px;
 	z-index: 1;
-	height: 80px;
+	height: 160px;
 	width: 100%;
-	background-color: #337ab7;
+	/*background-color: #337ab7;*/
+	background-color: rgb(255,55,5);
 	/*background-color: #ccc;*/
 	color: white;
 }
 #intro h3 {
 	display: table-cell;
 	vertical-align: middle;
-	font-size: 2.7em;
+	font-size: 3.7em;
 }
+/*
 .separator {
-	/*border: 1px solid magenta;*/
 	z-index: -1;
 	position: relative;
 	width: 250px;
@@ -307,9 +312,8 @@ h3 {
 	position: absolute;
 	display: block;
 	width: 100%;
-	/*bottom: -5px;*/
 }
-
+*/
 #intro ~ section {
 	position: relative;
 	display: table;
@@ -331,7 +335,8 @@ h3 {
 	font-family: 'Satisfy', cursive;
 	font-size: 1.7em;
 	text-align: justify;
-	color: #337ab7;
+	/*color: #337ab7;*/
+	color: rgb(255,55,5);
 }
 #intro ~ section ::before { /* enables background opacity without affecting the other elements */
 	content: '';
@@ -345,6 +350,59 @@ h3 {
 	/*background: #16181c url('../images/bio-young.png') no-repeat right;*/
 	background: #16181c url('../images/background-dots.jpg') no-repeat right;
 	background-attachment: fixed;
+}
+
+
+/* *** NUMBERS SECTION *** */
+
+#numbers {
+	/*position: relative;*/
+	/*min-height: 450px;*/
+	color: rgba(208, 48, 108, 1);
+	background-color: rgba(25,25,25,1);
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+
+#numbers .number,
+#numbers .text {
+	/*border: 1px solid yellow;*/
+	/*width: 100%;*/
+	text-align: center;
+	font-weight: 600;
+}
+
+#numbers div[class*='col-'] {
+	/*border: 1px solid magenta;*/
+	margin: 100px auto;
+}
+#numbers .number {
+	font-size: 3rem;
+}
+#numbers div[class*='col-']:nth-child(1) div {
+	color: rgb(6,100,138);
+}
+#numbers div[class*='col-']:nth-child(2) div {
+	color: rgb(255,200,5);
+}
+#numbers div[class*='col-']:nth-child(3) div {
+	color: rgb(48,208,28);
+}
+
+#numbers .text {
+	color: white;
+}
+
+#numbers .image {
+	margin-top: 25px;
+	height: 120px;
+}
+#numbers .image img {
+	display: block;
+	/*width: 80%;*/	
+	height: 100%;
+	margin: 0 auto;
 }
 
 
