@@ -5,10 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Satisfy|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Roboto|Satisfy" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/navbar.css">
 
 </head>
 
@@ -20,6 +19,7 @@
 <div id="intro">
   <h3>WHO IS GEORGE DIAMOND?</h3>
 </div>
+  <!-- <hr> -->
 <!-- <div class="separator">
   <img src="images/row-separator.png">
 </div> -->
@@ -31,25 +31,25 @@
 
 <div class="container-fluid">
   <div id="numbers" class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div class="number">Five</div>
-      <div class="text">continents toured</div>
-      <div class="image"><img src="images/world-720.png"></div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="number">Eight</div>
-      <div class="text">forms of act to suit your needs</div>
+      <div class="text">types of act to suit your needs</div>
       <div class="image"><img src="images/magician-yellow.png"></div>
     </div>
-<!--     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="number">1000+</div>
-      <div class="text">shows</div>
-      <div class="image"><img src="images/world-720.png"></div>
-    </div> -->
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="number">Dozens</div>
+      <div class="text">of countries toured</div>
+      <div class="image"><img src="images/cruiser.png"></div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="number">Hundreds</div>
-      <div class="text">of successsful performances</div>
-      <div class="image"><img src="images/magician-bow-green.png"></div>
+      <div class="text">of international shows</div>
+      <div class="image"><img src="images/world-720.png"></div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="number">Thousands</div>
+      <div class="text">of satisfied clients</div>
+      <div class="image"><img src="images/magician-bow-orange.png"></div>
     </div>
   </div>
 </div>

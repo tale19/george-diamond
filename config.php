@@ -1,7 +1,7 @@
 <?php 
 
 return [
-	'url' => 'http://localhost/george-diamond/',
+	'url' => 'http://george-diamond.tale/',
 	'database' => [
 		'RDBMS' => 'mysql',
 		'host' => '127.0.0.1',

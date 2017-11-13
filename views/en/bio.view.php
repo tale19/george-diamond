@@ -5,11 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bio | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/tale.css">
-<link rel="stylesheet" type="text/css" href="css/bio.css">
-<!-- <link rel="stylesheet" type="text/css" href="../css/navbar.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Roboto|Satisfy" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 
 
 </head>

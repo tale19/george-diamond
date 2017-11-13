@@ -1,4 +1,4 @@
-<div id="title" class="page-header">
+<div id="header" class="page-header">
   <div class="container">
     <div id="header-holder">
       <h1>Magic of George Diamond</h1>
@@ -6,12 +6,8 @@
     </div>
     <img src="images/background.png" alt="Background image" class="img-responsive visible-xs mobile-background">
     <div id="superfinalist">
-      <div class="image-holder">
-        <img src="images/talenat-logo.png">  
-        <!-- <img src="images/talenat-logo.jpg">   -->
-        <!-- <img src="images/talenat-george.webp">   -->
-      </div>
-      <span>Serbia's Got Talent &trade; 2017 superfinalist</span>
+      <span>Serbia's Got Talent<span style="display:inline-block; font-family: sans-serif; font-size: 1em;">&trade;</span> superfinalist</span>
+      <a href="https://youtu.be/DSj25fuuE2o?t=6m8s" target="_blank" class="btn-lg btn-round">Watch on YouTube</a>
     </div> <!-- #superfinalist -->
   </div>  <!--container -->
 </div> <!--page-header -->
