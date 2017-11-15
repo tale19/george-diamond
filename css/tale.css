@@ -510,6 +510,7 @@ h3 {
 #numbers {
 	/*position: relative;*/
 	/*min-height: 450px;*/
+	font-family: 'Boogaloo', cursive;
 	background-color: rgba(25,25,25,1);
 	border-top: 1px solid rgba(0,0,0,.1);
 	border-bottom: 1px solid rgba(0,0,0,.1);
@@ -521,7 +522,7 @@ h3 {
 	/*border: 1px solid yellow;*/
 	/*width: 100%;*/
 	text-align: center;
-	font-weight: 600;
+	/*font-weight: 600;*/
 }
 
 #numbers div[class*='col-'] {
@@ -530,6 +531,10 @@ h3 {
 }
 #numbers .number {
 	font-size: 3rem;
+}
+#numbers .text {
+	font-size: 1em;
+	letter-spacing: 1px;
 }
 #numbers div[class*='col-']:nth-child(1) div {
 	color: rgb(255,200,5);
