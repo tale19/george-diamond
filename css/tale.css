@@ -38,17 +38,34 @@ a:hover {
 
 /* ***	NAVBAR ELEMENTS  *** */
 .navbar-default {
-	background-color: #337AB7;
-	border-bottom: 1px solid #337AB7;
-	 /* Bootstrap default: white */
+	/*background-color: #337AB7;*/
+	border-bottom: 1px solid #337AB7;	 /* Bootstrap default: white */
 	/*box-shadow: 0 5px 15px 1px #337ab7;*/
 }
 
 .nav.navbar-nav > li > a {
-	color: #fff;
+	margin: 20px 15px 0;
+	padding: 5px 0;
+	font-family: 'Passion One';
+	font-size: 1.4em;
+	color: #337AB7;
 }
-.nav.navbar-nav > li.active > a {
-	background-color: #003E6B;
+
+.nav.navbar-nav > li:nth-child(1).active > a {
+	color: rgb(208,48,108);
+	background-color: unset;
+}
+.nav.navbar-nav > li:nth-child(2).active > a {
+	color: rgb(255,200,5);
+	background-color: unset;
+}
+.nav.navbar-nav > li:nth-child(3).active > a {
+	color: rgb(48,208,28);
+	background-color: unset;
+}
+.nav.navbar-nav > li:nth-child(4).active > a {
+	color: rgb(255,55,5);
+	background-color: unset;
 }
 
 .navbar > .container > .navbar-header > .navbar-brand {
@@ -61,12 +78,6 @@ a:hover {
 	margin-top: 16px;
 	margin-bottom: 16px;
 }
-.navbar .navbar-toggle:hover {
-	background-color: #003E6B;
-}
-.navbar .navbar-toggle:focus {
-	background-color: #337ab7;
-}
 
 /* *** BOOK NOW BUTTONS *** */
 #book-now-xs {
@@ -75,19 +86,29 @@ a:hover {
 }
 
 #book-now-lg {
+	margin: 7px 0 0;
+	padding: 15px 10px;
+	/*border-radius: 26px;*/
+	color: #FFF;
+	font-family: unset;
+	font-size: unset;
+	font-weight: 600;
 }
 #book-now-lg:hover {
-	color: #FFF;
-	/*background-color: #449d44;*/
-	/*border-color: #398439;*/
-	border-color: #FFF;
-	/*color: red;*/
+  	color: #337ab7;
+	border: 1px solid #2e6da4;
 }
 
 
 
 /** NAVBAR MEDIA QUERIES */
 @media (max-width: 767px ) {
+	.navbar .navbar-toggle:hover {
+		/*background-color: #003E6B;*/
+	}
+	.navbar .navbar-toggle:focus {
+		/*background-color: #337ab7;*/
+	}
 	#book-now-xs {
 		width: 6.5em;
 		margin: 0 auto;
@@ -102,16 +123,35 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+	.nav.navbar-nav > li:nth-child(1) > a:hover {
+		color: rgb(208,48,108);
+		border-bottom: 4px solid rgb(208,48,108);
+	}
+	.nav.navbar-nav > li:nth-child(2) > a:hover {
+		color: rgb(255,200,5);
+		border-bottom: 4px solid rgb(255,200,5);
+	}
+	.nav.navbar-nav > li:nth-child(3) > a:hover {
+		color: rgb(48,208,28);
+		border-bottom: 4px solid rgb(48,208,28);
+	}
+	.nav.navbar-nav > li:nth-child(4) > a:hover {
+		color: rgb(255,55,5);
+		border-bottom: 4px solid rgb(255,55,5);
+	}
+
+
 	.navbar > .container > .navbar-header > .navbar-brand {
 		margin-right: 15px;
 	}	
-	.nav.navbar-nav > li.active > a {
-		border-radius: 5px;
-	}
+
+
 
 	#book-now-lg {
 		margin-right: 15px;
 	}
+
+
 }
 
 
@@ -194,8 +234,9 @@ h3 {
 	display: block;
 	/*color: rgb(208,48,108);*/
 	color: #337AB7;
-	font-family: 'Passion One', cursive;
-	font-weight: 900;
+	font-family: 'Patua One', cursive;
+	/*font-family: 'Passion One', cursive;*/
+	/*font-weight: 900;*/
 }
 #superfinalist .btn-lg {
 	color: #FF0000;
@@ -237,7 +278,8 @@ h3 {
 		/*pointer-events: none;*/
 		width: 300px;
 		margin: 50px auto 0;
-		font-size: 1.6em;
+		font-size: 1.4em;
+		/*font-size: 1.6em;*/
 	}
 	#superfinalist span {
 		text-align: center;
@@ -280,8 +322,8 @@ h3 {
 	}
 
 	#superfinalist {
-		margin-top: 280px;
-		font-size: 2em;
+		margin-top: 290px;
+		font-size: 1.7em;
 	}
 	#superfinalist span {
 		margin-bottom: 5px;
@@ -301,11 +343,11 @@ h3 {
 
 	#superfinalist {
 		/*width: 40%;*/
-		margin-top: 250px;
-		font-size: 2.65em;
+		margin-top: 260px;
+		font-size: 2.2em;
 	}
 	#superfinalist span {
-		margin-bottom: -10px;
+		margin-bottom: 0px;
 	}
 }
 
@@ -318,18 +360,18 @@ h3 {
 		/*background-position: right center;*/
 	}
 	h1 {
-		font-size: 6em;
+		font-size: 5.5em;
 	}
 	h2,h4 {
-		font-size: 3.5em;
+		font-size: 3.2em;
 	}
 	h3 {
 		font-size: 2.76em;
 	}
 
 	#superfinalist {
-		margin-top: 180px;
-		font-size: 3em;
+		margin-top: 210px;
+		font-size: 2.5em;
 	}
 }
 
@@ -341,18 +383,15 @@ h3 {
 
 #intro {
 	display: table;
-	z-index: 1;
+	/*z-index: 1;*/
 	width: 100%;
-	/*background-color: #337ab7;*/
-	/*background-color: rgb(255,55,5);*/
-	/*background-color: rgb(208,48,108);*/
 	color: rgb(208,48,108);
 	background-color: #ddd;
-	/*color: white;*/
 }
 #intro h3 {
 	display: table-cell;
 	vertical-align: middle;
+	font-family: 'Patua One', cursive;
 	font-weight: 800;
 }
 

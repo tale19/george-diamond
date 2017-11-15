@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Roboto|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Roboto|Satisfy" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 
@@ -33,7 +33,7 @@
   <div id="numbers" class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="number">Eight</div>
-      <div class="text">types of act to suit your needs</div>
+      <div class="text">forms of magic to suit your needs</div>
       <div class="image"><img src="images/magician-yellow.png"></div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
@@ -48,7 +48,7 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="number">Thousands</div>
-      <div class="text">of satisfied clients</div>
+      <div class="text">of satisfied spectators</div>
       <div class="image"><img src="images/magician-bow-orange.png"></div>
     </div>
   </div>
@@ -111,8 +111,8 @@
 <?php require 'views/en/partials/footer.view.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
