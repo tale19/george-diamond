@@ -8,5 +8,6 @@ $router->define([
 	'news' => 'controllers/en/news.php',
 	// 'article.php?id=' . $allNews->getId() => 'controllers/en/bio.php',
 	'photos' => 'controllers/en/photos.php',
-	'videos' => 'controllers/en/videos.php'
+	'videos' => 'controllers/en/videos.php',
+	'contact' => 'controllers/en/contact.php'
 ]);

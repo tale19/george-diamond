@@ -29,37 +29,39 @@
   </div>
 </section>
 
-<div class="container-fluid">
-  <div id="numbers" class="row">
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="number">Eight</div>
-      <div class="text">forms of magic to suit your needs</div>
-      <div class="image"><img src="images/magician-yellow.png"></div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="number">Dozens</div>
-      <div class="text">of countries toured</div>
-      <div class="image"><img src="images/cruiser.png"></div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="number">Hundreds</div>
-      <div class="text">of international shows</div>
-      <div class="image"><img src="images/world-720.png"></div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="number">Thousands</div>
-      <div class="text">of satisfied spectators</div>
-      <div class="image"><img src="images/magician-bow-orange.png"></div>
-    </div>
-  </div>
-</div>
+<div id="numbers" class="container-fluid">
+  <div class="container">  
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="number">Eight</div>
+        <div class="text">forms of magic to suit your needs</div>
+        <div class="image"><img src="images/magician-yellow.png"></div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="number">Dozens</div>
+        <div class="text">of countries toured</div>
+        <div class="image"><img src="images/cruiser.png"></div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="number">Hundreds</div>
+        <div class="text">of international shows</div>
+        <div class="image"><img src="images/world-720.png"></div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="number">Thousands</div>
+        <div class="text">of satisfied spectators</div>
+        <div class="image"><img src="images/magician-bow-orange.png"></div>
+      </div>
+    </div> <!-- #numbers.row -->
+  </div> <!-- .container -->
+</div> <!-- .container-fluid -->
 
-<div id="content">
+<div id="index-content" class="container-fluid">
 
 <div class="container">
   <div id="booking-box" class="jumbotron">
     <div>
-      <h3>Making your event magical!</h3>
+      <h1>Making your event magical!</h1>
       <p>George Diamond is a world class entertainer presenting shows that everyone will enjoy. He will turn your special event into a memorable illusionary journey to the world of impossible, and his lavish Vegas style shows will be an experience your guests will remember for a very long time! From small shows, ideal for private parties, to big stage grandiose events for hundreds of guests.</p>
     </div>
     <hr>
@@ -74,7 +76,7 @@
         <li>telepathy and mentalism</li>
       </ul>
       <a href="#" type="button" class="btn btn-default">Find out more</a>
-      <a href="#" type="button" class="btn btn-default btn-primary">Book your show!</a>
+      <a href="#" type="button" class="btn btn-primary">Book your show!</a>
       <img src="images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
     </div>
   </div>  <!-- jumbotron -->

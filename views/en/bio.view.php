@@ -18,7 +18,7 @@
   require 'partials/page-header.view.php';
 ?>
 
-<div id="content">
+<div id="bio-content">
 
 <h3>About George Diamond</h3>
 <div id="about-george-diamond" class="container">

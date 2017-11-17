@@ -23,7 +23,7 @@
         <li <?php echo ($urlPortion == 'shows') ? 'class="active"' : ''; ?> ><a href="shows" class="navbar-btn">Shows</a></li>
         <li <?php echo ($urlPortion == 'news') ? 'class="active"' : ''; ?> ><a href="news" class="navbar-btn">News</a></li>
         <li <?php echo ($urlPortion == 'photos' || $urlPortion == 'videos') ? 'class="active"' : ''; ?>  class="dropdown">
-          <a href="" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="photos" class="navbar-btn">Photos</a></li>
             <li><a href="videos" class="navbar-btn">Videos</a></li>
@@ -33,7 +33,7 @@
       <ul class="nav navbar-nav navbar-right">
         <!-- <li><a href="index.html" type="button" class="btn navbar-btn">Srpski</a></li> -->
         <!-- <li><a href="index.php" type="button" class="btn navbar-btn">English</a></li> -->
-        <li><a href="#" type="button" id="book-now-lg" class="navbar-btn btn btn-primary">Contact</a></li>
+        <li><a href="contact" type="button" id="book-now-lg" class="navbar-btn btn btn-primary">Contact</a></li>
       </ul>
     </div>  <!-- .navbar-collapse -->
   </div>  <!-- .container -->

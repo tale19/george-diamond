@@ -13,6 +13,8 @@ body {
 	/*background: url('../images/background-stars.jpeg') no-repeat center;*/
 	/*background: url('../images/background-dark-stars.jpeg') no-repeat center;*/
 	/*background-color: magenta;*/
+	max-width: 1600px;
+	margin: 0 auto;
 	background-attachment: fixed;
 	padding-top: 67px;
 	color: #CCC;
@@ -93,8 +95,10 @@ a:hover {
 	font-family: unset;
 	font-size: unset;
 	font-weight: 600;
+	background-color: #3371b7;
 }
 #book-now-lg:hover {
+	background-color: #f8f8f8;
   	color: #337ab7;
 	border: 1px solid #2e6da4;
 }
@@ -440,8 +444,9 @@ h3 {
 	z-index: -1;
 	opacity: .4;
 	/*background: #16181c url('../images/bio-young.png') no-repeat right;*/
-	background: #16181c url('../images/background-dots.jpg') no-repeat right;
+	background: #ddd url('../images/background-dots.jpg') no-repeat center;
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 /* *** INTRO MEDIA QUERIES *** */
@@ -589,13 +594,118 @@ h3 {
 
 
 
+ /* *** SETTING BACKGROUND OPACITY WITHOUT USING PSEUDO ELEMENTS *** */
+ /* 
+You can do it (without using any pseudo or extra elements) by placing a linear-gradient image that is nothing but a layer of semi-transparent white color (alpha = 0.5) on top of the image.
+This will not affect the contents of the p tag also because it is still just a background image layer and nothing more than that. Note that the actual background image should be given after the gradient layer because CSS renders the last one (in the comma separated list) as the lower-most layer.
+*/
 
-
-
-
-#content {
-	color: #333;
+#index-content,
+#bio-content,
+#news-content,
+#contact-content {
+	position: relative;
+	width: 100%;
+	display: block;
+	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/background-circles.png') repeat-y center;	*/
+	background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tribal.png') no-repeat left;
+	/*background-size: cover;*/
+	background-attachment: fixed;
+	background-color: #f8f8f8;
+	color: #383838;
 }
+
+
+/* *** BOOKING BOX (jumbotron) ***/
+#index-content {
+	/*background-color: #f8f8f8;*/
+	/*background-color: #337AB7;*/
+	/*background-color: rgba(25,25,25,1);*/
+}
+
+#booking-box {
+	margin-top: 80px;
+	position: relative;
+	border: 1px solid #001423;
+	/*background-color: rgba(208,48,108,.8);*/
+	/*background-color: rgba(6,100,138,1);*/
+	background: unset;
+	background-color: #337BA7;
+	/*background-color: transparent;
+	/*background: rgb(6,100,138) url('../images/background-circles.png') no-repeat left;*/
+	color: antiquewhite;
+}
+
+#booking-box h1 {
+	font-family: 'Boogaloo', cursive;	
+	font-size: 4em;
+	margin-top: 0;
+	text-align: center;
+	margin-bottom: 1em;
+}
+#booking-box p {
+	text-align: justify;
+}
+#jumbotron-shows {
+	position: relative;
+}
+#jumbotron-shows p {
+	margin: 0;
+}
+#amazing-shows {
+	position: relative;
+}
+#amazing-shows a:first-child {
+	color: magenta;
+	background-color: #001423;
+}
+#amazing-shows a:first-child:hover {
+	color: #001423;
+	background-color: magenta;
+	border-color: #001423;
+}
+#booking-box ul {
+	position: relative;
+	padding: 0;
+	margin-bottom: 35px;
+}
+#booking-box ul > li {
+	display: block;
+	position: relative;
+	margin: 0;
+	font-size: 1.2em;
+	text-transform: capitalize;
+}
+#booking-box ul > li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    margin: 4px 5px 0;
+    content: "\E080";
+    /*font-family: 'Glyphicons Halflings';*/
+    font-size: 9px;
+}
+#booking-box img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+#jumbotron-shows a {
+	font-weight: 600;
+}
+
+#booking-box .btn-primary {
+	background-color: #337ab7;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -620,12 +730,12 @@ h3 {
 	
 }
 
-
 	/* *** HOMEPAGE TOP 3 NEWS *** */
 
 #top-news {
 	position: relative;
 	margin-bottom: 40px;
+	background: transparent;
 }
 
 @media (min-width: 768px) {
@@ -793,70 +903,76 @@ h3 {
 
 
 
-/* *** BOOKING BOX (jumbotron) ***/
-#booking-box {
-	margin-top: 80px;
-	position: relative;
-	/*background-color: inherit;*/
-	border: 1px solid #001423;
-	background-color: rgba(255,255,255,0.1);
-	color: antiquewhite;
+
+
+
+
+
+
+
+
+
+/* *** CONTACT PAGE *** */
+#contact-content {
+	/*background-color: rgb(21,22,26);*/
 }
 
-#booking-box h3 {
-	font-size: 2em;
-	margin-top: 0;
-	text-align: center;
-	margin-bottom: 1em;
-}
-#booking-box p {
-	text-align: justify;
-}
-#jumbotron-shows {
+#contact-content .jumbotron {
 	position: relative;
+	margin-top: 80px;
+	height: 610px;
+	border: 1px solid #383838;
+	margin: 50px auto;
+	color: rgb(208,48,108);
+	/*font-weight: 600;*/
 }
-#jumbotron-shows p {
-	margin: 0;
-}
-#amazing-shows {
-	position: relative;
-}
-#amazing-shows a:first-child {
-	color: magenta;
-	background-color: #001423;
-}
-#amazing-shows a:first-child:hover {
-	color: #001423;
-	background-color: magenta;
-	border-color: #001423;
-}
-#booking-box ul {
-	position: relative;
-	padding: 0;
-	margin-bottom: 35px;
-}
-#booking-box ul > li {
+
+#contact-content .jumbotron > div {
+	z-index: 2;
 	display: block;
-	position: relative;
-	margin: 0;
-	font-size: 1.2em;
-	text-transform: capitalize;
+	width: 45%;
+	margin: 0 auto;
+	text-align: center;
 }
-#booking-box ul > li:before {
-    /*Using a Bootstrap glyphicon as the bullet point*/
-    margin: 4px 5px 0;
-    content: "\E080";
-    /*font-family: 'Glyphicons Halflings';*/
-    font-size: 9px;
+#contact-content .jumbotron > div h4 {
+	font-size: 1.5em;
 }
-#booking-box img {
-	position: absolute;
-	right: 0;
-	bottom: 0;
+#contact-content .jumbotron > div form {
+	margin-bottom: 40px;
 }
-#jumbotron-shows a {
-	font-weight: 600;
+#contact-content .form-group {
+	background-color: #fff;
+	opacity: 1;
+	z-index: 16;
 }
+#contact-content .jumbotron p,
+#contact-content .jumbotron span {
+	font-style: italic;
+}
+#contact-form {
+	height: 150px;
+}
+#contact-content form + span {
+	display: block;
+	margin: 20px auto; 
+	font-weight: 600; 
+	letter-spacing: 0.3rem
+}
+#contact-msg {
+	/*height: 50px;*/
+}
+
+#contact-content .jumbotron a.btn-lg {
+/*	color: #333377;
+	font-weight: 600;*/
+	display: inline-block;
+	margin-top: 10px;
+}
+
+
+
+
+
 
 
 
@@ -864,7 +980,7 @@ h3 {
 #footer {
     bottom: 0;
     padding: 0;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
     /*background: #0f0f0f url('../images/background-sparkle.jpg') center no-repeat;*/
     /*background-color: #0f0f0f;*/
     background-color: #001423;

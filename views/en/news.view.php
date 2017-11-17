@@ -15,7 +15,7 @@
 require 'views/en/partials/navbar.view.php'; 
 ?>
 
-<div id="content">
+<div id="news-content">
 <h3>News</h3>
 
 
