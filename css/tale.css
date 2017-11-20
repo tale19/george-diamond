@@ -44,7 +44,9 @@ a:hover {
 	border-bottom: 1px solid #337AB7;	 /* Bootstrap default: white */
 	/*box-shadow: 0 5px 15px 1px #337ab7;*/
 }
-
+nav .navbar-header h1 {
+	font-size: 25px;
+}
 .nav.navbar-nav > li > a {
 	margin: 20px 15px 0;
 	padding: 5px 0;

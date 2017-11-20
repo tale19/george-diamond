@@ -13,7 +13,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="tel:+381641969699" type="button" id="book-now-xs" class="btn btn-primary navbar-btn visible-xs">Call now!</a>
+      <h1 class="visible-xs">Magic of George Diamond</h1>
+      <!-- <a href="tel:+381641969699" type="button" id="book-now-xs" class="btn btn-primary navbar-btn visible-xs">Call now!</a> -->
     </div>  <!-- navbar-header -->
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
