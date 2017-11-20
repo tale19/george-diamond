@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $article->__get('title'); ?></title>
-<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Roboto|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 </head>
@@ -15,7 +15,7 @@
   require 'page-header.view.php';
  ?>
 
-<div id="content">
+<div id="article-content">
 <h3><?= $article->__get('title'); ?></h3>
 
 <div class="container">

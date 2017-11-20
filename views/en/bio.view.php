@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bio | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Roboto|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy|Titan+One" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 
@@ -15,7 +15,7 @@
 <body>
 <?php 
   require 'partials/navbar.view.php';
-  require 'partials/page-header.view.php';
+  // require 'partials/page-header.view.php';
 ?>
 
 <div id="bio-content">
@@ -36,7 +36,7 @@
 <div id="credits" class="container">
 <h3>Credits</h3>
   <div class="row">
-  <div class="col-sm-6 tekst-levo">
+  <div class="col-sm-6">
       <h4>Cruise Ships:</h4>
       <ul>
         <li>M/V Star Pisces, Star Cruises, Hong Kong cruises</li>
@@ -65,7 +65,7 @@
         <li>Hotel Mona, Serbia</li>
       </ul>
   </div>
-    <div class="col-sm-6 tekst-desno">
+    <div class="col-sm-6">
       <h4>Variety &amp; Cabaret:</h4>
       <ul>
         <li>Cabaret Rose, Belgrade, Serbia</li>
@@ -96,7 +96,7 @@
 
 
   <div class="row">
-    <div class="col-sm-6 tekst-levo">
+    <div class="col-sm-6">
       <h4>Special Appearances:</h4>
       <ul>  
         <li>Uno City – United Nations Open House Day, Vienna, Austria</li>
@@ -116,7 +116,7 @@
         <li>Shows in shopping malls such as IAPM (Shanghai, China), IPM, New Jade Center, TPMM (Hong Kong), etc.</li>
       </ul>
     </div>
-    <div class="col-sm-6 tekst-desno">
+    <div class="col-sm-6">
       <h4>TV &amp; Film</h4>
       <ul>
         <li>Appearance on Namibian National Television, Windhoek, Namibia</li>

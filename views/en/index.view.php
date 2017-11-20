@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Roboto|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 
@@ -81,33 +81,7 @@
     </div> <!-- #amazing shows -->
   </div>  <!-- jumbotron -->
 </div>  <!-- jumbotron container -->
-
-<h3>Latest news</h3>
-
-<div class="container">
-
-  <div id="top-news-image-container" class="hidden-xs">
-    <span class="helper"></span><img src="images/news-default.png">
-  </div>
-
-
-  <div id="top-news">
-
-  <?php foreach ($topNews as $topNewsPreview) : ?>
-    <article class="top-news-article">
-      <h4 class="top-news-headline"><?= $topNewsPreview->__get('title'); ?></h4> <!-- "ordinary" getter is also valid: $topNewsPreview->getId(); -->
-      <span class="top-news-date"><?=$topNewsPreview->getDate()->format('jS M Y');?></span>
-      <div class="top-news-content">
-        <?= $topNewsPreview->getContent();?>
-      </div> <!-- .top-news-content -->
-      <a href="<?=$config['url']?>article.php?id=<?=$topNewsPreview->__get('id'); ?>" class="news-preview-expander btn btn-default btn-primary"><span>Read full article</span></a>
-    </article> <!-- top-news-article -->
-  <?php endforeach; ?>
-      
-  </div> <!-- #top-news -->
-
-</div> <!-- .container -->
-
+  
 </div> <!-- #content -->
 
 <?php require 'views/en/partials/footer.view.php'; ?>
