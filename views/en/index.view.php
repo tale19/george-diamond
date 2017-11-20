@@ -62,23 +62,23 @@
   <div id="booking-box" class="jumbotron">
     <div>
       <h1>Making your event magical!</h1>
-      <p>George Diamond is a world class entertainer presenting shows that everyone will enjoy. He will turn your special event into a memorable illusionary journey to the world of impossible, and his lavish Vegas style shows will be an experience your guests will remember for a very long time! From small shows, ideal for private parties, to big stage grandiose events for hundreds of guests.</p>
+      <p>George Diamond is a world class entertainer presenting shows that everyone will enjoy. From small shows, ideal for private parties, to big stage grandiose events for hundreds of guests, he will turn your special event into a memorable illusionary journey to a world of the impossible, and his lavish Vegas-style shows will be an experience your guests will remember for a very long time!</p>
     </div>
     <hr>
     <div id="amazing-shows">
-      <p>Some of George's fascinating shows:</p>
+      <p>Check out some of George's fascinating shows:</p>
       <ul id="amazing-shows-list">
-        <li>amazing grand illusions</li>
-        <li>breathtaking quick costume changes</li>
-        <li>exotic mysteries of Chinese masks</li>
-        <li>hilarious comedy magic</li>
-        <li>classy stage magic</li>
-        <li>telepathy and mentalism</li>
+        <li><a href="#" class="amazing-show">amazing grand illusions</a></li>
+        <li><a href="#" class="amazing-show">breathtaking quick costume changes</a></li>
+        <li><a href="#" class="amazing-show">exotic mysteries of Chinese masks</a></li>
+        <li><a href="#" class="amazing-show">hilarious comedy magic</a></li>
+        <li><a href="#" class="amazing-show">classy stage magic</a></li>
+        <li><a href="#" class="amazing-show">telepathy and mentalism</a></li>
       </ul>
-      <a href="#" type="button" class="btn btn-default">Find out more</a>
-      <a href="#" type="button" class="btn btn-primary">Book your show!</a>
+      <a href="#" type="button" class="btn btn-info">Find out more</a>
+      <a href="contact" type="button" class="btn btn-success">Book your show!</a>
       <img src="images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
-    </div>
+    </div> <!-- #amazing shows -->
   </div>  <!-- jumbotron -->
 </div>  <!-- jumbotron container -->
 

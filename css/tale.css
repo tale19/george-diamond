@@ -30,7 +30,7 @@ a:hover {
 	cursor: pointer;
 }
 a:hover {
-	color: magenta;	
+	/*color: magenta;	*/
 }
 
 .btn-round {
@@ -608,12 +608,14 @@ This will not affect the contents of the p tag also because it is still just a b
 	width: 100%;
 	display: block;
 	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/background-circles.png') repeat-y center;	*/
-	background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tribal.png') no-repeat left;
+	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tribal.png') no-repeat left;*/
 	/*background-size: cover;*/
 	background-attachment: fixed;
 	background-color: #f8f8f8;
-	color: #383838;
+	/*color: #383838;*/
 }
+
+
 
 
 /* *** BOOKING BOX (jumbotron) ***/
@@ -627,13 +629,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	margin-top: 80px;
 	position: relative;
 	border: 1px solid #001423;
-	/*background-color: rgba(208,48,108,.8);*/
-	/*background-color: rgba(6,100,138,1);*/
-	background: unset;
 	background-color: #337BA7;
-	/*background-color: transparent;
-	/*background: rgb(6,100,138) url('../images/background-circles.png') no-repeat left;*/
 	color: antiquewhite;
+	font-family: 'Patua One', cursive;
 }
 
 #booking-box h1 {
@@ -655,50 +653,51 @@ This will not affect the contents of the p tag also because it is still just a b
 #amazing-shows {
 	position: relative;
 }
-#amazing-shows a:first-child {
-	color: magenta;
-	background-color: #001423;
+#amazing-shows {
 }
-#amazing-shows a:first-child:hover {
-	color: #001423;
-	background-color: magenta;
-	border-color: #001423;
+#amazing-shows a.btn {
+	margin-top: 15px;
+	/*border: 1px solid yellow;*/
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-#booking-box ul {
+
+#amazing-shows-list {
 	position: relative;
 	padding: 0;
-	margin-bottom: 35px;
+	/*font-size: .95em;*/
 }
-#booking-box ul > li {
-	display: block;
+#amazing-shows ul > li {
+	list-style: none;
+}
+.amazing-show {
+	display: inline-block; /* required for transiton to work */
+	transition: transform .5s;
 	position: relative;
-	margin: 0;
 	font-size: 1.2em;
 	text-transform: capitalize;
+	color: white;
 }
-#booking-box ul > li:before {
+.amazing-show:hover {
+	color: unset;
+	transform: translate(10px, 0px);
+}
+.amazing-show:before {
     /*Using a Bootstrap glyphicon as the bullet point*/
     margin: 4px 5px 0;
     content: "\E080";
-    /*font-family: 'Glyphicons Halflings';*/
+    font-family: 'Glyphicons Halflings';
     font-size: 9px;
 }
-#booking-box img {
+#amazing-shows img {
+	display: block;
+	/*transition: transform 2s;*/
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
-#jumbotron-shows a {
-	font-weight: 600;
+#amazing-shows img:hover {
+	/*transform: translate(-200px,0px) rotate(-360deg);*/
 }
-
-#booking-box .btn-primary {
-	background-color: #337ab7;
-}
-
-
-
-
 
 
 
@@ -924,18 +923,29 @@ This will not affect the contents of the p tag also because it is still just a b
 	border: 1px solid #383838;
 	margin: 50px auto;
 	color: rgb(208,48,108);
-	/*font-weight: 600;*/
+	font-family: 'Patua One', cursive;
+	/*font-weight: 800;*/
 }
 
 #contact-content .jumbotron > div {
-	z-index: 2;
-	display: block;
+	/*border: 1px solid yellow;*/
+	/*max-height: 150px;*/
+	/*display: block;*/
 	width: 45%;
 	margin: 0 auto;
 	text-align: center;
 }
 #contact-content .jumbotron > div h4 {
 	font-size: 1.5em;
+}
+
+#contact-content .jumbotron > div form,
+#contact-content .jumbotron > div a {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#contact-content .jumbotron > div a:hover {
+	/*color: currentColor;*/
+	text-decoration: underline;
 }
 #contact-content .jumbotron > div form {
 	margin-bottom: 40px;
@@ -952,22 +962,7 @@ This will not affect the contents of the p tag also because it is still just a b
 #contact-form {
 	height: 150px;
 }
-#contact-content form + span {
-	display: block;
-	margin: 20px auto; 
-	font-weight: 600; 
-	letter-spacing: 0.3rem
-}
-#contact-msg {
-	/*height: 50px;*/
-}
 
-#contact-content .jumbotron a.btn-lg {
-/*	color: #333377;
-	font-weight: 600;*/
-	display: inline-block;
-	margin-top: 10px;
-}
 
 
 

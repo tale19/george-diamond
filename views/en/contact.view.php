@@ -15,7 +15,7 @@
 	<div class="jumbotron">
 		<h3>Contact George Diamond</h3>
 		<div>
-			<h4>Fill out the form below</h4>
+			<!-- <h4>Fill out the form</h4> -->
 			<!-- <div id="contact-form" style="background-color: yellow;">form goes here</div>  -->
 			<form>
 		 	   <div class="form-group">
@@ -26,10 +26,10 @@
  					<!-- <label for="comment">Type your message here:</label> -->
 					<textarea class="form-control" rows="5" id="comment" placeholder="Type your message here"></textarea>
 				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
+				<button type="submit" class="btn btn-default">Send</button>
 			</form>
 			<!-- <span>OR</span>  -->
-			<h4>Or send your inqueries via email:</h4>
+			<h4>Or send your inqueries directly via email:</h4>
 			<a href="mailto:george.kaurin@gmail.com"><span>george.kaurin@gmail.com</span></a>
 		</div>
 	</div> <!-- .jumbotron -->
