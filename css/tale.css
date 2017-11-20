@@ -12,17 +12,14 @@ body {
 	/*background: url('../images/background-black.jpg') no-repeat center;*/
 	/*background: url('../images/background-stars.jpeg') no-repeat center;*/
 	/*background: url('../images/background-dark-stars.jpeg') no-repeat center;*/
-	/*background-color: magenta;*/
+	/*background-color: yellow;*/
 	max-width: 1600px;
 	margin: 0 auto;
 	background-attachment: fixed;
-	padding-top: 67px;
-	color: #CCC;
+	padding-top: 47px;
+	color: #337ab7;
 }
-	@media (min-width: 768px) {
-		body {padding-top: 69px;}
-	}
-	/* body padding keeps the page header next to fixed navbar, preventing the background from protruding /**/
+/* body padding keeps the page header next to fixed navbar, preventing the background from protruding /**/
 
 a,
 a:hover {
@@ -40,6 +37,7 @@ a:hover {
 
 /* ***	NAVBAR ELEMENTS  *** */
 .navbar-default {
+	/*display: none;*/
 	/*background-color: #337AB7;*/
 	border-bottom: 1px solid #337AB7;	 /* Bootstrap default: white */
 	/*box-shadow: 0 5px 15px 1px #337ab7;*/
@@ -161,6 +159,21 @@ nav .navbar-header h1 {
 }
 
 
+#index-content,
+#bio-content,
+#news-content,
+#contact-content {
+	/*position: relative;*/
+	width: 100%;
+	display: block;
+	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/background-circles.png') repeat-y center;	*/
+	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tribal.png') no-repeat left;*/
+	/*background-size: cover;*/
+	/*background-attachment: fixed;*/
+	background-color: #f8f8f8;
+	/*background-color: rgb(208,48,108);*/
+	/*color: #383838;*/
+}
 
 
 
@@ -169,8 +182,7 @@ nav .navbar-header h1 {
 /* *** 	HEADER ELEMENTS	 *** */
 #header {
 	position: relative;
-	height: 550px;
-	margin: 0 auto;
+	margin: 20px 0;
 	border-bottom: 1px solid rgba(0,0,0,.3);
 }
 #header > .container {
@@ -212,12 +224,18 @@ h2 {
 		font-style: italic;
 	}
 h3 {
+	margin-bottom: 1em;
+	padding-top: 1em;
 	text-align: center;
-	font-weight: 600;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	/*font-weight: 600;*/
+	font-family: 'Patua One', cursive;
 }
 
+h4 {
+	font-family: 'Racing Sans One', cursive;
+	font-family: 'Titan One', cursive;
+	font-weight: 100;
+}
 
 
 #header #header-holder {
@@ -395,6 +413,7 @@ h3 {
 	background-color: #ddd;
 }
 #intro h3 {
+	padding-top: unset;
 	display: table-cell;
 	vertical-align: middle;
 	font-family: 'Patua One', cursive;
@@ -602,20 +621,6 @@ You can do it (without using any pseudo or extra elements) by placing a linear-g
 This will not affect the contents of the p tag also because it is still just a background image layer and nothing more than that. Note that the actual background image should be given after the gradient layer because CSS renders the last one (in the comma separated list) as the lower-most layer.
 */
 
-#index-content,
-#bio-content,
-#news-content,
-#contact-content {
-	position: relative;
-	width: 100%;
-	display: block;
-	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/background-circles.png') repeat-y center;	*/
-	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tribal.png') no-repeat left;*/
-	/*background-size: cover;*/
-	background-attachment: fixed;
-	background-color: #f8f8f8;
-	/*color: #383838;*/
-}
 
 
 
@@ -731,69 +736,7 @@ This will not affect the contents of the p tag also because it is still just a b
 	
 }
 
-	/* *** HOMEPAGE TOP 3 NEWS *** */
-
-#top-news {
-	position: relative;
-	margin-bottom: 40px;
-	background: transparent;
-}
-
-@media (min-width: 768px) {
-	#top-news-image-container {
-		width: 40%;
-		/* height needs to be set as an exact value via js */
-		float: left;
-		padding-right: 15px;
-	    /*white-space: nowrap;*/
-    	/*text-align: center; */
-    	/*margin: 1em 0;*/
-	}
-	.helper {
-	    display: inline-block;
-	    height: 100%;
-	    vertical-align: middle;
-	}
-	#top-news-image-container img {
-    	vertical-align: middle;
-    	max-width: 100%;
-    	max-height: 100%;
-	}
-
-	#top-news {
-		width: 60%;
-		float: right;
-		/*height: 210px;*/
-		/*top: 40px;*/
-	}
-}
-@media (min-width: 992px) {
-	#top-news-image-container img {
-    	max-width: 75%;
-    	max-height: 75%;
-	}
-}
-@media (min-width: 1200px) {
-	#top-news-image-container img {
-    	max-width: 95%;
-    	max-height: 95%;
-	}
-}
-
-
-
-.top-news-content {
-	margin-top: 10px;
-	max-height: 120px;
-	overflow: hidden;
-	/*border: 1px solid blue;*/
-}
-
-.clear {
-	clear: both;
-}
-
-
+	
 
 
 	/* *** NEWS PREVIEW (PAGINATOR) *** */
@@ -977,82 +920,43 @@ This will not affect the contents of the p tag also because it is still just a b
 #footer {
     bottom: 0;
     padding: 0;
-    /*margin-top: 80px;*/
-    /*background: #0f0f0f url('../images/background-sparkle.jpg') center no-repeat;*/
-    /*background-color: #0f0f0f;*/
     background-color: #001423;
+    /*background-color: #ddd;*/
+    /*background-color: #337ab7;*/
     color: antiquewhite;
-    border-top: 1px solid white;
 }
-#footer a:hover {
-	color: antiquewhite;
+#footer h3 {
+	font-family: 'Patua One', cursive;
+	letter-spacing: .1em;
 }
-
-
-#direct-contact,
-#social-media {
-    margin: 40px auto;
-}
-
-#direct-contact-details {
-	max-width: 240px;
-	margin: 0 auto;
-/*	border: 1px solid blue;*/
-	/*display: table;*/
-	position: relative;
-	align-content: center;
-}
-
-.direct-contact-row {
-	display: table;
-	position: relative;
-	/*width: 100%;*/
-	margin: 15px auto;
-/*	border: 1px solid lime;*/
-	/*padding: 2px auto;*/
-}
-
-.direct-contact-icon {
-	display: table-cell;
-	vertical-align: middle;
-	/*position: relative;*/
-	margin-right: 10px;
-	/*border: 1px solid yellow;*/
-	fill: #fffca5;
-}
-
-#direct-contact-details a,
-#direct-contact-details span {
-	display: table-cell;
-/*	border: 1px solid yellow;*/
-	/*text-align: center;*/
-	/*top: 0;*/
-	/*position: relative;*/
-	vertical-align: middle;
-	/*bottom: 25px;*/
-}
-
 #social-media-icons {
+	/*border: 1px solid yellow;*/
+	width: 310px;
+	margin: 0 auto;
+}
+.social-media-icon {
+	/*border: 1px solid green;*/
+	display: inline-block;
+	width: 64px;
+	/*margin: 0 auto;*/
+	padding: 0;
+	margin: 0 5px;
 }
 
 #social-media-icons a img {
+	height: 32px;
+	width: 32px;
 	display: block;
 	margin: 0 auto;
-	/*width: 100%;*/
-	/*margin-left: 24px;*/
 }
 
-.social-media-icon {
-	/*border: 1px solid green;*/
-	padding: 0;
-}
 
 #social-media-icons > div > span {
 	display: block; /* može i inline-block sa width: 100%; */
 	text-align: center;
 	font-style: italic;
 	/*border: 1px solid yellow;*/
-	margin-top: 5px;
+	margin-top: 3px;
 	/*width: 100%;*/
 	/*margin: 0 auto;*/
 }
@@ -1062,100 +966,22 @@ This will not affect the contents of the p tag also because it is still just a b
 	color: #888;
 }
 
-#footer-creator {
-	margin-top: 20px;
-	position: relative;
-	/*left: 0;*/
-}
-
-#footer-creator .container {
-	z-index: 1;
-	position: relative;
-}
-
-#footer-creator .container > a {
-	color: #9bbbff;
-}
-
-#creator-background {
-	position: absolute;
-	height: 40px;
-	z-index: 0;
-	bottom: 0;
-	left: 0;
-	background-color: #666;
-	border-top-right-radius: 60px;
-	/*width: 40%;*/
-
-}
 
 
 /* media query EXTRA SMALL display (up to 767px) */
 @media (max-width: 767px) {
-
-
-	#booking-box p {
-		font-size: 1.25em;
-	}
-	#jumbotron-shows a {
-		display: block;
-		width: 16em;
-		margin: 0 auto;
-	}
-
-	/* FOOTER */
-
-	#direct-contact-details {
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	#direct-contact-details hr {
-		border-color: #888;
-		margin: 0 auto;
-	}
-	
-	#social-media {
-		margin-top: 60px;
-
-	}
-
-	#footer-client > hr {
-		margin-top: 60px;
-	}
-
 	#social-media-icons {
 		max-width: 320px;
-		margin: 0 auto;
 	}
-
-	#creator-background {
-		min-width: 240px;
+	#footer h3 {
+		margin: 30px auto 15px;
 	}
-
-/*	p.credits {
-		text-align: center;
-		display: block;
-		margin: 0 auto 20px;
-		width: 20em;
-	}
-	p.credits ~ p.credits {
-		text-align: center;
-		float: none;
-	}*/
-
 }
 
 /* media query SMALL display (768-991px) */
 @media (min-width: 768px) {
-
-	#booking-box img {
-		max-height: 249px;
-		max-width: 244px;
-	}
-
-	#creator-background {
-		min-width: 35%;
+	#footer h3 {
+		margin: 50px auto 25px;
 	}
 }
 
