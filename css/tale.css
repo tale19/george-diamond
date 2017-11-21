@@ -329,7 +329,7 @@ h4 {
 	h1 {
 		font-size: 3.7em;
 	}
-	h2,h4 {
+	h2 {
 		font-size: 2.1em;
 	}
 	#bio-content h3, #shows-content, #news-content h3, #article-content h3 {
@@ -349,7 +349,7 @@ h4 {
 	h1 {
 		font-size: 4.75em;
 	}
-	h2,h4 {
+	h2 {
 		font-size: 2.7em;
 	}
 	#bio-content h3, #shows-content, #news-content h3, #article-content h3 {
@@ -377,7 +377,7 @@ h4 {
 	h1 {
 		font-size: 5.5em;
 	}
-	h2,h4 {
+	h2 {
 		font-size: 3.2em;
 	}
 	#bio-content h3, #shows-content, #news-content h3, #article-content h3 {
@@ -699,143 +699,7 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 
-
-
-
-
-
-
-
-/* *** NEWS ELEMENTS *** */
-.top-news-date,	
-.news-preview-date,
-.news-date {
-	color: #ED9911;
-	font-style: italic;
-}
-
-.top-news-article,
-/*.news-preview-box*/ {
-	position: relative;
-	padding: 0.5em 1em;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	background-color: rgba(255,255,255,0.1);
-}
-
-@media (max-width: 767px) {
-	
-}
-
-	
-
-
-	/* *** NEWS PREVIEW (PAGINATOR) *** */
-
-.news-preview-box {
-	border: 2px solid magenta;
-	/*padding: 0.5em auto;*/
-	margin: unset;
-	margin-bottom: 80px;
-	/*margin-right: -15px;*/
-	border-radius: 5px;
-	background-color: rgba(255,255,255,0.1);
-}
-
-.news-preview-box .news-preview-content {
-	/*border: 1px solid blue;*/
-	/*margin: 0;*/
-	/*margin-top: 10px;*/
-	/*position: relative;*/
-	/*height: 150px;*/
-	/*overflow: hidden;*/
-	/*padding-bottom: 30px;*/
-	text-align: justify;
-}
-.news-preview-headline {
-	/*border: 1px solid yellow;*/
-}
-
-.news-image-container {
-	height: 85%;
-	margin: 10px auto;
-	/*border: 1px solid green;*/
-}
-
-.news-image-container img {
-	display: block;
-	margin: 0 auto;
-	border-radius: 5px;
-	max-height: 80%;
-	max-width: 100%;
-} 
-
-.news-share {
-	/*border: 1px solid yellow;*/
-	color: red;
-	position: relative;
-	bottom: 0;
-	/*right: 0;*/
-	max-height: 15%;
-	margin-top: 10px;
-	margin-bottom: 15px;
-}
-@media (max-width: 767px) {
-	h4 {
-		text-align: center;
-		margin-bottom: 20px;
-	}
-
-	.news-preview-box {
-		/*margin: 50px 10px;*/
-	}
-
-	.news-preview-article {
-		max-height: 70%;
-		margin-bottom: 15px;
-		/*overflow: hidden;*/
-		/*background-color: yellow;*/
-	}
-
-	.news-image-container {
-		display: block;
-		margin: 10px auto 30px;
-		max-width: 80%;
-	} 
-	.news-image-container img {
-		width: 100%;
-	}
-}
-@media (min-width: 768px) {
-	.news-preview-box {
-		/*left: 0;*/
-		/*margin: 0;*/
-		/*padding: 0;*/
-		/*margin-right: unset;*/
-		/*padding-right: unset;*/
-	}
-}
-
-
-	/* *** FULL NEWS ARTICLE *** */
-.news-article-box {
-	padding: 0.5em 1em;
-}
-
-.news-article-box .news-image-container img {
-	margin-top: 0;
-}
-
-.news-content {
-	position: relative;
-}
-.news-content .news-share {
-	position: relative;
-	margin-top: 20px;
-}
-
-
-			/* *** BIO PAGE *** */
+/* *** BIO PAGE *** */
 
 #about-george-diamond img {
 	float: left;
@@ -875,6 +739,152 @@ This will not affect the contents of the p tag also because it is still just a b
 		font-size: 2.5em;
 	}
 }
+
+
+
+
+
+/* *** NEWS ELEMENTS *** */
+.news-preview-date,
+.news-date {
+	/*color: #ED9911;*/
+	font-style: italic;
+	font-weight: 600;
+}
+
+
+@media (max-width: 767px) {
+	
+}
+
+
+/* *** NEWS PAGE (PAGINATOR) *** */
+#news-content {
+/*	background-color: rgb(6,100,138);
+	background-color: #337ab7;
+	color: white;*/
+}
+.news-preview-box {
+	/*border: 2px solid magenta;*/
+	/*padding: 0.5em auto;*/
+	margin: unset;
+	margin-bottom: 40px;
+	/*margin-right: -15px;*/
+	border-radius: 5px;
+	background-color: rgba(0,0,0,.1);
+	padding: 1em 0.5em;
+}
+/*.news-preview-box.green {
+	background-color: rgb(48,208,28);
+}*/
+
+.news-preview-box h4 {
+	font-size: 2em;
+}
+
+.news-preview-box .news-preview-content {
+	/*border: 1px solid blue;*/
+	/*margin: 0;*/
+	/*margin-top: 10px;*/
+	/*position: relative;*/
+	/*height: 150px;*/
+	/*overflow: hidden;*/
+	/*padding-bottom: 30px;*/
+	text-align: justify;
+}
+.news-preview-headline {
+	/*border: 1px solid yellow;*/
+}
+
+.news-image-container {
+	height: 85%;
+	margin: 10px auto;
+	/*border: 1px solid green;*/
+}
+
+.news-image-container img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 5px;
+	max-height: 80%;
+	max-width: 100%;
+	/*transition: transform .5s;*/
+	opacity: 0;
+	transition: opacity 1s ease-out;
+} 
+.news-image-container img.appear {
+	opacity: 1;
+	/*transform: translateY(-100px);*/
+	/*transform: ease-out;*/
+}
+
+.news-share {
+	/*border: 1px solid yellow;*/
+	color: red;
+	position: relative;
+	bottom: 0;
+	/*right: 0;*/
+	max-height: 15%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+	.news-preview-box h4 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.news-preview-box {
+		/*margin: 50px 10px;*/
+	}
+
+	.news-preview-article {
+		max-height: 70%;
+		margin-bottom: 15px;
+		/*overflow: hidden;*/
+		/*background-color: yellow;*/
+	}
+
+	.news-image-container {
+		display: block;
+		margin: 10px auto 30px;
+		max-width: 80%;
+	} 
+	.news-image-container img {
+		width: 100%;
+	}
+}
+@media (min-width: 768px) {
+	.news-preview-box {
+		/*left: 0;*/
+		/*margin: 0;*/
+		/*padding: 0;*/
+		/*margin-right: unset;*/
+		/*padding-right: unset;*/
+		min-height: 250px;
+	}
+}
+
+
+	/* *** FULL NEWS ARTICLE *** */
+.news-article-box {
+	padding: 0.5em 1em;
+}
+
+.news-article-box .news-image-container img {
+	margin-top: 0;
+}
+
+.news-content {
+	position: relative;
+}
+.news-content .news-share {
+	position: relative;
+	margin-top: 20px;
+}
+
+
+
 
 
 

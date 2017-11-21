@@ -16,7 +16,8 @@ require 'views/en/partials/navbar.view.php';
 ?>
 
 <div id="news-content">
-<h3>News</h3>
+<!-- <h3>News</h3> -->
+<h3 class="elem">News</h3>
 
 
 
@@ -26,12 +27,6 @@ require 'views/en/partials/navbar.view.php';
       <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-preview-article">
         <h4 class="news-preview-headline"><?= $news->getTitle(); ?></h4>
         <span class="news-preview-date"><?= $news->getDate()->format('D, jS M Y'); ?></span>
-        <div class="news-share">
-          <span>Share this news</span> <span>FB</span>
-          <span>Tw</span>
-          <span>viber</span>
-          <span>wtsapp</span>
-        </div>  <!-- news share -->
         <div class="news-preview-content">
           <?= $news->getContent(); ?>
         </div> <!-- .news-preview-content -->
@@ -39,6 +34,12 @@ require 'views/en/partials/navbar.view.php';
       <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
         <div class="news-image-container">
           <img src="images/news/<?= $news->getImgName(); ?>">
+          <div class="news-share">
+            <span>Share this news</span> <span>FB</span>
+            <span>Tw</span>
+            <span>viber</span>
+            <span>wtsapp</span>
+          </div>  <!-- news share -->
         </div>  <!-- news preview image container -->
       </div>  <!-- .news-preview-misc -->
     </section> <!-- news content, row -->
@@ -47,7 +48,7 @@ require 'views/en/partials/navbar.view.php';
 
 <div class="container">
 
-<div style="bottom:0; margin-top:50px; text-align: center; background-color: red;">PAGINATOR</div>
+<div id="paginator" class="pageelem" style="bottom:0; margin-top:50px; text-align: center; background-color: red;">PAGINATOR</div>
 
 </div> <!-- container -->
 
@@ -61,6 +62,6 @@ require 'views/en/partials/navbar.view.php';
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<!-- <script type="text/javascript" src="../js/news.js"></script> -->
+<script type="text/javascript" src="js/news.js"></script>
 </body>
 </html>
