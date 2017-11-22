@@ -41,36 +41,47 @@ function main() {
 		// 	console.log('not in Viewport');
 		// }
 	}
-
-
 	
-// then, pass each news image container to the method to get its position
 	var $newsImageBox = $('.news-image-container');
-	// var positions = [];
-	$newsImageBox.each(function(){
-		// positions.push(getElementVerticalPosition($(this)));
-		// var $newsBoxTop = getElementVerticalPosition($(this))[0];
-		// var $newsBoxBottom = getElementVerticalPosition($(this))[1];
-		// console.log(getElementVerticalPosition($(this))[0]);
-		console.log(getElementVerticalPosition($(this))[0]);
-		console.log(getElementVerticalPosition($(this))[1]);
-		// getElementVerticalPosition($(this));
-		// return [$newsBoxTop, $newsBoxBottom];
-		if (inViewport($(this))) {
-			$(this).find('img').addClass('appear');
-			console.log('opa');
-		} 
-		// else {
-		// 	$(this).find('img').removeClass('appear');
-		// }
-	});
-	$(window).scroll(function() {
+
+
+// then, pass each news image container to the method to get its position
+
+
+
+		// var positions = [];
+		$newsImageBox.each(function(){
+			console.log(getElementVerticalPosition($(this))[0]);
+			console.log(getElementVerticalPosition($(this))[1]);
+			// getElementVerticalPosition($(this));
+			// return [$newsBoxTop, $newsBoxBottom];
+			if (inViewport($(this))) {
+				$(this).find('img').addClass('appear');
+				console.log('opa');
+			} 
+			// else {
+			// 	$(this).find('img').removeClass('appear');
+			// }
+		});
 		// $clientHeight = $(window).clientHeight;
+	$(window).scroll(function() {
 		console.log('window scrolltop: ' + getWindowOffset()[0]);
 		// console.log('window viewport height: ' + getWindowOffset()[1]);
 		// console.log('window bottom view: ' + getWindowOffset()[2]);
 		console.log(inViewport($newsImageBox));
-
+		$newsImageBox.each(function(){
+			console.log(getElementVerticalPosition($(this))[0]);
+			console.log(getElementVerticalPosition($(this))[1]);
+			// getElementVerticalPosition($(this));
+			// return [$newsBoxTop, $newsBoxBottom];
+			if (inViewport($(this))) {
+				$(this).find('img').addClass('appear');
+				console.log('opa');
+			} 
+			// else {
+			// 	$(this).find('img').removeClass('appear');
+			// }
+		});
 	});
 
 		// console.log(positions);
