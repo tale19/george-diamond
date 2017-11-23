@@ -213,13 +213,14 @@ h2 {
 h3 {
 	text-align: center;
 }
-#bio-content h3, #shows-content, #news-content h3, #article-content h3 {
+#bio-content h3, #shows-content, #news-content h3 {
 	margin-bottom: 1em;
 	padding-top: 1em;
 	/*font-weight: 600;*/
 	font-family: 'Patua One', cursive;
 }
 
+#article-content h3,
 h4 {
 	font-family: 'Racing Sans One', cursive;
 	/*font-family: 'Titan One', cursive;*/
@@ -529,6 +530,7 @@ h4 {
 	/*min-height: 450px;*/
 	font-family: 'Boogaloo', cursive;
 	background-color: rgba(25,25,25,1);
+	background-color: #001423;
 	border-top: 1px solid rgba(0,0,0,.1);
 	border-bottom: 1px solid rgba(0,0,0,.1);
 }
@@ -798,11 +800,11 @@ This will not affect the contents of the p tag also because it is still just a b
 
 .news-image-container {
 	height: 85%;
-	margin: 10px auto;
-	/*border: 1px solid green;*/
+	margin: 15px auto;
 }
-
-.news-image-container img {
+.news-preview-misc .news-image-container img,
+.news-misc .news-image-container img {
+	border: 1px solid #337AB7;
 	display: block;
 	margin: 0 auto;
 	border-radius: 5px;
@@ -868,19 +870,24 @@ This will not affect the contents of the p tag also because it is still just a b
 
 	/* *** FULL NEWS ARTICLE *** */
 .news-article-box {
-	padding: 0.5em 1em;
+	margin: 50px auto;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,.1);
+	padding: 1em 0.5em;
 }
 
-.news-article-box .news-image-container img {
-	margin-top: 0;
+.news-article-box .news-image-container {
+	/*border: 1px solid magenta;*/
+	margin-top: unset;
 }
 
 .news-content {
-	position: relative;
+	/*position: relative;*/
 }
-.news-content .news-share {
-	position: relative;
-	margin-top: 20px;
+.news-article .news-share {
+	/*position: relative;*/
+	/*margin-top: 20px;*/
+	bottom: 0;
 }
 
 

@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>News | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Racing+Sans+One|Roboto|Satisfy|Titan+One" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 </head>
@@ -17,7 +18,7 @@ require 'views/en/partials/navbar.view.php';
 
 <div id="news-content">
 <!-- <h3>News</h3> -->
-<h3 class="elem">News</h3>
+<h3>News</h3>
 
 
 
@@ -40,6 +41,7 @@ require 'views/en/partials/navbar.view.php';
             <span>viber</span>
             <span>wtsapp</span>
           </div>  <!-- news share -->
+          <!-- <a href="article-<?=$news->getId();?>" class="btn btn-primary">Read full news</a> -->
         </div>  <!-- news preview image container -->
       </div>  <!-- .news-preview-misc -->
     </section> <!-- news content, row -->
@@ -48,9 +50,24 @@ require 'views/en/partials/navbar.view.php';
 
 <div class="container">
 
-<div id="paginator" class="pageelem" style="bottom:0; margin-top:50px; text-align: center; background-color: red;">PAGINATOR</div>
+<!-- <div id="paginator" class="pageelem" style="bottom:0; margin-top:50px; text-align: center; background-color: red;">PAGINATOR</div> -->
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 
 </div> <!-- container -->
+
 
 </div> <!-- content -->
 

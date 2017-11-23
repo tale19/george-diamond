@@ -21,8 +21,7 @@ function main() {
 	console.log('window bottom view: ' + getWindowOffset()[2]);
 
 
-// next, get offsets of all the news image boxes
-// create a global getter for elements' position
+// next, create a getter for elements' position
 	function getElementVerticalPosition($elem) {
 		$elementTopPosition = $elem.offset().top;
 		$elementBottomPosition = $elem.offset().top + $elem.height();
@@ -31,69 +30,41 @@ function main() {
 		return [$elementTopPosition, $elementBottomPosition];
 	}
 
-// create a method that checks if an element is in the viewport using the window offset and element's parameters
+// then create a method that checks if an element is in the viewport using the window offset and element's parameters
 	function inViewport($elem) {
 		if (getElementVerticalPosition($elem)[0] > getWindowOffset()[0] && getElementVerticalPosition($elem)[1] < getWindowOffset()[2]) {
 			// console.log('element is in Viewport');
 			return true;
 		} 
-		// else {
-		// 	console.log('not in Viewport');
-		// }
 	}
 	
+
+
+// now, pass each news image container to the method to get its position
 	var $newsImageBox = $('.news-image-container');
+	$newsImageBox.each(function(){
+		console.log(getElementVerticalPosition($(this))[0]);
+		console.log(getElementVerticalPosition($(this))[1]);
+		if (inViewport($(this))) {
+			$(this).find('img').addClass('appear');
+			console.log('opa');
+		} 
+	});
 
 
-// then, pass each news image container to the method to get its position
-
-
-
-		// var positions = [];
-		$newsImageBox.each(function(){
-			console.log(getElementVerticalPosition($(this))[0]);
-			console.log(getElementVerticalPosition($(this))[1]);
-			// getElementVerticalPosition($(this));
-			// return [$newsBoxTop, $newsBoxBottom];
-			if (inViewport($(this))) {
-				$(this).find('img').addClass('appear');
-				console.log('opa');
-			} 
-			// else {
-			// 	$(this).find('img').removeClass('appear');
-			// }
-		});
-		// $clientHeight = $(window).clientHeight;
+// finally, repeat to make it work on scroll, too
 	$(window).scroll(function() {
 		console.log('window scrolltop: ' + getWindowOffset()[0]);
 		// console.log('window viewport height: ' + getWindowOffset()[1]);
 		// console.log('window bottom view: ' + getWindowOffset()[2]);
-		console.log(inViewport($newsImageBox));
+		console.log(inViewport($newsImageBox)); // ovde vraća true samo za prvi box, za ostale kaže UNDEFINED
 		$newsImageBox.each(function(){
-			console.log(getElementVerticalPosition($(this))[0]);
-			console.log(getElementVerticalPosition($(this))[1]);
-			// getElementVerticalPosition($(this));
-			// return [$newsBoxTop, $newsBoxBottom];
 			if (inViewport($(this))) {
 				$(this).find('img').addClass('appear');
 				console.log('opa');
 			} 
-			// else {
-			// 	$(this).find('img').removeClass('appear');
-			// }
 		});
 	});
-
-		// console.log(positions);
-
-
-
-
-
-		// console.log($newsImageBox);
-
-
-
 
 }
 
