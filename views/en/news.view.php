@@ -66,6 +66,11 @@ require 'views/en/partials/navbar.view.php';
   </ul>
 </nav>
 
+<!-- <div id="scrolltop-container"> -->
+    <div class="scrolltop-button"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+<!-- </div> -->
+
+
 </div> <!-- container -->
 
 
