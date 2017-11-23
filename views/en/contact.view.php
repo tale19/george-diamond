@@ -3,6 +3,7 @@
 <head>
 	<title>Contact | George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
 </head>

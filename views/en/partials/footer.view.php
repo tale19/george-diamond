@@ -4,20 +4,21 @@
         <h3>Follow George Diamond</h3>
         <div id="social-media-icons">
           <div class="social-media-icon">
-            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><img src="<?=$config['url']?>images/iconmonstr-facebook-64.png" /></a>
-            <span>Facebook</span>
+            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-f fa-2x" aria-hidden="true"></i></a>
+            <!-- <span>Facebook</span> -->
           </div>
           <div class="social-media-icon">
-            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><img src="<?=$config['url']?>images/twitter-original-64.png" /></a>
-            <span>Twitter</span>
+            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            <!-- <span>Twitter</span> -->
           </div>
           <div class="social-media-icon">
-            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><img src="<?=$config['url']?>images/instagram-original-64.png" /></a>
-            <span>Instagram</span>
+            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            <!-- <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><img src="<?=$config['url']?>images/instagram-original-64.png" /></a> -->
+            <!-- <span>Instagram</span> -->
           </div>
           <div class="social-media-icon">
-            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><img src="<?=$config['url']?>images/youtube-original-321.png" /></a>
-            <span>YouTube</span>
+            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+            <!-- <span>YouTube</span> -->
           </div>
         </div>  <!-- social media icons -->
       </div>   <!-- social media -->
