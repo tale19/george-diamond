@@ -130,16 +130,10 @@ nav .navbar-header h1 {
 	.navbar .navbar-toggle:focus {
 		/*background-color: #337ab7;*/
 	}
-	#book-now-xs {
-		width: 6.5em;
+	#book-now-lg {
+		display: block;
+		width: 6em;
 		margin: 0 auto;
-		margin-top: 16px;
-		margin-bottom: 16px;	
-	}
-	#book-now-xs:hover {
-		color: #337ab7;
-		background-color: #ccc;
-		border: 1px solid #337ab7;
 	}
 }
 /* extra small (320-424px) */
