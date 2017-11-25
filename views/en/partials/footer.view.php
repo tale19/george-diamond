@@ -1,7 +1,6 @@
 <footer id="footer" class="container-fluid">
   <div class="container">
       <div id="social-media">
-        <h3>Follow George Diamond</h3>
         <div id="social-media-icons">
           <div class="social-media-icon">
             <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-f fa-2x" aria-hidden="true"></i></a>

@@ -990,14 +990,16 @@ This will not affect the contents of the p tag also because it is still just a b
     bottom: 0;
     padding: 0;
     background-color: #001423;
-    /*background-color: #ddd;*/
-    /*background-color: #337ab7;*/
     color: antiquewhite;
 }
-#footer h3 {
+/*#footer h3 {
 	font-family: 'Patua One', cursive;
 	letter-spacing: .1em;
+}*/
+#social-media {
+	margin-top: 30px;
 }
+
 #social-media-icons {
 	/*border: 1px solid yellow;*/
 	width: 180px;
@@ -1011,11 +1013,25 @@ This will not affect the contents of the p tag also because it is still just a b
 	padding: 0;
 	margin: 0 5px;
 }
+
+
 #social-media-icons a {
 	color: white;
 }
 #social-media-icons a:hover {
-	color: #337AB7;
+	/*color: #337AB7;*/
+}
+.social-media-icon:nth-child(1) i:hover {
+	color: #3b5998;
+}
+.social-media-icon:nth-child(2) i:hover {
+	color: #00aced;
+}
+.social-media-icon:nth-child(3) i:hover {
+	color: #bc2a8d;
+}
+.social-media-icon:nth-child(4) i:hover {
+	color: red;
 }
 
 #social-media-icons a img {
@@ -1025,16 +1041,6 @@ This will not affect the contents of the p tag also because it is still just a b
 	margin: 0 auto;
 }
 
-/*
-#social-media-icons > div > span {
-	display: block; /* može i inline-block sa width: 100%; */
-	/*text-align: center;
-	font-style: italic;
-	border: 1px solid yellow;
-	margin-top: 3px;
-	width: 100%;
-}*/
-*/
 .copyright {
 	text-align: center;
 	color: #888;
@@ -1047,25 +1053,19 @@ This will not affect the contents of the p tag also because it is still just a b
 	#social-media-icons {
 		max-width: 320px;
 	}
-	#footer h3 {
-		margin: 30px auto 15px;
-	}
 }
 
 /* media query SMALL display (768-991px) */
 @media (min-width: 768px) {
-	#footer h3 {
-		margin: 50px auto 25px;
-	}
+	
 }
 
 /* media query MEDIUM display (992-1199px) */
 @media (min-width: 992px) {
-
-
+	
 }
 
 /* media query LARGE display (1220px and obove) */
 @media (min-width: 1200px) {
-
+	
 }
