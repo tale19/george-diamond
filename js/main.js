@@ -1,3 +1,27 @@
+
+// ****** FUNCTIONS ******
+// 	Getter that returns the window parameters
+function getWindowOffset() {
+	var $windowTop = $(window).scrollTop() + 67; // 67px is the navbar height;
+	var $windowHeight = $(window).height();
+	var $windowBottom = $windowTop + $windowHeight;
+	return [$windowTop, $windowHeight, $windowBottom];
+}
+
+// 	Getter for elements' position
+function getElementVerticalPosition($elem) {
+	$elementTopPosition = $elem.offset().top;
+	$elementBottomPosition = $elem.offset().top + $elem.height();
+	return [$elementTopPosition, $elementBottomPosition];
+}
+
+// 	Method that checks if an element is in the viewport using the window offset and element's parameters
+function inViewport($elem) {
+	if (getElementVerticalPosition($elem)[0] > getWindowOffset()[0] && getElementVerticalPosition($elem)[1] < getWindowOffset()[2]) {
+		return true;
+	} 
+}
+
 function main() {
 
 	// Dynamically add class .active to mark current page in the navbar

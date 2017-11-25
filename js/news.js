@@ -7,61 +7,20 @@ function main() {
 
 
 // *** News images appearing on viewport entry ***
-	
-// first, create a getter that returns the window parameters
-	function getWindowOffset() {
-		var $windowTop = $(window).scrollTop() + 67; // 67px is the navbar height;
-		var $windowHeight = $(window).height();
-		var $windowBottom = $windowTop + $windowHeight;
-		return [$windowTop, $windowHeight, $windowBottom];
-	}
-
-	console.log('window scrolltop: ' + getWindowOffset()[0]);
-	console.log('window viewport height: ' + getWindowOffset()[1]);
-	console.log('window bottom view: ' + getWindowOffset()[2]);
-
-
-// next, create a getter for elements' position
-	function getElementVerticalPosition($elem) {
-		$elementTopPosition = $elem.offset().top;
-		$elementBottomPosition = $elem.offset().top + $elem.height();
-		// console.log('news preview top position: ' + $elementTopPosition);
-		// console.log('news preview bottom position: ' + $elementBottomPosition);
-		return [$elementTopPosition, $elementBottomPosition];
-	}
-
-// then create a method that checks if an element is in the viewport using the window offset and element's parameters
-	function inViewport($elem) {
-		if (getElementVerticalPosition($elem)[0] > getWindowOffset()[0] && getElementVerticalPosition($elem)[1] < getWindowOffset()[2]) {
-			// console.log('element is in Viewport');
-			return true;
-		} 
-	}
-	
-
-
-// now, pass each news image container to the method to get its position
+// 	pass each news image container to the "in viewport checker" to get its position
 	var $newsImageBox = $('.news-image-container');
 	$newsImageBox.each(function(){
-		console.log(getElementVerticalPosition($(this))[0]);
-		console.log(getElementVerticalPosition($(this))[1]);
 		if (inViewport($(this))) {
 			$(this).find('img').addClass('appear');
-			console.log('opa');
 		} 
 	});
 
-
-// finally, repeat to make it work on scroll, too
+// 	repeat to make it work on scroll as well
 	$(window).scroll(function() {
-		console.log('window scrolltop: ' + getWindowOffset()[0]);
-		// console.log('window viewport height: ' + getWindowOffset()[1]);
-		// console.log('window bottom view: ' + getWindowOffset()[2]);
-		console.log(inViewport($newsImageBox)); // ovde vraća true samo za prvi box, za ostale kaže UNDEFINED
+		console.log(inViewport($newsImageBox)); // ovde vraća true samo za prvi box, za ostale kaže UNDEFINED ???
 		$newsImageBox.each(function(){
 			if (inViewport($(this))) {
 				$(this).find('img').addClass('appear');
-				console.log('opa');
 			} 
 		});
 	});

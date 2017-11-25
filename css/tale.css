@@ -114,15 +114,14 @@ nav .navbar-header h1 {
 @media (max-width: 767px ) {
 	.navbar > .container > .navbar-header > .navbar-brand {
 		display: none;
-		border: 1px solid magenta;
-		/*width: 50px;*/
 	}
-	.navbar > .container > .navbar-header > .navbar-brand {
-		/*margin: 10px auto;*/
+	.navbar > .container > .navbar-header {
+		padding-left: 30px;
 	}
 	nav .navbar-header h1 {
-		font-size: 1.6em;
-		line-height: 1.25em;
+		text-align: left;
+		font-size: 2em;
+		line-height: 1.1em;
 	}
 
 	.navbar .navbar-toggle:hover {
@@ -143,7 +142,13 @@ nav .navbar-header h1 {
 		border: 1px solid #337ab7;
 	}
 }
-
+/* extra small (320-424px) */
+@media (max-width: 424px) {
+	nav .navbar-header h1 {
+		font-size: 1.5em;
+		line-height: 1.25em;
+	}
+}
 @media (min-width: 768px) {
 	.nav.navbar-nav > li:nth-child(1) > a:hover {
 		color: rgb(208,48,108);
@@ -161,19 +166,12 @@ nav .navbar-header h1 {
 		color: rgb(255,55,5);
 		border-bottom: 4px solid rgb(255,55,5);
 	}
-
-
 	.navbar > .container > .navbar-header > .navbar-brand {
 		margin-right: 15px;
 	}	
-
-
-
 	#book-now-lg {
 		margin-right: 15px;
 	}
-
-
 }
 
 
@@ -645,16 +643,14 @@ This will not affect the contents of the p tag also because it is still just a b
 
 #booking-box {
 	margin-top: 80px;
-	position: relative;
-	border: 1px solid #001423;
 	background-color: #337BA7;
 	color: antiquewhite;
+	border: 1px solid #001423;
 	font-family: 'Patua One', cursive;
 }
 
 #booking-box h1 {
 	font-family: 'Boogaloo', cursive;	
-	font-size: 4em;
 	margin-top: 0;
 	text-align: center;
 	margin-bottom: 1em;
@@ -662,30 +658,27 @@ This will not affect the contents of the p tag also because it is still just a b
 #booking-box p {
 	text-align: justify;
 }
-#jumbotron-shows {
-	position: relative;
-}
-#jumbotron-shows p {
-	margin: 0;
-}
+
 #amazing-shows {
 	position: relative;
 }
-#amazing-shows {
+#amazing-shows > p {
+	text-align: left;
 }
+
 #amazing-shows a.btn {
 	margin-top: 15px;
-	/*border: 1px solid yellow;*/
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #amazing-shows-list {
 	position: relative;
 	padding: 0;
-	/*font-size: .95em;*/
+	font-size: .85em;
 }
 #amazing-shows ul > li {
 	list-style: none;
+	line-height: 1.9em;
 }
 .amazing-show {
 	display: inline-block; /* required for transiton to work */
@@ -693,7 +686,8 @@ This will not affect the contents of the p tag also because it is still just a b
 	position: relative;
 	font-size: 1.2em;
 	text-transform: capitalize;
-	color: white;
+	color: antiquewhite;
+	/*color:  rgb(255,200,5);*/
 }
 .amazing-show:hover {
 	color: unset;
@@ -705,6 +699,7 @@ This will not affect the contents of the p tag also because it is still just a b
     content: "\E080";
     font-family: 'Glyphicons Halflings';
     font-size: 9px;
+    text-decoration: none;
 }
 #amazing-shows img {
 	display: block;
@@ -716,6 +711,31 @@ This will not affect the contents of the p tag also because it is still just a b
 #amazing-shows img:hover {
 	/*transform: translate(-200px,0px) rotate(-360deg);*/
 }
+
+@media (max-width: 767px) {
+	#booking-box h1 {
+		font-size: 2.2em;
+	}
+	#booking-box div p {
+		font-size: 1em;
+	}
+
+}
+
+/* ***** EXTRA SMALL DISPLAY (320-374px) ***** */
+@media (max-width: 374px) {
+	#amazing-shows-list {
+		font-size: .7rem;
+	}
+}
+
+@media (min-width: 768px) {
+	#booking-box h1 {
+		font-size: 4em;
+	}
+}
+
+
 
 
 
@@ -834,8 +854,6 @@ This will not affect the contents of the p tag also because it is still just a b
 } 
 .news-image-container img.appear {
 	opacity: 1;
-	/*transform: translateY(-100px);*/
-	/*transform: ease-out;*/
 }
 
 .news-share {
