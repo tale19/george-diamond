@@ -141,6 +141,9 @@
       </ul>
     </div>
   </div> <!-- row -->
+
+  <div class="scrolltop-button"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+  
 </div> <!-- container -->
   
 </div> <!-- content -->

@@ -1025,17 +1025,16 @@ This will not affect the contents of the p tag also because it is still just a b
 	margin: 0 auto;
 }
 
-
+/*
 #social-media-icons > div > span {
 	display: block; /* može i inline-block sa width: 100%; */
-	text-align: center;
+	/*text-align: center;
 	font-style: italic;
-	/*border: 1px solid yellow;*/
+	border: 1px solid yellow;
 	margin-top: 3px;
-	/*width: 100%;*/
-	/*margin: 0 auto;*/
-}
-
+	width: 100%;
+}*/
+*/
 .copyright {
 	text-align: center;
 	color: #888;
