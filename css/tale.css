@@ -635,12 +635,6 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 /* *** BOOKING BOX (jumbotron) ***/
-#index-content {
-	/*background-color: #f8f8f8;*/
-	/*background-color: #337AB7;*/
-	/*background-color: rgba(25,25,25,1);*/
-}
-
 #booking-box {
 	margin-top: 80px;
 	background-color: #337BA7;
@@ -660,7 +654,7 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 #amazing-shows {
-	position: relative;
+	position: relative; /* to keep the image contained */
 }
 #amazing-shows > p {
 	text-align: left;
@@ -689,10 +683,10 @@ This will not affect the contents of the p tag also because it is still just a b
 	color: antiquewhite;
 	/*color:  rgb(255,200,5);*/
 }
-.amazing-show:hover {
-	color: unset;
-	transform: translate(10px, 0px);
-}
+	.amazing-show:hover {
+		color: unset;
+		transform: translateX(10px);
+	}
 .amazing-show:before {
     /*Using a Bootstrap glyphicon as the bullet point*/
     margin: 4px 5px 0;
@@ -703,13 +697,10 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 #amazing-shows img {
 	display: block;
-	/*transition: transform 2s;*/
 	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-#amazing-shows img:hover {
-	/*transform: translate(-200px,0px) rotate(-360deg);*/
+	top: 0;
+	opacity: 0;
+	transition: all 1.5s;
 }
 
 @media (max-width: 767px) {
@@ -717,25 +708,58 @@ This will not affect the contents of the p tag also because it is still just a b
 		font-size: 2.2em;
 	}
 	#booking-box div p {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 
 }
 
 /* ***** EXTRA SMALL DISPLAY (320-374px) ***** */
 @media (max-width: 374px) {
+	#booking-box div p {
+		font-size: 1em;
+	}
 	#amazing-shows-list {
 		font-size: .7rem;
+	}
+	#amazing-shows a:nth-child(4) { /* resize booking button's font */
+		font-size: 0.85em;
+		line-height: 1.85em;
 	}
 }
 
 @media (min-width: 768px) {
 	#booking-box h1 {
-		font-size: 4em;
+		font-size: 3em;
+	}
+	#booking-box p {
+		font-size: 1.2em;
+	}
+	.amazing-show {
+		font-size: 1.3em;
+	}
+	#amazing-shows ul + a.btn {
+		margin-top: 45px;
+	}
+	#amazing-shows img {
+		height: 90px;
+		right: 350px;
+		transition: all 1s;
+	}
+	#amazing-shows img.animate {
+		transform: translate(305px,45px) scale(2) rotate(360deg);
+		opacity: 1;
 	}
 }
 
-
+@media (min-width: 992px) {
+	#amazing-shows img {
+		right: 650px;
+		transition: all 2s;
+	}
+	#amazing-shows img.animate {
+		transform: translate(605px, 45px) scale(2) rotate(720deg);
+	}
+}
 
 
 

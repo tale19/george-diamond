@@ -85,6 +85,16 @@ function main() {
 			// $navh1.removeClass('disappear');
 		}
 	});
+
+
+	/* *** ANIMATE JUMBOTRON IMAGE *** */
+	$amazingShows = $('#amazing-shows-list');
+	$(window).scroll(function() {
+		if(inViewport($amazingShows)) {
+			$($amazingShows).parent().find('img').addClass('animate');
+		}
+	});
+
 }
 
 $(document).ready(main);

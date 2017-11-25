@@ -76,8 +76,8 @@
         <li><a href="#" class="amazing-show">classy stage magic</a></li>
         <li><a href="#" class="amazing-show">telepathy and mentalism</a></li>
       </ul>
-      <a href="#" type="button" class="btn btn-info">Find out more</a>
-      <a href="contact" type="button" class="btn btn-success">Book your show!</a>
+      <a href="#" type="button" class="btn btn-block btn-info">Find out more</a>
+      <a href="contact" type="button" class="btn btn-block btn-success">You got me! Show me where to book!</a>
       <img src="images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
     </div> <!-- #amazing shows -->
   </div>  <!-- jumbotron -->
