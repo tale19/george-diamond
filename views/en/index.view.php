@@ -15,8 +15,22 @@
 <body>
 <?php 
   require 'views/en/partials/navbar.view.php';
-  require 'views/en/partials/page-header.view.php';
  ?>
+
+<div id="header" class="page-header">
+  <div class="container">
+    <div id="header-holder">
+      <h1>Magic of George Diamond</h1>
+      <h2>A show that has toured the entire world</h2>
+    </div>
+    <img src="images/background.png" alt="Background image" class="img-responsive visible-xs mobile-background">
+    <div id="superfinalist">
+      <span>Serbia's Got Talent<span style="display:inline-block; font-family: sans-serif; font-size: 1em;">&trade;</span> superfinalist</span>
+      <a href="https://youtu.be/DSj25fuuE2o?t=6m8s" target="_blank" class="btn-lg btn-round">Watch on YouTube</a>
+    </div> <!-- #superfinalist -->
+  </div>  <!--container -->
+</div> <!--page-header -->
+
 <div id="intro" class="section-separator">
   <h3>WHO IS GEORGE DIAMOND?</h3>
 </div>
@@ -80,7 +94,7 @@
         <li class="amazing-show">telepathy and mentalism</li>
         <li class="amazing-show" style="font-style: italic; text-transform: none;">... and much, much more</li>
       </ul>
-      <a href="#" type="button" class="btn btn-block btn-info">Find out more</a>
+      <a href="shows" type="button" class="btn btn-block btn-info">Find out more</a>
       <a href="contact" type="button" class="btn btn-block btn-success">You got me! Show me where to book!</a>
       <img src="images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
     </div> <!-- #amazing shows -->
