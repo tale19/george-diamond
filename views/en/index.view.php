@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
@@ -67,14 +67,14 @@
     </div>
     <hr>
     <div id="amazing-shows">
-      <p>Check out some of George's fascinating shows:</p>
       <ul id="amazing-shows-list">
-        <li><a href="#" class="amazing-show">amazing grand illusions</a></li>
-        <li><a href="#" class="amazing-show">breathtaking quick costume changes</a></li>
-        <li><a href="#" class="amazing-show">exotic mysteries of Chinese masks</a></li>
-        <li><a href="#" class="amazing-show">hilarious comedy magic</a></li>
-        <li><a href="#" class="amazing-show">classy stage magic</a></li>
-        <li><a href="#" class="amazing-show">telepathy and mentalism</a></li>
+        <li class="amazing-show">amazing grand illusions</li>
+        <li class="amazing-show">breathtaking quick costume changes</li>
+        <li class="amazing-show">exotic mysteries of Chinese masks</li>
+        <li class="amazing-show">hilarious comedy magic</li>
+        <li class="amazing-show">classy stage magic</li>
+        <li class="amazing-show">telepathy and mentalism</li>
+        <li class="amazing-show" style="font-style: italic; text-transform: none;">... and much, much more</li>
       </ul>
       <a href="#" type="button" class="btn btn-block btn-info">Find out more</a>
       <a href="contact" type="button" class="btn btn-block btn-success">You got me! Show me where to book!</a>
