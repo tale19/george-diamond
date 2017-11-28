@@ -1,18 +1,5 @@
 function main() {
 	// *** SMOOTHLY SCROLL TO SHOW FROM JUMBOTRON LINKS ***
-
-
-	// first, create an array of targets:
-	// var targets = {};
-	// targets['#shows-illusion-shortcut'] = '#shows-illusion';
-	// targets['#shows-stage-shortcut'] = '#shows-stage';
-	// targets['#shows-private-shortcut'] = '#shows-private';
-	// targets['#shows-quickchange-shortcut'] = '#shows-quickchange';
-	// targets['#shows-chinese-shortcut'] = '#shows-chinese';
-	// targets['#shows-short-shortcut'] = '#shows-short';
-	// targets['#shows-parlor-shortcut'] = '#shows-parlor';
-	// targets['#shows-kids-shortcut'] = '#shows-kids';
-
 	$showShortcut = $('.shows-full-list-item');
 	$showShortcut.on('click', function(e){
 		e.preventDefault;
@@ -24,6 +11,24 @@ function main() {
     }, 1200);
 	});
 
+	// *** Paragraphs appearing on viewport entry ***
+// 	pass each paragraph container to the "in viewport checker" to get its position
+	// var $showTitle = $('#shows-content .show-box .show-article h4');
+	var $showsRow = $('#shows-content .show-box .row');
+	$showsRow.each(function(){
+		if (inPartialViewport($(this))) {
+			$(this).find('.paragraph').addClass('appear');
+		} 
+	});
+
+// 	repeat to make it work on scroll as well
+	$(window).scroll(function() {
+		$showsRow.each(function(){
+			if (inPartialViewport($(this))) {
+				$(this).find('.paragraph').addClass('appear');
+			} 
+		});
+	});
 
 
 
