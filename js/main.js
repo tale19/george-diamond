@@ -22,6 +22,15 @@ function inViewport($elem) {
 	} 
 }
 
+// 	Method that checks if an element is PARTIALLY in the viewport using the window offset and element's parameters
+function inPartialViewport($elem) {
+	if ((getElementVerticalPosition($elem)[0] > getWindowOffset()[0] && getElementVerticalPosition($elem)[0] < getWindowOffset()[2]) || 
+		(getElementVerticalPosition($elem)[1] > getWindowOffset()[0] && getElementVerticalPosition($elem)[1] < getWindowOffset()[2])) 
+	{
+		return true;
+	} 
+}
+
 function main() {
 
 	// Dynamically add class .active to mark current page in the navbar
