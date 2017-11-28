@@ -786,10 +786,12 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 /* *** BIO PAGE *** */
-
-#about-george-diamond img {
+#bio-content p {
+	text-align: justify;
+}
+#bio-content #about-george-diamond img {
 	float: left;
-	margin: 0 15px 5px 0;
+	margin: 5px 15px 5px 0;
 }
 
 #bio-content #credits h4 {
@@ -802,31 +804,47 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 
+
 @media (max-width: 767px) {
-	#about-george-diamond img {
-		max-width: 40%;
-	}
 	#bio-content #credits h4 {
 		font-size: 1.7em;
 	}
+	#bio-content p,
+	#bio-content ul {
+		font-size: 1.15em;
+	}
+	#bio-content #about-george-diamond img {
+		width: 220px;
+	}
 }
+
+		@media (max-width: 525px) {
+			#bio-content #about-george-diamond img {
+				float: none;
+				width: 85%;
+				margin: 15px auto;
+			}
+		}
 
 @media (min-width: 768px) {
-	#about-george-diamond img {
-		max-width: 35%;
-	}
 	#bio-content #credits h4 {
-		font-size: 2.2em;
+		font-size: 2.3em;
+	}	
+	#bio-content p,
+	#bio-content ul {
+		font-size: 1.15em;
+	}
+	#about-george-diamond img {
+		max-width: 45%;
 	}
 }
+
 
 @media (min-width: 992px) {
-	#bio-content #credits h4 {
-		font-size: 2.5em;
+	#about-george-diamond img {
+		max-width: 33%;
 	}
 }
-
-
 
 
 
