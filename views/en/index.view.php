@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home | Magic and Illusions of George Diamond</title>
-<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy|Varela+Round" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
@@ -17,45 +17,49 @@
   require 'views/en/partials/navbar.view.php';
   require 'views/en/partials/page-header.view.php';
  ?>
-<div id="intro">
+<div id="intro" class="section-separator">
   <h3>WHO IS GEORGE DIAMOND?</h3>
 </div>
   <!-- <hr> -->
 <!-- <div class="separator">
   <img src="images/row-separator.png">
 </div> -->
-<section class="container-fluid">
+<section id="about-george" class="container-fluid">
   <div class="container">
     <span>George Diamond is a professional illusionist, magician and quick change artist, specializing in grand illusion, quick costume changes, stage magic, comedy magic and mentalism. Years of experience, a very specific performance style, as well as wide repertoire and unique choice of magic and illusions make his shows dazzling and entertaining for audiences of all ages, interests and countries.</span>
   </div>
 </section>
 
-<div id="numbers" class="container-fluid">
+<div id="wdyg" class="section-separator">
+  <h3>WHAT DO YOU GET?</h3>
+</div>
+
+<section id="offer" class="container-fluid">
   <div class="container">  
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="number">Eight</div>
-        <div class="text">forms of magic to suit your needs</div>
+        <div class="subtitle">Variety</div>
         <div class="image"><img src="images/magician-yellow.png"></div>
+        <div class="subtext">There's an act for everyone: from your kid's birthday party to large stage shows</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="number">Dozens</div>
-        <div class="text">of countries toured</div>
-        <div class="image"><img src="images/cruiser.png"></div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="number">Hundreds</div>
-        <div class="text">of international shows</div>
+        <div class="subtitle">Experience</div>
         <div class="image"><img src="images/world-720.png"></div>
+        <div class="subtext">George has had hundreds of international performances</div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="number">Thousands</div>
-        <div class="text">of satisfied spectators</div>
+        <div class="subtitle">Proven quality</div>
         <div class="image"><img src="images/magician-bow-orange.png"></div>
+        <div class="subtext">Thousands of satisfied spectators have enjoyed George's shows</div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="subtitle">Flexible pricing</div>
+        <div class="image"><img src="images/numbers-money.png"></div>
+        <div class="subtext">We offer a pricing structure that will ensure you get the best value for your money</div>
       </div>
     </div> <!-- #numbers.row -->
   </div> <!-- .container -->
-</div> <!-- .container-fluid -->
+</section> <!-- .container-fluid -->
 
 <div id="index-content" class="container-fluid">
 
@@ -63,7 +67,7 @@
   <div id="booking-box" class="jumbotron">
     <div>
       <h1>Making your event magical!</h1>
-      <p>George Diamond is a world class entertainer presenting shows that everyone will enjoy. From small shows, ideal for private parties, to big stage grandiose events for hundreds of guests, he will turn your special event into a memorable illusionary journey to a world of the impossible, and his lavish Vegas-style shows will be an experience your guests will remember for a very long time!</p>
+      <p>George Diamond is a world class entertainer, presenting shows that everyone will enjoy. From small shows, ideal for private parties, to big stage grandiose events for hundreds of guests, he will turn your special event into a memorable illusionary journey to a world of the impossible, and his lavish Vegas style shows will be an experience your guests will remember for a very long time!</p>
     </div>
     <hr>
     <div id="amazing-shows">

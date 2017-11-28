@@ -197,7 +197,7 @@ nav .navbar-header h1 {
 /* *** 	HEADER ELEMENTS	 *** */
 #header {
 	position: relative;
-	margin: 20px 0;
+	margin: 20px 0 0 0;
 	border-bottom: 1px solid rgba(0,0,0,.3);
 }
 #header > .container {
@@ -411,14 +411,12 @@ h3 {
 
 /* *** INTRO SECTION (ABOUT GEROGE) *** */
 
-#intro {
+.section-separator {
 	display: table;
 	/*z-index: 1;*/
 	width: 100%;
-	color: rgb(208,48,108);
-	background-color: #ddd;
 }
-#intro h3 {
+.section-separator h3 {
 	padding-top: unset;
 	display: table-cell;
 	vertical-align: middle;
@@ -442,26 +440,32 @@ h3 {
 	width: 100%;
 }
 */
-#intro ~ section {
+#intro {
+	color: rgb(208,48,108);
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+#about-george {
 	position: relative;
 	display: table;
 	width: 100%;
 	/*border: 2px solid blue;*/
 }
-#intro ~ section > div.container {
+#about-george > div.container {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 }
-#intro ~ section span {
+#about-george span {
 	/*border: 1px solid magenta;*/
 	display: block;
 	width: 100%;
-	margin: 2em auto;
+	margin: 3em auto;
 	font-family: 'Boogaloo', cursive;
 	color: rgb(208,48,108);
 }
-#intro ~ section ::before { /* enables background opacity without affecting the other elements' opacity */
+#about-george ::before { /* enables background opacity without affecting the other elements' opacity */
 	content: '';
 	position: absolute;
 	top: 0;
@@ -478,58 +482,58 @@ h3 {
 
 /* *** INTRO MEDIA QUERIES *** */
 @media (max-width: 767px) {
-	#intro {
+	.section-separator {
 		height: 100px;
 	}
-	#intro h3 {
+	.section-separator h3 {
 		font-size: 2em;
 	}
 
-	#intro ~ section span {
+	#about-george span {
 		/*display: block;*/
 		font-size: 1.6em;
 	}
 }
 
 @media (min-width: 768px) {
-	#intro {
+	.section-separator {
 		height: 80px;
 	}
-	#intro h3 {
+	.section-separator h3 {
 		font-size: 2.5em;
 	}
 
-	#intro ~ section span {
+	#about-george span {
 		/*display: block;*/
 		font-size: 1.8em;
 	}
 }
 
 @media (min-width: 992px) {
-	#intro {
+	.section-separator {
 		height: 100px;
 	}
-	#intro h3 {
+	.section-separator h3 {
 		font-size: 3em;
 	}
 
-	#intro ~ section span {
+	#about-george span {
 		/*display: block;*/
 		font-size: 2.1em;
 	}
 }
 
 @media (min-width: 1200px) {
-	#intro {
+	.section-separator {
 		height: 120px;
 	}
-	#intro h3 {
+	.section-separator h3 {
 		font-size: 3.5em;
 	}
 
-	#intro ~ section span {
+	#about-george span {
 		/*display: block;*/
-		font-size: 2.6em;
+		font-size: 2.3em;
 	}
 }
 
@@ -538,85 +542,121 @@ h3 {
 
 
 /* *** NUMBERS SECTION *** */
-
-#numbers {
+#wdyg {
+	background-color: #001423;
+	color: #c8c8c8;
+	border-bottom: 1px solid #333;
+	/*margin-bottom: 0;*/
+}
+#offer {
 	/*position: relative;*/
 	/*min-height: 450px;*/
-	font-family: 'Boogaloo', cursive;
+	/*font-family: 'Boogaloo', cursive;*/
+	font-family: 'Nova Round', cursive;
+	font-family: 'Varela Round', cursive;
 	background-color: rgba(25,25,25,1);
 	background-color: #001423;
-	border-top: 1px solid rgba(0,0,0,.1);
-	border-bottom: 1px solid rgba(0,0,0,.1);
+	/*border-top: 1px solid rgba(0,0,0,.1);*/
+	/*border-bottom: 1px solid rgba(0,0,0,.1);*/
 }
 
 
-#numbers .number,
-#numbers .text {
+#offer .subtitle,
+#offer .subtext {
 	/*border: 1px solid yellow;*/
 	/*width: 100%;*/
 	text-align: center;
 	/*font-weight: 600;*/
 }
 
-#numbers div[class*='col-'] {
-	/*border: 1px solid magenta;*/
-	margin: 0 auto;
+#offer div[class*='col-'] {
+	
 }
-#numbers .number {
-	font-size: 3rem;
+#offer div[class*='col-']:nth-child(1) div {
+	color: rgb(255,200,5);
 }
-#numbers .text {
+#offer div[class*='col-']:nth-child(2) div {
+	/*color: rgb(6,100,138);*/
+	color: rgb(7, 135, 186);
+}
+#offer div[class*='col-']:nth-child(3) div {
+	color: rgb(255,55,5);
+}
+#offer div[class*='col-']:nth-child(4) div {
+	color: rgb(48,208,28);
+}
+
+#offer div[class*='col-'] > .subtitle {
+	color: #c8c8c8 !important;
+	font-size: 2rem;
+}
+#offer div[class*='col-'] .subtext {
 	font-size: 1em;
 	letter-spacing: 1px;
 }
-#numbers div[class*='col-']:nth-child(1) div {
-	color: rgb(255,200,5);
-}
-#numbers div[class*='col-']:nth-child(2) div {
-	color: rgb(48,208,28);
-}
-#numbers div[class*='col-']:nth-child(3) div {
-	color: rgb(6,100,138);
-}
-#numbers div[class*='col-']:nth-child(4) div {
-	color: rgb(255,55,5);
-}
 
-
-#numbers .image {
-	margin-top: 25px;
+#offer div[class*='col-'] .image {
+	position: relative;
+	margin: 25px auto;
 	height: 120px;
+	/*border: 1px solid yellow;*/
 }
-#numbers .image img {
+#offer div[class*='col-'] .image img {
 	display: block;
-	/*width: 80%;*/	
+	position: absolute;
+	opacity: 0;
 	height: 100%;
-	margin: 0 auto;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 1s;
 }
+	#offer div[class*='col-'] .image img.appear {
+		opacity: 1;
+		transform: translate(-50%,-100%);
+	}
 
 @media  (max-width: 767px) {
-	#numbers div[class*='col-'] {
+	#offer div[class*='col-'] {
 		margin-top: 35px;
 	}
-	#numbers div[class*='col-']:last-child {
+	#offer div[class*='col-']:last-child {
 		margin-bottom: 35px;
 	}
 }
+	@media (min-width: 426px) and (max-width: 767px) {
+		#offer div[class*='col-'] .subtext {
+			margin-left: auto;
+			margin-right: auto;
+			width: 350px;
+		}
+	}
 
 @media  (min-width: 768px) {
-	#numbers div[class*='col-'] {
+	#offer div[class*='col-'] {
 		margin-top: 50px;
 		margin-bottom: unset;
 	}
-	#numbers div[class*='col-']:last-child {
-		margin-bottom: 50px;7
-		margin-top: unset;
+	#offer div[class*='col-']:last-child {
+		margin-bottom: 50px;
+	}
+	#offer div[class*='col-'] > .subtitle {
+		font-size: 2.4em;
 	}
 }
 
 @media  (min-width: 992px) {
-	#numbers div[class*='col-'] {
+	#offer div[class*='col-'] {
 		margin: 80px auto;
+	}
+	#offer div[class*='col-'] > .subtitle {
+		font-size: 2.1em;
+	}
+}
+
+@media  (min-width: 1200px) {
+	#offer div[class*='col-'] > .subtitle {
+		font-size: 2.6em;
 	}
 }
 
@@ -1273,7 +1313,6 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 /*#footer h3 {
 	font-family: 'Patua One', cursive;
-	letter-spacing: .1em;
 }*/
 #social-media {
 	margin-top: 30px;
