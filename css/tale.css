@@ -186,6 +186,8 @@ nav .navbar-header h1 {
 	background-color: #f8f8f8;
 	/*background-color: rgb(208,48,108);*/
 	/*color: #383838;*/
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-weight: 500;
 }
 
 
@@ -666,31 +668,15 @@ This will not affect the contents of the p tag also because it is still just a b
 	padding: 0;
 	font-size: .85em;
 }
-#amazing-shows ul > li {
-	list-style: none;
-	line-height: 1.9em;
-}
+
 .amazing-show {
-	display: inline-block; /* required for transiton to work */
-	transition: transform .5s;
-	position: relative;
-	font-size: 1.2em;
+	list-style: none;
 	text-transform: capitalize;
-	color: antiquewhite;
-	/*color:  rgb(255,200,5);*/
+	font-size: 1.2em;
+	line-height: 1.7em;
 }
-	.amazing-show:hover {
-		color: unset;
-		transform: translateX(10px);
-	}
-.amazing-show:before {
-    /*Using a Bootstrap glyphicon as the bullet point*/
-    margin: 4px 5px 0;
-    content: "\E080";
-    font-family: 'Glyphicons Halflings';
-    font-size: 9px;
-    text-decoration: none;
-}
+
+
 #amazing-shows img {
 	display: block;
 	position: absolute;
@@ -715,9 +701,9 @@ This will not affect the contents of the p tag also because it is still just a b
 		font-size: 1em;
 	}
 	#amazing-shows-list {
-		font-size: .7rem;
+		font-size: .8rem;
 	}
-	#amazing-shows a:nth-child(4) { /* resize booking button's font */
+	#amazing-shows a:nth-child(3) { /* resize booking button's font */
 		font-size: 0.85em;
 		line-height: 1.85em;
 	}
@@ -801,10 +787,140 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 
+
+
+
+
+
+
 /* *** SHOWS PAGE *** */
 #shows-content {
+	
+}
+
+
+
+
+
+
+
+/* *** BOOKING BOX (jumbotron) ***/
+/*
+#booking-box {
+	margin-top: 80px;
+	background-color: #337BA7;
+	color: antiquewhite;
+	border: 1px solid #001423;
 	font-family: 'Patua One', cursive;
 }
+
+#booking-box h1 {
+	font-family: 'Boogaloo', cursive;	
+	margin-top: 0;
+	text-align: center;
+	margin-bottom: 1em;
+}
+#booking-box p {
+	text-align: justify;
+}
+*/
+
+#shows-content .jumbotron {
+	background-color: #001423;
+	color: white;
+}
+
+#shows-content .jumbotron p {
+	text-align: justify;
+	/*font-size: 1.5em;*/
+}
+#shows-content .jumbotron p:nth-child(3) {
+	margin-bottom: 5px;
+}
+
+#shows-full-list {
+	/*position: relative;*/
+	padding: 0;
+	/*font-size: .85em;*/
+}
+
+#shows-full-list > li {
+	list-style: none;
+	/*line-height: 1.9em;*/
+}
+
+.shows-full-list-item {
+	display: inline-block; /* required for transiton to work */
+	transition: transform .5s;
+	/*position: relative;*/
+	text-transform: capitalize;
+	color: unset;
+}
+	.shows-full-list-item:hover {
+		color: unset;
+		transform: translateX(10px);
+	}
+.shows-full-list-item:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    margin: 4px 5px 0;
+    content: "\E080";
+    font-family: 'Glyphicons Halflings';
+    font-size: .5em;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+	#shows-content .jumbotron p {
+		font-size: 1em;
+	}
+	#shows-content .jumbotron .shows-full-list-item {
+		font-size: 1em;
+	}
+
+
+}
+
+
+@media (min-width: 768px) {
+	#shows-content .jumbotron p {
+		font-size: 1.3em;
+	}
+	#shows-content .jumbotron .shows-full-list-item {
+		font-size: 1.3em;
+	}
+}
+
+@media (min-width: 992px) {
+	#shows-content .jumbotron p {
+		font-size: 1.5em;
+	}
+	#shows-content .jumbotron .shows-full-list-item {
+		font-size: 1.5em;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	#shows-content .jumbotron p {
+		font-size: 1.7em;
+	}
+	#shows-content .jumbotron .shows-full-list-item {
+		font-size: 1.7em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 #shows-content .jumbotron {
 	margin-bottom: 50px;
@@ -822,22 +938,21 @@ This will not affect the contents of the p tag also because it is still just a b
 	color: unset;
 }
 
-#shows-content .show-box {
+*/
+
+
+#shows-content .show-box .row {
 	padding: 2em 1em;
 }
 
 #shows-content .show-box:nth-child(odd) {
-	/*background-color: white;*/
-	/*color: #337ab7;*/
+	color: #337ab7;
 	background-color: #f8f8f8;
-	color: #449d44;
 
 }
 #shows-content .show-box:nth-child(even) {
-	/*background-color: #337ab7;*/
-	/*color: white;*/
-	color: #f8f8f8;
-	background-color: #449d44;
+	background-color: #337ab7;
+	color: white;
 }
 
 #shows-content .show-box .show-article h4 {
@@ -851,11 +966,50 @@ This will not affect the contents of the p tag also because it is still just a b
 #shows-content .show-box .shows-misc {
 	/*height: 100%;*/
 }
-#shows-content .show-box .shows-misc img {
+
+.shows-misc {
+	/*border: 1px solid magenta;*/
+	height: 350px;
+	margin: 15px auto;
+}
+
+.shows-misc img {
+	/*border: 3px solid rgb(48,208,28);*/
+	display: block;
+	margin: 0 auto;
 	border-radius: 5px;
-	max-height: 100%;
+	max-height: 80%;
 	max-width: 100%;
+	/*transition: transform .5s;*/
+	/*opacity: 0;*/
+	transition: opacity 1s ease-out;
+} 
+.news-image-container img.appear {
+	opacity: 1;
+}
+
+
+
+
+
+/*#shows-content .show-box .shows-misc img {
+	border-radius: 5px;
+	max-width: 100%;
+	max-height: 100%;
 	margin-bottom: 15px;
+}*/
+
+#shows-content .show-box .shows-misc .btn-lg {
+	display: block;
+	width: 6.7em;
+	margin: 15px auto;
+	font-weight: 800;
+	border: 1px solid #001423;
+}
+#shows-content .show-box .shows-misc .btn-lg:hover {
+	background-color: #001423;
+	color: white;
+	border: 1px solid white;
 }
 
 @media (max-width: 767px) {
