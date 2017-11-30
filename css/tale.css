@@ -989,64 +989,6 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 /* *** Show boxes *** */
-
-
-
-
-
-/* *** BIO PAGE *** */
-
-
-
-#bio-content #credits .col-sm-6 ul  {
-	margin-left: 15px;
-}
-
-
-
-@media (max-width: 767px) {
-
-	#bio-content p,
-	#bio-content ul {
-		font-size: 1.15em;
-	}
-	#bio-content #about-george-diamond img {
-		width: 220px;
-	}
-}
-
-		@media (max-width: 525px) {
-			#bio-content #about-george-diamond img {
-				float: none;
-				width: 85%;
-				margin: 15px auto;
-			}
-		}
-
-@media (min-width: 768px) {
-
-	#bio-content p,
-	#bio-content ul {
-		font-size: 1.15em;
-	}
-	#about-george-diamond img {
-		max-width: 45%;
-	}
-}
-
-
-@media (min-width: 992px) {
-	#about-george-diamond img {
-		max-width: 33%;
-	}
-}
-
-
-
-
-
-
-
 #shows-content .show-box:nth-child(odd) {
 	color: #337ab7;
 	background-color: #f8f8f8;
@@ -1075,18 +1017,20 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 #shows-content .show-box .shows-misc {
-	/*height: 100%;*/
+	height: 100%;
 }
 
 
 
-.shows-misc img {
+#shows-content .shows-misc img {
 	/*border: 3px solid rgb(48,208,28);*/
 	display: block;
 	margin: 0 auto;
 	border-radius: 5px;
-	max-height: 80%;
+	/*max-height: 80%;
 	max-width: 100%;
+	width: 100%;
+	height: auto;*/
 	/*transition: transform .5s;*/
 	/*opacity: 0;*/
 	transition: opacity 1s ease-out;
@@ -1117,6 +1061,11 @@ This will not affect the contents of the p tag also because it is still just a b
 	#shows-content .show-box .show-article h4 {
 		font-size: 1.7em;
 	}
+	#shows-content .shows-misc img {
+		height: auto;
+		max-width: 100%;
+		border: 2px solid green;
+	}
 }
 
 @media (min-width: 768px) {
@@ -1133,11 +1082,27 @@ This will not affect the contents of the p tag also because it is still just a b
 		height: 350px;
 		margin: 15px auto;
 	}
+	#shows-content .shows-misc img {
+		height: auto;
+		max-width: 100%;
+		border: 2px solid green;
+	}
 }
 
-
-
-
+@media (min-width: 526px) and (max-width: 767px){
+	#shows-content .shows-misc img {
+		max-height: 100%;
+		width: auto;
+		border: 1px solid magenta;
+	}
+}
+@media (min-width: 1200px) {
+	#shows-content .shows-misc img {
+		max-height: 100%;
+		width: auto;
+		border: 1px solid magenta;
+	}
+}
 
 
 
