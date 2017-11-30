@@ -21,11 +21,11 @@ function main() {
 
 // *** Row (#offer) images appearing on viewport entry ***
 // 	pass each image container to the "in viewport checker" to get its position
-	var $rowImageBox = $('#offer .image');
+	var $rowImageBox = $("#offer div[class*='col-']");
 	$rowImageBox.each(function(){
 		if (inViewport($(this))) {
-			console.log('radi');
-			$(this).find('img').addClass('appear');
+			console.log($(this).children());
+			$(this).children().addClass('appear');
 		} 
 	});
 
@@ -34,7 +34,7 @@ function main() {
 		console.log(inViewport($rowImageBox)); // ovde vraća true samo za prvi box, za ostale kaže UNDEFINED ???
 		$rowImageBox.each(function(){
 			if (inViewport($(this))) {
-				$(this).find('img').addClass('appear');
+				$(this).children().addClass('appear');
 			} 
 		});
 	});

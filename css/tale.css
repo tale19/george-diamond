@@ -572,6 +572,7 @@ h3 {
 #offer div[class*='col-'] {
 	
 }
+
 #offer div[class*='col-']:nth-child(1) div {
 	color: rgb(255,200,5);
 }
@@ -589,10 +590,20 @@ h3 {
 #offer div[class*='col-'] > .subtitle {
 	color: #c8c8c8 !important;
 	font-size: 2rem;
+	opacity: 0;
+	transition: all 2.5s;
 }
+	#offer div[class*='col-'] > .subtitle.appear {
+		opacity: 1;
+	}
 #offer div[class*='col-'] .subtext {
 	font-size: 1em;
 	letter-spacing: 1px;
+	opacity: 0;
+	transition: all 2.5s;
+}
+	#offer div[class*='col-'] > .subtext.appear {
+		opacity: 1;
 }
 
 #offer div[class*='col-'] .image {
@@ -604,14 +615,14 @@ h3 {
 #offer div[class*='col-'] .image img {
 	display: block;
 	position: absolute;
-	opacity: 0;
 	height: 100%;
 	top: 100%;
 	left: 50%;
+	opacity: 0;
+	transition: all .7s;
 	transform: translateX(-50%);
-	transition: all 1s;
 }
-	#offer div[class*='col-'] .image img.appear {
+	#offer div[class*='col-'] .image.appear img {
 		opacity: 1;
 		transform: translate(-50%,-100%);
 	}
@@ -622,6 +633,9 @@ h3 {
 	}
 	#offer div[class*='col-']:last-child {
 		margin-bottom: 35px;
+	}
+	#offer div[class*='col-'] .image img {
+		transition-delay: .5s;
 	}
 }
 	@media (min-width: 426px) and (max-width: 767px) {
@@ -640,6 +654,23 @@ h3 {
 	#offer div[class*='col-']:last-child {
 		margin-bottom: 50px;
 	}
+	#offer div[class*='col-']:nth-child(1) .subtitle,
+	#offer div[class*='col-']:nth-child(1) .subtext,
+	#offer div[class*='col-']:nth-child(1) .image img,
+	#offer div[class*='col-']:nth-child(3) .subtitle,
+	#offer div[class*='col-']:nth-child(3) .subtext,
+	#offer div[class*='col-']:nth-child(3) .image img {
+		transition-delay: .5s;
+	}
+	#offer div[class*='col-']:nth-child(2) .subtitle,
+	#offer div[class*='col-']:nth-child(2) .subtext,
+	#offer div[class*='col-']:nth-child(2) .image img,
+	#offer div[class*='col-']:nth-child(4) .subtitle,
+	#offer div[class*='col-']:nth-child(4) .subtext,
+	#offer div[class*='col-']:nth-child(4) .image img{
+		transition-delay: 1s;
+	}
+
 	#offer div[class*='col-'] > .subtitle {
 		font-size: 2.4em;
 	}
@@ -648,6 +679,26 @@ h3 {
 @media  (min-width: 992px) {
 	#offer div[class*='col-'] {
 		margin: 80px auto;
+	}
+	#offer div[class*='col-']:nth-child(1) .subtitle,
+	#offer div[class*='col-']:nth-child(1) .subtext,
+	#offer div[class*='col-']:nth-child(1) .image img{
+		transition-delay: .3s;
+	}
+	#offer div[class*='col-']:nth-child(2) .subtitle,
+	#offer div[class*='col-']:nth-child(2) .subtext,
+	#offer div[class*='col-']:nth-child(2) .image img{
+		transition-delay: .6s;
+	}
+	#offer div[class*='col-']:nth-child(3) .subtitle,
+	#offer div[class*='col-']:nth-child(3) .subtext,
+	#offer div[class*='col-']:nth-child(3) .image img{
+		transition-delay: .9s;
+	}
+	#offer div[class*='col-']:nth-child(4) .subtitle,
+	#offer div[class*='col-']:nth-child(4) .subtext,
+	#offer div[class*='col-']:nth-child(4) .image img{
+		transition-delay: 1.2s;
 	}
 	#offer div[class*='col-'] > .subtitle {
 		font-size: 2.1em;
