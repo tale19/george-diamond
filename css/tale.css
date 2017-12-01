@@ -903,7 +903,7 @@ This will not affect the contents of the p tag also because it is still just a b
 
 /* *** SHOWS PAGE *** */
 #shows-content {
-	
+	overflow-x: hidden; /* prevents the browser from adding scrollbar when images are off viewport before scrlling to the row */
 }
 
 #shows-content .jumbotron {
@@ -1017,28 +1017,19 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 #shows-content .show-box .shows-misc {
+	/*border: 3px solid rgb(48,208,28);*/
 	height: 100%;
 }
 
 
 
 #shows-content .shows-misc img {
-	/*border: 3px solid rgb(48,208,28);*/
 	display: block;
 	margin: 0 auto;
 	border-radius: 5px;
-	/*max-height: 80%;
-	max-width: 100%;
-	width: 100%;
-	height: auto;*/
-	/*transition: transform .5s;*/
-	/*opacity: 0;*/
-	transition: opacity 1s ease-out;
+	opacity: 0;
+	transition: all 1.5s;
 } 
-.news-image-container img.appear {
-	opacity: 1;
-}
-
 
 #shows-content .show-box .shows-misc .btn-lg {
 	display: block;
@@ -1053,6 +1044,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	border: 1px solid white;
 }
 
+
+
+
 @media (max-width: 767px) {
 	#shows-content .show-box .row {
 		padding-top: 2em;
@@ -1064,6 +1058,10 @@ This will not affect the contents of the p tag also because it is still just a b
 	#shows-content .shows-misc img {
 		height: auto;
 		max-width: 100%;
+		transition-delay: 2s;
+	}
+	#shows-content .shows-misc img.appear {
+		opacity: 1;
 	}
 }
 
@@ -1084,6 +1082,22 @@ This will not affect the contents of the p tag also because it is still just a b
 	#shows-content .shows-misc img {
 		height: auto;
 		max-width: 100%;
+	}
+	#shows-content .shows-misc.odd img {
+		transform: translateX(450px);
+	}
+
+	#shows-content .shows-misc.odd img.appear {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+	#shows-content .shows-misc.even img {
+		transform: translateX(-450px);
+	}
+
+	#shows-content .shows-misc.even img.appear {
+		opacity: 1;
+		transform: translateX(0px);
 	}
 }
 

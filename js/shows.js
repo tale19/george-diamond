@@ -11,21 +11,26 @@ function main() {
     }, 1200);
 	});
 
-	// *** Paragraphs appearing on viewport entry ***
+	// *** Paragraphs and images appearing on viewport entry ***
 // 	pass each paragraph container to the "in viewport checker" to get its position
 	// var $showTitle = $('#shows-content .show-box .show-article h4');
 	var $showsRow = $('#shows-content .show-box .row');
-	$showsRow.each(function(){
-		if (inPartialViewport($(this))) {
-			$(this).find('.paragraph').addClass('appear');
-		} 
-	});
-
+	var $showsImg = $('#shows-content .shows-misc img');
 // 	repeat to make it work on scroll as well
 	$(window).scroll(function() {
 		$showsRow.each(function(){
 			if (inPartialViewport($(this))) {
 				$(this).find('.paragraph').addClass('appear');
+				$(this).find('img').addClass('appear');
+			} 
+		});
+	});
+
+	$(window).scroll(function() {
+		$showsImg.each(function(){
+			if (inPartialViewport($(this))) {
+				$(this).addClass('appear');
+				console.log($(this).attr('src') + ' entered');
 			} 
 		});
 	});
