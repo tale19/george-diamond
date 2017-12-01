@@ -1064,7 +1064,6 @@ This will not affect the contents of the p tag also because it is still just a b
 	#shows-content .shows-misc img {
 		height: auto;
 		max-width: 100%;
-		border: 2px solid green;
 	}
 }
 
@@ -1085,7 +1084,6 @@ This will not affect the contents of the p tag also because it is still just a b
 	#shows-content .shows-misc img {
 		height: auto;
 		max-width: 100%;
-		border: 2px solid green;
 	}
 }
 
@@ -1093,14 +1091,12 @@ This will not affect the contents of the p tag also because it is still just a b
 	#shows-content .shows-misc img {
 		max-height: 100%;
 		width: auto;
-		border: 1px solid magenta;
 	}
 }
 @media (min-width: 1200px) {
 	#shows-content .shows-misc img {
 		max-height: 100%;
 		width: auto;
-		border: 1px solid magenta;
 	}
 }
 
