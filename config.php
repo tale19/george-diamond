@@ -3,9 +3,7 @@
 return [
 	'url' => 'http://george-diamond.tale/',
 	'database' => [
-		'RDBMS' => 'mysql',
-		'host' => '127.0.0.1',
-		'dbname' => 'george',
+		'dsn' => 'mysql:host = 127.0.0.1; dbname=george',
 		'username' => 'root',
 		'password' => '',
 		'options' => [
