@@ -1,4 +1,5 @@
 <?php 
+
 $config = require 'config.php';
 require 'core/database/Connection.php';
 require 'core/Database/QueryBuilder.php';
