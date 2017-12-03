@@ -12,6 +12,16 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <?php 
 require 'views/en/partials/navbar.view.php'; 
 ?>
@@ -35,13 +45,7 @@ require 'views/en/partials/navbar.view.php';
       <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
         <div class="news-image-container">
           <img src="images/news/<?= $news->getImgName(); ?>">
-          <div class="news-share">
-            <p>Share this news:</p>
-            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-official fa" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><i class="fa fa-youtube fa" aria-hidden="true"></i></a>
-          </div>  <!-- news share -->
+            <?php require 'views/en/partials/news-share.view.php'; ?>
           <a href="/news/article/<?=$news->getId();?>" class="btn btn-primary">Read full news</a>
         </div>  <!-- news preview image container -->
       </div>  <!-- .news-preview-misc -->

@@ -37,13 +37,7 @@
         <span class="news-date"><?= $article->getDate()->format('D, jS M Y'); ?> - </span>
         <?= $article->getContent(); ?>
       </div> <!-- news body -->
-      <div class="news-share">
-        <p>Share this news:</p>
-        <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-official fa" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/mrgeorgediamond" target="_blank"><i class="fa fa-twitter-square fa" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
-        <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><i class="fa fa-youtube fa" aria-hidden="true"></i></a>
-      </div> <!-- .news-share -->
+      <?php require 'views/en/partials/news-share.view.php'; ?>
     </article> <!-- news-article -->
     <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-misc">
       <div class="news-image-container">
