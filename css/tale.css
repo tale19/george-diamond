@@ -266,13 +266,16 @@ h3 {
 	/*font-family: 'Passion One', cursive;*/
 }
 #superfinalist .btn-lg {
-	color: #FF0000;
-	border: 2px solid #FF0000;
-	font-weight: 600;
-}
-#superfinalist .btn-lg:hover {
 	background-color: #FF0000;
 	color: white;
+	border: 2px solid #FF0000;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-weight: 800;
+	text-align: center;
+}
+#superfinalist .btn-lg:hover {
+	background-color: #fff;
+	color: #FF0000;
 }
 
 /* *** HEADER ELEMENTS MEDIA QUERIES *** */
@@ -751,6 +754,7 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 #amazing-shows-list {
+	font-weight: 500;
 	position: relative;
 	padding: 0;
 	font-size: .85em;
