@@ -1114,6 +1114,10 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 /* *** NEWS ELEMENTS *** */
+#news-content * {
+	/*border: 1px solid red;*/
+}
+
 #news-content .news-preview-content p:nth-of-type(1),
 #article-content .news-content p:nth-of-type(1) {
 	display: inline; /* enables date to be in the same line as the <p> */
@@ -1158,7 +1162,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	background-color: rgb(48,208,28);
 }*/
 
+
 .news-preview-box h4 {
+	margin-top: unset;
 	font-size: 2em;
 }
 
@@ -1308,17 +1314,17 @@ This will not affect the contents of the p tag also because it is still just a b
 
 	/* *** FULL NEWS ARTICLE *** */
 #article-content {
-	padding-bottom: 50px;
-	}
+	
+}
 #article-content .news-article-box {
-	margin: 50px auto;
+	margin: 50px auto 0;
 	border-radius: 5px;
 	background-color: rgba(0,0,0,.1);
 	padding: 30px 0;
 	/*border: 1px solid green;*/
 }
 #article-content h3 {
-	margin-top: 2em;
+	margin-top: unset;
 }
 
 #article-content .news-article-box .news-content {
@@ -1333,39 +1339,43 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 #article-content .news-article .news-share {
-	/*position: relative;*/
-	/*margin-top: 20px;*/
 	bottom: 0;
 }
 #back-to-news {
-	/*border: 1px dashed black;*/
+	position: relative;
+	height: 35px;
+	margin: 30px auto;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#back-to-news a {
+	position: absolute;
+	text-align: center;
+}
+
+#article-content .fb-comments > span {
+	margin-top: 30px;
+}
+
+
 @media (max-width: 767px) {
-	#back-to-news a {
-		display: block;
-		margin: 15px auto;
-		text-align: center;
+	#back-to-news a:nth-child(2) {
+		right: 0;
 	}
 }
 
 
 
 @media (min-width: 768px) {
-	#back-to-news {
-		position: relative;
-		height: 45px;
-}
-	#back-to-news a {
-		position: absolute;
-		display: block;
+	#back-to-news a:nth-child(1) i {
+		display: none;
 	}
-	#back-to-news a.btn-round {
-		width: 7em;
+		#back-to-news a:nth-child(1):hover i {
+			display: inline; /* reveal chevron-left on hover */
+		}
+	#back-to-news a:nth-child(2) {
 		left: 50%;
 		transform: translateX(-50%);
-		margin: 0 auto;
-		text-align: center;
 	}
 }
 
