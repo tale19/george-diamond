@@ -24,7 +24,7 @@
   <div class="news-article-box row">
     <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-article">
       <div class="news-content">
-        <p class="news-date"><?= $article->getDate()->format('D, jS M Y'); ?></p>
+        <span class="news-date"><?= $article->getDate()->format('D, jS M Y'); ?> - </span>
         <?= $article->getContent(); ?>
       </div> <!-- news body -->
       <div class="news-share">
@@ -43,8 +43,8 @@
   </div>  <!-- .news-article-box.row -->
 
   <div id="back-to-news">
-    <a href="/news" class="btn-lg btn-primary">Back to all news</a>
-    <a href="/" class="btn-lg btn-round btn-success"><strong>Home Page</strong></a>
+    <a href="/news" class="btn btn-primary">Back to all news</a>
+    <a href="/" class="btn btn-round btn-success"><strong>Home Page</strong></a>
   </div>
 </div> <!-- .container -->
 

@@ -1114,11 +1114,22 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 /* *** NEWS ELEMENTS *** */
+#news-content .news-preview-content p:nth-of-type(1),
+#article-content .news-content p:nth-of-type(1) {
+	display: inline; /* enables date to be in the same line as the <p> */
+}
+
+#news-content .news-preview-content,
+#article-content .news-content {
+	font-size: 1.15em;
+	font-weight: 400;
+}
+
 .news-preview-date,
 .news-date {
 	/*color: #ED9911;*/
 	font-style: italic;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 
@@ -1197,6 +1208,7 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 .news-share p {
+	margin: unset;
 	font-size: 18px;
 	font-weight: 400;
 	font-style: italic;
@@ -1225,6 +1237,12 @@ This will not affect the contents of the p tag also because it is still just a b
 	color: #f00;
 }
 
+
+
+
+
+
+
 .scrolltop-button {
 	box-sizing: content-box;
 	opacity: 0;
@@ -1246,6 +1264,9 @@ This will not affect the contents of the p tag also because it is still just a b
 .scrolltop-button.appear {
 	opacity: 1;
 }
+
+
+
 
 @media (max-width: 767px) {
 	.news-preview-box h4 {
@@ -1297,10 +1318,10 @@ This will not affect the contents of the p tag also because it is still just a b
 	/*border: 1px solid green;*/
 }
 #article-content h3 {
-	/*margin: unset;*/
+	margin-top: 2em;
 }
 
-#article-content .news-article-box .news-content p {
+#article-content .news-article-box .news-content {
 	text-align: justify;
 }
 
@@ -1311,9 +1332,6 @@ This will not affect the contents of the p tag also because it is still just a b
 	/*border: 1px solid darkred;*/
 }
 
-#article-content .news-content {
-	/*position: relative;*/
-}
 #article-content .news-article .news-share {
 	/*position: relative;*/
 	/*margin-top: 20px;*/

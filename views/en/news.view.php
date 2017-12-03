@@ -27,8 +27,8 @@ require 'views/en/partials/navbar.view.php';
     <section class="news-preview-box row">
       <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-preview-article">
         <h4 class="news-preview-headline"><?= $news->getTitle(); ?></h4>
-        <span class="news-preview-date"><?= $news->getDate()->format('D, jS M Y'); ?></span>
         <div class="news-preview-content">
+          <span class="news-preview-date"><?= $news->getDate()->format('D, jS M Y'); ?> - </span>
           <?= $news->getContent(); ?>
         </div> <!-- .news-preview-content -->
       </article> <!-- news-article -->
