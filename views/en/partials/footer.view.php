@@ -3,7 +3,7 @@
       <div id="social-media">
         <div id="social-media-icons">
           <div class="social-media-icon">
-            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-f fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Magic-of-George-Diamond-145328488856893/" target="_blank"><i class="fa fa-facebook-f fa-2x" aria-hidden="true"></i></a>
             <!-- <span>Facebook</span> -->
           </div>
           <div class="social-media-icon">
