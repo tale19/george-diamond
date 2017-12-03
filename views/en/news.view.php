@@ -36,12 +36,13 @@ require 'views/en/partials/navbar.view.php';
         <div class="news-image-container">
           <img src="images/news/<?= $news->getImgName(); ?>">
           <div class="news-share">
-            <span>Share this news</span> <span>FB</span>
-            <span>Tw</span>
-            <span>viber</span>
-            <span>wtsapp</span>
+            <p>Share this news:</p>
+            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-official fa" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><i class="fa fa-youtube fa" aria-hidden="true"></i></a>
           </div>  <!-- news share -->
-          <!-- <a href="article-<?=$news->getId();?>" class="btn btn-primary">Read full news</a> -->
+          <a href="/news/article/<?=$news->getId();?>" class="btn btn-primary">Read full news</a>
         </div>  <!-- news preview image container -->
       </div>  <!-- .news-preview-misc -->
     </section> <!-- news content, row -->

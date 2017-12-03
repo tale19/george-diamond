@@ -19,15 +19,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <?php echo ($urlPortion == 'home' || $urlPortion == '') ? 'class="active"' : ''; ?> ><a href="home" class="navbar-btn">Home</a></li>
-        <li <?php echo ($urlPortion == 'bio') ? 'class="active"' : ''; ?> ><a href="bio" class="navbar-btn">Bio</a></li>
-        <li <?php echo ($urlPortion == 'shows') ? 'class="active"' : ''; ?> ><a href="shows" class="navbar-btn">Shows</a></li>
-        <li <?php echo ($urlPortion == 'news') ? 'class="active"' : ''; ?> ><a href="news" class="navbar-btn">News</a></li>
+        <li <?php echo ($urlPortion == 'home' || $urlPortion == '') ? 'class="active"' : ''; ?> ><a href="/" class="navbar-btn">Home</a></li>
+        <li <?php echo ($urlPortion == 'bio') ? 'class="active"' : ''; ?> ><a href="/bio" class="navbar-btn">Bio</a></li>
+        <li <?php echo ($urlPortion == 'shows') ? 'class="active"' : ''; ?> ><a href="/shows" class="navbar-btn">Shows</a></li>
+        <li <?php echo ($urlPortion == 'news') ? 'class="active"' : ''; ?> ><a href="/news" class="navbar-btn">News</a></li>
         <li <?php echo ($urlPortion == 'photos' || $urlPortion == 'videos') ? 'class="active"' : ''; ?>  class="dropdown">
           <a href="#" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="photos" class="navbar-btn">Photos</a></li>
-            <li><a href="videos" class="navbar-btn">Videos</a></li>
+            <li><a href="/photos" class="navbar-btn">Photos</a></li>
+            <li><a href="/videos" class="navbar-btn">Videos</a></li>
           </ul>
         </li>
       </ul>
