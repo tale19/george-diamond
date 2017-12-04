@@ -748,10 +748,6 @@ This will not affect the contents of the p tag also because it is still just a b
 	text-align: left;
 }
 
-#amazing-shows a.btn {
-	margin-top: 15px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
 
 #amazing-shows-list {
 	font-weight: 500;
@@ -761,12 +757,15 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 .amazing-show {
-	list-style: none;
 	text-transform: capitalize;
 	font-size: 1.2em;
 	line-height: 1.7em;
+	margin-left: 15px;
 }
-
+.amazing-show:last-child {
+	list-style: none;
+	margin-left: unset;
+}
 
 #amazing-shows img {
 	display: block;
@@ -776,6 +775,21 @@ This will not affect the contents of the p tag also because it is still just a b
 	transition: all 1.5s;
 }
 
+#booking-box .buttons {
+	margin-top: 25px;
+	font-weight: 400;
+}
+
+#booking-box .buttons p {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+#booking-box a.btn {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+}
+
+
 @media (max-width: 767px) {
 	#booking-box h1 {
 		font-size: 2.2em;
@@ -783,20 +797,12 @@ This will not affect the contents of the p tag also because it is still just a b
 	#booking-box div p {
 		font-size: 1.2em;
 	}
-
 }
 
 /* ***** EXTRA SMALL DISPLAY (320-374px) ***** */
 @media (max-width: 374px) {
 	#booking-box div p {
 		font-size: 1em;
-	}
-	#amazing-shows-list {
-		font-size: .8rem;
-	}
-	#amazing-shows a:nth-child(3) { /* resize booking button's font */
-		font-size: 0.85em;
-		line-height: 1.85em;
 	}
 }
 
@@ -821,6 +827,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	#amazing-shows img.animate {
 		transform: translate(305px,45px) scale(2) rotate(360deg);
 		opacity: 1;
+	}
+	#booking-box .buttons p {
+		text-align: center;
 	}
 }
 
