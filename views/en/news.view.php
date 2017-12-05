@@ -35,15 +35,16 @@ require 'views/en/partials/navbar.view.php';
       <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
         <div class="news-image-container">
           <img src="images/news/<?= $news->getImgName(); ?>">
-          <div class="news-share">
-            <p>Share this news:</p>
-            <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-official fa" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/mrgeorgediamond" target="_blank"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><i class="fa fa-youtube fa" aria-hidden="true"></i></a>
-          </div>  <!-- news share -->
-          <a href="/news/article/<?=$news->getId();?>" class="btn btn-primary">Read full news</a>
         </div>  <!-- news preview image container -->
+        <div class="news-share">
+          <p>Share this news:</p>
+          <a href="http://www.facebook.com/share.php?u=<?= $config['url']?>news/article/<?=$news->getId();?>&title=<?=$news->getTitle() ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="http://twitter.com/intent/tweet?status=<?=$news->getTitle() ?>+<?= $config['url']?>news/article/<?=$news->getId();?>"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= $config['url']?>news/article/<?=$news->getId();?>&title=<?=$news->getTitle() ?>&source=<?= $config['url']?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="whatsapp://send?text=<?=$news->getTitle() ?>" data-action="share/whatsapp/share" class="hidden-sm hidden-md hidden-lg"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="viber://forward?text=<?=$news->getTitle() ?>" class="hidden-sm hidden-md hidden-lg"><img src="/images/viber_icon_white_small.png"></a>
+        </div>  <!-- news share -->
+          <a href="/news/article/<?=$news->getId();?>" class="btn btn-primary">Read full news</a>
       </div>  <!-- .news-preview-misc -->
     </section> <!-- news content, row -->
   <?php endforeach; ?>

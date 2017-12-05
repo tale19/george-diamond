@@ -1236,27 +1236,48 @@ This will not affect the contents of the p tag also because it is still just a b
 	display: inline-block;
 	margin: auto 1px;
 	text-align: center;
+	border-radius: 36px;
 	width: 36px;
-	font-size: 28px;
+	height: 36px;
+	font-size: 24px;
 	/*background-color: magenta;*/
 }
 .news-share a:nth-of-type(1) {
-	color: #3b5998;
+	background-color: #3b5998;
+	color: white;
 }
 .news-share a:nth-of-type(2) {
-	color: #00aced;
+	background-color: #00aced;
+	color: white;
 }
 
 .news-share a:nth-of-type(3) {
-	color: #bc2a8d;
+	background-color: #007bb6;
+	color: white;
 }
 
 .news-share a:nth-of-type(4) {
 	background-color: unset;
-	color: #f00;
+	background-color: #34af23;
+	color: white;
+}
+.news-share a:nth-of-type(5) {
+	background-color: #8f5db7;
+}
+.news-share a:nth-of-type(5) img {
+	display: inline-block;
+	border: unset;
+	height: 24px;
+	width: 24px;
+	transform: translateY(-10%);
 }
 
-
+@media (max-width: 767px) {
+	.news-share a.visible-xs {
+		/*float: left;*/
+		display: inline-block;
+	}
+}
 
 
 

@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $article->getTitle(); ?></title>
+<meta property="og:title" content="<?= $article->getTitle() ?>">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="<?= $article->getTitle() ?>">
+<meta property="og:image" content="/images/news/<?= $article->getImgName() ?>">
 <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
+<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/tale.css">
 </head>
 <body>
 <div id="fb-root"></div>
@@ -39,10 +43,11 @@
       </div> <!-- news body -->
       <div class="news-share">
         <p>Share this news:</p>
-        <a href="https://www.facebook.com/magicofgeorgediamond" target="_blank"><i class="fa fa-facebook-official fa" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/mrgeorgediamond" target="_blank"><i class="fa fa-twitter-square fa" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/magicofgeorgediamond" target="_blank"><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
-        <a href="https://www.youtube.com/channel/UCdd0g3CNpcIsH3Vt21K2ddQ" target="_blank"><i class="fa fa-youtube fa" aria-hidden="true"></i></a>
+        <a href="http://www.facebook.com/share.php?u=<?= $config['url']?>news/article/<?=$article->getId();?>&title=<?=$article->getTitle() ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="http://twitter.com/intent/tweet?status=<?=$article->getTitle() ?>+<?= $config['url']?>news/article/<?=$article->getId();?>"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= $config['url']?>news/article/<?=$article->getId();?>&title=<?=$article->getTitle() ?>&source=<?= $config['url']?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="whatsapp://send?text=<?=$article->getTitle() ?>" data-action="share/whatsapp/share" class="hidden-sm hidden-md hidden-lg"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="viber://forward?text=<?=$article->getTitle() ?>" class="hidden-sm hidden-md hidden-lg"><img src="/images/viber_icon_white_small.png"></a>
       </div> <!-- .news-share -->
     </article> <!-- news-article -->
     <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-misc">
