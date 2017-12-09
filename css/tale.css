@@ -748,10 +748,6 @@ This will not affect the contents of the p tag also because it is still just a b
 	text-align: left;
 }
 
-#amazing-shows a.btn {
-	margin-top: 15px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
 
 #amazing-shows-list {
 	font-weight: 500;
@@ -761,12 +757,15 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 .amazing-show {
-	list-style: none;
 	text-transform: capitalize;
 	font-size: 1.2em;
 	line-height: 1.7em;
+	margin-left: 15px;
 }
-
+.amazing-show:last-child {
+	list-style: none;
+	margin-left: unset;
+}
 
 #amazing-shows img {
 	display: block;
@@ -776,6 +775,21 @@ This will not affect the contents of the p tag also because it is still just a b
 	transition: all 1.5s;
 }
 
+#booking-box .buttons {
+	margin-top: 25px;
+	font-weight: 400;
+}
+
+#booking-box .buttons p {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+#booking-box a.btn {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+}
+
+
 @media (max-width: 767px) {
 	#booking-box h1 {
 		font-size: 2.2em;
@@ -783,20 +797,12 @@ This will not affect the contents of the p tag also because it is still just a b
 	#booking-box div p {
 		font-size: 1.2em;
 	}
-
 }
 
 /* ***** EXTRA SMALL DISPLAY (320-374px) ***** */
 @media (max-width: 374px) {
 	#booking-box div p {
 		font-size: 1em;
-	}
-	#amazing-shows-list {
-		font-size: .8rem;
-	}
-	#amazing-shows a:nth-child(3) { /* resize booking button's font */
-		font-size: 0.85em;
-		line-height: 1.85em;
 	}
 }
 
@@ -821,6 +827,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	#amazing-shows img.animate {
 		transform: translate(305px,45px) scale(2) rotate(360deg);
 		opacity: 1;
+	}
+	#booking-box .buttons p {
+		text-align: center;
 	}
 }
 
@@ -1217,47 +1226,45 @@ This will not affect the contents of the p tag also because it is still just a b
 	margin: 25px auto;
 }
 
-/*.news-share p {
-	margin: unset;
-	font-size: 18px;
-	font-weight: 400;
-	font-style: italic;
-}*/
-.news-share > * {
-	position: absolute;
-	top: 0;
-	margin: auto 2px;
-}
-.news-share > .fb-share-button {
-	top: -5px;
-}
-/*
 .news-share a {
 	display: inline-block;
 	margin: auto 1px;
 	text-align: center;
+	border-radius: 36px;
 	width: 36px;
-	font-size: 28px;
+	height: 36px;
+	font-size: 24px;
+	/*background-color: magenta;*/
 }
 .news-share a:nth-of-type(1) {
-	color: #3b5998;
+	background-color: #3b5998;
+	color: white;
 }
 .news-share a:nth-of-type(2) {
-	color: #00aced;
+	background-color: #00aced;
+	color: white;
 }
 
 .news-share a:nth-of-type(3) {
-	color: #bc2a8d;
+	background-color: #007bb6;
+	color: white;
 }
 
 .news-share a:nth-of-type(4) {
 	background-color: unset;
-	color: #f00;
+	background-color: #34af23;
+	color: white;
 }
-
-*/
-
-
+.news-share a:nth-of-type(5) {
+	background-color: #8f5db7;
+}
+.news-share a:nth-of-type(5) img {
+	display: inline-block;
+	border: unset;
+	height: 24px;
+	width: 24px;
+	transform: translateY(-10%);
+}
 
 
 

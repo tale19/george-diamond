@@ -94,10 +94,16 @@
         <li class="amazing-show">telepathy and mentalism</li>
         <li class="amazing-show" style="font-style: italic; text-transform: none;">... and much, much more</li>
       </ul>
-      <a href="shows" type="button" class="btn btn-block btn-info">Find out more</a>
-      <a href="contact" type="button" class="btn btn-block btn-success">You got me! Show me where to book!</a>
       <img src="images/jumbotron-img.png" alt="jumbotron image" class="hidden-xs">
     </div> <!-- #amazing shows -->
+    <div class="buttons">
+      <p>This sounds awesome! I want to find out more about George!</p>
+      <a href="bio" type="button" class="btn btn-block btn-default">Biography and credits</a>
+      <p>Still uncertain? Check out his shows in action!</p>
+      <a href="shows" type="button" class="btn btn-block btn-default">Shows</a>
+      <p>You got me! Show me where to book!</p>
+      <a href="contact" type="button" class="btn btn-block btn-success">Book now!</a>
+    </div>
   </div>  <!-- jumbotron -->
 </div>  <!-- jumbotron container -->
   
