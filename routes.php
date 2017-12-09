@@ -1,5 +1,6 @@
 <?php 
 
+$articleId =  ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
 $router->define([
 	'' => 'controllers/en/index.php',
 	'home' => 'controllers/en/index.php',

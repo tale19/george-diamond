@@ -1,16 +1,19 @@
 <?php 
 
 $config = require 'config.php';
-require 'core/database/Connection.php';
-require 'core/Database/QueryBuilder.php';
+
+// reqest Router class to define routes
 require 'core/Router.php';
+
+
+require 'core/database/Connection.php';
+require 'core/database/QueryBuilder.php';
+
 require 'models/News.php';
 
-// $pdo = Connection::make();
-// $query = new QueryBuilder($pdo);
-
-// *** since we're using "$pdo" just here, we can inline it: ***
-
+// Make a $query object that uses a PDO, 
+// created through Connection::make() method,
+// to make queries from controller pages
 $query = new QueryBuilder(
 	Connection::make($config['database'])
 );

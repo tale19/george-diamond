@@ -3,10 +3,17 @@
 /**
 * 
 */
+	$articleId =  ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
 class Router
 {
-	
 	protected $routes = [];
+
+	public static function load($file)
+	{
+		$router = new static;
+		require $file;
+		return $router;
+	}
 
 	public function define($routes)
 	{
