@@ -11,32 +11,39 @@ function main() {
     }, 1200);
 	});
 
-	// *** Paragraphs and images appearing on viewport entry ***
-// 	pass each paragraph container to the "in viewport checker" to get its position
+	// *** YOUTUBE MODAL ***
+	// stop YouTube video when closing the modal
+	$("#videoModal").on("hidden.bs.modal",function(){
+		$("#iframeYT").attr("src","#");
+	});
+		
+	// $modalTitle = $('#videoModalLabel');
+	// $modalTitle.text(data('naslov'));
+	// console.log(data);
+
+
+
+	// *** PARAGRAPHS AND IMAGES APPEARING ON VIEWPORT ENTRY ***
+	// 	pass each paragraph container to the "in viewport checker" to get its position
 	// var $showTitle = $('#shows-content .show-box .show-article h4');
 	var $showsParagraph = $('#shows-content .show-box .paragraph');
 	var $showsMisc = $('#shows-content .show-box .shows-misc');
-// 	repeat to make it work on scroll as well
+	//  make it work on scroll
 	$(window).scroll(function() {
 		$showsParagraph.each(function(){
 			if (inPartialViewport($(this), 150)) {
 				$(this).addClass('appear');
-				// console.log(getElementVerticalPosition($(this)));
 			} 
 		});
 	});
 
 	$(window).scroll(function() {
-				// console.log(getWindowOffset());
 		$showsMisc.each(function(){
 			if (inPartialViewport($(this), 150)) {
 				$(this).find('img').addClass('appear');
-				console.log(getElementVerticalPosition($(this)));
 			} 
 		});
 	});
-
-
 
 
 
@@ -55,7 +62,6 @@ function main() {
 
 	// next, make it go *SMOOTHLY*  to page top on click
 	$scrolltopButton.on('click', function(e) {
-		// $(window).scrollTop(0);
 		$("html, body").animate({ scrollTop: 0 }, 600);
     	e.preventDefault();
 	});

@@ -174,19 +174,15 @@ nav .navbar-header h1 {
 #shows-content,
 #news-content,
 #article-content,
-#contact-content {
+#contact-content,
+#videos-content {
 	/*position: relative;*/
 	min-height: 100%;
 	width: 100%;
 	display: block;
+	padding-top: 30px;
 	padding-bottom: 50px;
-	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/background-circles.png') repeat-y center;	*/
-	/*background:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tribal.png') no-repeat left;*/
-	/*background-size: cover;*/
-	/*background-attachment: fixed;*/
 	background-color: #f8f8f8;
-	/*background-color: rgb(208,48,108);*/
-	/*color: #383838;*/
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-weight: 600;
 }
@@ -227,16 +223,19 @@ h2 {
 h3 {
 	text-align: center;
 }
-#bio-content h3, #shows-content h3, #news-content h3 {
-	padding-top: .5em;
-	margin-bottom: .4em;
-	/*font-weight: 600;*/
+#article-content h3, 
+#bio-content h3, 
+#shows-content h3, 
+#news-content h3,
+#videos-content h3 
+{
+	margin-bottom: .8em;
 	font-family: 'Passion One', cursive;
 }
 
 #shows-content h4,
-#news-content h4,
-#article-content h3 {
+#news-content h4
+{
 	font-family: 'Patua One', cursive;
 	/*font-family: 'Titan One', cursive;*/
 	font-weight: 100;
@@ -291,8 +290,13 @@ h3 {
 	h2 {
 		font-size: 1.4em;
 	}
-	#bio-content h3, #shows-content h3, #news-content h3, #article-content h3 {
-		font-size: 2.3em;
+	#article-content h3,
+	#bio-content h3, 
+	#shows-content h3, 
+	#news-content h3, 
+	#videos-content h3
+	{
+		font-size: 3em;
 	}
 	#header {
 		height: 100%; /* prevents the header from collapsing" */
@@ -350,8 +354,13 @@ h3 {
 	h2 {
 		font-size: 2.1em;
 	}
-	#bio-content h3, #shows-content h3, #news-content h3, #article-content h3 {
-		font-size: 2.5em;
+	#article-content h3,
+	#bio-content h3, 
+	#shows-content h3, 
+	#news-content h3, 
+	#videos-content h3
+	{
+		font-size: 3.5em;
 	}
 
 	#superfinalist {
@@ -370,8 +379,13 @@ h3 {
 	h2 {
 		font-size: 2.7em;
 	}
-	#bio-content h3, #shows-content h3, #news-content h3, #article-content h3 {
-		font-size: 3em;
+	#article-content h3,
+	#bio-content h3, 
+	#shows-content h3, 
+	#news-content h3, 
+	#videos-content h3
+	{
+		font-size: 4em;
 	}
 
 	#superfinalist {
@@ -398,8 +412,13 @@ h3 {
 	h2 {
 		font-size: 3.2em;
 	}
-	#bio-content h3, #shows-content h3, #news-content h3, #article-content h3 {
-		font-size: 3.76em;
+	#article-content h3,
+	#bio-content h3, 
+	#shows-content h3, 
+	#news-content h3, 
+	#videos-content h3
+	{
+		font-size: 4.8em;
 	}
 
 	#superfinalist {
