@@ -176,6 +176,7 @@ nav .navbar-header h1 {
 #article-content,
 #contact-content {
 	/*position: relative;*/
+	min-height: 100%;
 	width: 100%;
 	display: block;
 	padding-bottom: 50px;
@@ -1479,8 +1480,10 @@ This will not affect the contents of the p tag also because it is still just a b
 
 /* *** FOOTER ELEMENTS *** */
 #footer {
+	/*position: absolute;*/
     bottom: 0;
     padding: 0;
+    /*width: 100%;*/
     background-color: #001423;
     color: antiquewhite;
 }
