@@ -1,7 +1,3 @@
-<?php 
-  $urlPortion = ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
-  // var_dump($urlPortion);
- ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -19,11 +15,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <?php echo ($urlPortion == 'home' || $urlPortion == '') ? 'class="active"' : ''; ?> ><a href="/" class="navbar-btn">Home</a></li>
-        <li <?php echo ($urlPortion == 'bio') ? 'class="active"' : ''; ?> ><a href="/bio" class="navbar-btn">Bio</a></li>
-        <li <?php echo ($urlPortion == 'shows') ? 'class="active"' : ''; ?> ><a href="/shows" class="navbar-btn">Shows</a></li>
-        <li <?php echo ($urlPortion == 'news') ? 'class="active"' : ''; ?> ><a href="/news" class="navbar-btn">News</a></li>
-        <li <?php echo ($urlPortion == 'photos' || $urlPortion == 'videos') ? 'class="active"' : ''; ?>  class="dropdown">
+        <li <?php echo (Request::uri() == 'home' || Request::uri() == '') ? 'class="active"' : ''; ?> ><a href="/" class="navbar-btn">Home</a></li>
+        <li <?php echo (Request::uri() == 'bio') ? 'class="active"' : ''; ?> ><a href="/bio" class="navbar-btn">Bio</a></li>
+        <li <?php echo (Request::uri() == 'shows') ? 'class="active"' : ''; ?> ><a href="/shows" class="navbar-btn">Shows</a></li>
+        <li <?php echo (substr(Request::uri(), 0, 4) == 'news') ? 'class="active"' : ''; ?> ><a href="/news/1" class="navbar-btn">News</a></li>
+        <li <?php echo (Request::uri() == 'photos' || Request::uri() == 'videos') ? 'class="active"' : ''; ?>  class="dropdown">
           <a href="#" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/photos" class="navbar-btn">Photos</a></li>

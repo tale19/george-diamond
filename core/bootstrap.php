@@ -1,8 +1,7 @@
 <?php 
-
 $config = require 'config.php';
 
-// require Router and Request class to define routes
+// require Router and Request classes to define routes
 require 'core/Router.php';
 require 'core/Request.php';
 

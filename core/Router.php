@@ -3,7 +3,6 @@
 /**
 * 
 */
-	$articleId =  ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
 class Router
 {
 	protected $routes = [];

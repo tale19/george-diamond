@@ -33,7 +33,7 @@ require 'views/en/partials/navbar.view.php';
 
 
   <div class="container">
-  <?php foreach ($allNews as $news) : ?>
+  <?php foreach ($displayedNews as $news) : ?>
     <section class="news-preview-box row">
       <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-preview-article">
         <h4 class="news-preview-headline"><?= $news->getTitle(); ?></h4>
@@ -44,7 +44,7 @@ require 'views/en/partials/navbar.view.php';
       </article> <!-- news-article -->
       <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-8 news-preview-misc">
         <div class="news-image-container">
-          <img src="images/news/<?= $news->getImgName(); ?>">
+          <img src="/images/news/<?= $news->getImgName(); ?>">
         </div>  <!-- news preview image container -->
         <div class="news-share">
           <p>Share this news:</p>
@@ -62,18 +62,46 @@ require 'views/en/partials/navbar.view.php';
 
 <div class="container">
 
-<!-- <div id="paginator" class="pageelem" style="bottom:0; margin-top:50px; text-align: center; background-color: red;">PAGINATOR</div> -->
-
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-end">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
+<nav aria-label="News navigation">
+  <ul class="pagination">
+    <li>
+      <a href="1">First</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <li <?php echo (Request::newsId() == 1) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo Request::newsId() -1 ?>" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li <?php echo (Request::newsId() == 1 || Request::newsId() == 2) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo Request::newsId() -2 ?>"><?php echo Request::newsId() -2 ?></a>
+    </li>
+    <li <?php echo (Request::newsId() == 1) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo Request::newsId() -1 ?>"><?php echo Request::newsId() -1 ?></a>
+    </li>
+    <li class="active">
+      <a href=""><?php echo Request::newsId() ?></a>
+    </li>
+    <li <?php echo (($newsCount <= 15 && Request::newsId() > 2) || ((Request::newsId() + 1) * 5 - $newsCount > 5 )) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo Request::newsId() +1 ?>"><?php echo Request::newsId() +1 ?></a>
+    </li>
+    <li <?php echo (($newsCount <= 20 && Request::newsId() > 2) || ((Request::newsId() * + 2) * 5 - $newsCount > 5 && Request::newsId() > 3)) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo Request::newsId() +2 ?>"><?php echo Request::newsId() +2 ?></a>
+    </li>
+    <li <?php echo (($newsCount <= 15 && Request::newsId() > 2) || ((Request::newsId() + 1) * 5 - $newsCount > 5 )) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo Request::newsId() +1 ?>" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    <li>
+      <a href="
+        <?php 
+          if ($newsCount % 5 > 0) {
+            echo floor($newsCount / 5) + 1 ;
+          } elseif ($newsCount % 5 == 0) {
+            echo floor($newsCount / 5);
+          }
+        ?>">Last
+      </a>
     </li>
   </ul>
 </nav>
@@ -95,8 +123,8 @@ require 'views/en/partials/navbar.view.php';
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/news.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/news.js"></script>
 </body>
 </html>

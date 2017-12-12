@@ -57,14 +57,14 @@
     </div>
   </div>  <!-- .news-article-box.row -->
 
-  <div id="back-to-news">
-    <a href="/news" class="btn btn-primary"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to all news</a>
-    <a href="/" class="btn btn-round btn-success"><strong>Home Page</strong></a>
+  <div class="buttons">
+    <a href="/news/1" class="btn btn-primary"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to all news</a>
+    <a href="/" class="btn"><strong>Explore</strong></a>
   </div>
 
 <!-- <div style="bottom:0; margin-top:50px; text-align: center; background-color: red;">Comment box</div> -->
 
-  <div class="fb-comments" data-href="<?=$config['url']; ?>news/article/<?= $articleId; ?>" data-numposts="5"></div>
+  <div class="fb-comments" data-href="<?=$config['url']; ?>news/article/<?= Request::articleId(); ?>" data-numposts="5"></div>
 
 </div> <!-- .container -->
 </div> <!-- #article-content -->
