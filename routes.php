@@ -1,6 +1,6 @@
 <?php 
 
-$newsId =  Request::newsId();
+$newsPage =  Request::newsPageNumber();
 $articleId =  Request::articleId();
 
 $router->define([
@@ -8,7 +8,7 @@ $router->define([
 	'home' => 'controllers/en/index.php',
 	'bio' => 'controllers/en/bio.php',
 	'shows' => 'controllers/en/shows.php',
-	'news/' . $newsId => 'controllers/en/news.php',
+	'news/' . $newsPage => 'controllers/en/news.php',
 	'news/article/' . $articleId => 'controllers/en/article.php',
 	'photos' => 'controllers/en/photos.php',
 	'videos' => 'controllers/en/videos.php',

@@ -64,44 +64,45 @@ require 'views/en/partials/navbar.view.php';
 
 <nav aria-label="News navigation">
   <ul class="pagination">
+    <!-- FIRST PAGE BUTOON -->
     <li>
       <a href="1">First</a>
     </li>
-    <li <?php echo (Request::newsId() == 1) ? 'class="hidden"' : ''; ?>>
-      <a href="<?php echo Request::newsId() -1 ?>" aria-label="Previous">
+    <!-- PREVIOUS PAGE BUTOON (NOT DISPLAYED ON FIRST PAGE) -->
+    <li <?php echo ($pageNumber == 1) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo $pageNumber -1 ?>" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li <?php echo (Request::newsId() == 1 || Request::newsId() == 2) ? 'class="hidden"' : ''; ?>>
-      <a href="<?php echo Request::newsId() -2 ?>"><?php echo Request::newsId() -2 ?></a>
+    <!-- TWO PAGES BEFORE THE ACTIVE BUTOON (NOT DISPLAYED ON FIRST AND SECOND PAGE) -->
+    <li <?php echo ($pageNumber <= 2) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo $pageNumber -2 ?>"><?php echo $pageNumber -2 ?></a>
     </li>
-    <li <?php echo (Request::newsId() == 1) ? 'class="hidden"' : ''; ?>>
-      <a href="<?php echo Request::newsId() -1 ?>"><?php echo Request::newsId() -1 ?></a>
+    <!-- ONE PAGE BEFORE THE ACTIVE BUTOON (NOT DEISPLAYED ON FIRST PAGE) -->
+    <li <?php echo ($pageNumber == 1) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo $pageNumber -1 ?>"><?php echo $pageNumber -1 ?></a>
     </li>
+    <!-- ACTIVE BUTOON -->
     <li class="active">
-      <a href=""><?php echo Request::newsId() ?></a>
+      <a href=""><?php echo $pageNumber ?></a>
     </li>
-    <li <?php echo (($newsCount <= 15 && Request::newsId() > 2) || ((Request::newsId() + 1) * 5 - $newsCount > 5 )) ? 'class="hidden"' : ''; ?>>
-      <a href="<?php echo Request::newsId() +1 ?>"><?php echo Request::newsId() +1 ?></a>
+    <!-- ONE PAGE AFTER THE ACTIVE BUTOON (NOT DISPALYED ON THE LAST PAGE) -->
+    <li <?php echo ($lastPage - $pageNumber < 1) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo $pageNumber +1 ?>"><?php echo $pageNumber +1 ?></a>
     </li>
-    <li <?php echo (($newsCount <= 20 && Request::newsId() > 2) || ((Request::newsId() * + 2) * 5 - $newsCount > 5 && Request::newsId() > 3)) ? 'class="hidden"' : ''; ?>>
-      <a href="<?php echo Request::newsId() +2 ?>"><?php echo Request::newsId() +2 ?></a>
+    <!-- TWO PAGES AFTER THE ACTIVE BUTOON (NOT DISPALYED ON THE SECOND TO LAST AND LAST PAGE) -->
+    <li <?php echo ($lastPage - $pageNumber < 2) ? 'class=hidden' : ''; ?>>
+      <a href="<?php echo $pageNumber +2 ?>"><?php echo $pageNumber +2 ?></a>
     </li>
-    <li <?php echo (($newsCount <= 15 && Request::newsId() > 2) || ((Request::newsId() + 1) * 5 - $newsCount > 5 )) ? 'class="hidden"' : ''; ?>>
-      <a href="<?php echo Request::newsId() +1 ?>" aria-label="Next">
+    <!-- NEXT PAGE BUTOON (NOT DISPLAYED ON LAST PAGE) -->
+    <li <?php echo ($lastPage - $pageNumber < 1) ? 'class="hidden"' : ''; ?>>
+      <a href="<?php echo $pageNumber +1 ?>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
+    <!-- LAST PAGE BUTOON -->
     <li>
-      <a href="
-        <?php 
-          if ($newsCount % 5 > 0) {
-            echo floor($newsCount / 5) + 1 ;
-          } elseif ($newsCount % 5 == 0) {
-            echo floor($newsCount / 5);
-          }
-        ?>">Last
-      </a>
+      <a href="<?= $lastPage ?>">Last</a>
     </li>
   </ul>
 </nav>

@@ -8,7 +8,7 @@ class Request
 		return ltrim(strstr($_SERVER['REQUEST_URI'], '/'), '/');
 	}
 
-	public static function newsId()
+	public static function newsPageNumber()
 	{
 		return ltrim(strstr($_SERVER['REQUEST_URI'], 'news/'), 'news/');
 	}
