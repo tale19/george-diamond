@@ -12,11 +12,38 @@ function main() {
 	});
 
 	// *** YOUTUBE MODAL ***
+	// // assign video to each show
+	function changeVideo(vId){
+		var iframe=document.getElementById("iframeYT");
+		iframe.src="https://www.youtube.com/embed/"+vId;
+
+		// $("#videoModal").modal("show");
+	}
+
+
+	var $videoBtn = $('a.videoButton');
+	// console.log("adsopfa");
+	// $videoBtn.on('click', );
+	// $videoBtn.on("click", console.log('K6M17HSezJg'));
+	$videoBtn.each(function(){
+		$(this).on('click', function(e) {
+			// e.preventDefault;
+			// changeVideo('K6M17HSezJg');
+			console.log($(this).data('target'));
+		});
+	});
+
+	$("#videoModal").on("shown.bs.modal",function(e){
+		var $invoker = e.relatedTarget;
+		console.log($invoker);
+	});
+
+
 	// stop YouTube video when closing the modal
 	$("#videoModal").on("hidden.bs.modal",function(){
 		$("#iframeYT").attr("src","#");
 	});
-		
+	
 	// $modalTitle = $('#videoModalLabel');
 	// $modalTitle.text(data('naslov'));
 	// console.log(data);

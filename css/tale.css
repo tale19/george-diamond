@@ -1017,6 +1017,18 @@ This will not affect the contents of the p tag also because it is still just a b
 	}
 }
 
+/* *** Modal *** */
+#shows-content .modal .modal-footer .panel {
+	margin-top: 15px;
+	text-align: left;
+}
+
+
+
+
+
+
+
 /* *** Show boxes *** */
 #shows-content .show-box:nth-child(odd) {
 	color: #337ab7;
