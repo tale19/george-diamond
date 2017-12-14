@@ -12,62 +12,77 @@ function main() {
 	});
 
 	// *** YOUTUBE MODAL ***
+	var $currentVideoId = 0;
+	function retrieveVideoId(){
+		var $iframe = $('#iframeYT');
+		console.log($iframe.attr('src').substr(-17, 11));
+		return $currentVideoId = $iframe.attr('src').substr(-17, 11);
+	}
 	// choose a video to play
-	function changeVideo(vId){
-		var iframe=document.getElementById("iframeYT");
-		iframe.src="https://www.youtube.com/embed/"+vId;
+	function playVideo(vId){
+		var iframe = document.getElementById("iframeYT");
+		iframe.src = "https://www.youtube.com/embed/" + vId + '?rel=0';
+		retrieveVideoId();
 	}
 
 	// open modal to play the video
-	var $videoBtn = $('a.videoButton');
-	$videoBtn.each(function(){
-		$(this).on('click', function(e) {
-			// e.preventDefault;
-			// retrieve list of videos from data-video of the button
-			$videoData = $(this).data('video');
-			changeVideo($videoData[0]);
+	var $videoBtn = $('a.play-video');
+	$videoBtn.on('click', function() {
+		// e.preventDefault;
 
-			// show panel toggler only if the invoking button stores more than one video
-			if ($videoData.length < 2) {
-				var $panelToggler = $('#panel-toggler');
-				$panelToggler.hide();
-			}
+		// retrieve list of videos from data-video of the button
+		var $videoData = [];
+		$videoData = $(this).data('video');
+		// default video
+		playVideo($videoData[0]);
 
-			var $listOfVideos = $('#videoModal .panel-body ul');
-			console.log($listOfVideos);
-			for (var i = 0; i < $videoData.length; i++) {
-				$listOfVideos.append(
-					'<li><a href="#" class="videoButton" data-video="' 
-					+ $videoData[i] 
-					+ '">' 
-					+ $videoData[i] 
-					+ '</a></li>');
+		// show panel toggler only if the invoking button stores more than one video
+		var $panelToggler = $('#panel-toggler');
+		if ($videoData.length < 2) {
+			$panelToggler.hide();
+		} else {
+			$panelToggler.show();
+		}
+
+		// create links to related videos in the panel
+		var $listOfVideos = $('#videoModal .panel .panel-body ul');
+		for (var i = 0; i < $videoData.length; i++) {
+			$listOfVideos.append(
+				'<li><a href="#" class="play-video" data-video="' 
+				+ $videoData[i] 
+				+ '">' 
+				+ $videoData[i] 
+				+ '</a></li>'
+			);
+		}
+
+		// add .active to the panel link of the current video
+		var $panelLink = $('#videoModal .modal-footer a.play-video');
+		$panelLink.each(function() {
+			if ($(this).data('video') == $currentVideoId) {
+				$(this).addClass('active');
 			}
-			var $panelLink = $('#videoModal a.videoButton');
-			console.log($panelLink);
-			$panelLink.each(function() {
-				$(this).on('click', function() {
-					console.log($(this).data('video'));
-					changeVideo($(this).data('video'));
-				});
-			});
 		});
-	});
 
-	// $("#videoModal").on("shown.bs.modal",function(e){
-	// 	var $invoker = e.relatedTarget;
-	// 	console.log($invoker);
-	// });
+		// play video when link from panel is clicked
+		// also change the .active link
+		$panelLink.on('click', function(e) {
+			e.preventDefault();
+			playVideo($(this).data('video'));
+			if ($(this).data('video') == $currentVideoId) {
+				$panelLink.removeClass('active');
+				$(this).addClass('active');
+			}
+		}); // $panelLink.onclick
+	}); // $videoBtn.onclick
 
-
-	// stop YouTube video when closing the modal
+	// stop YouTube video, collapse the panel and remove links when the modal is closed
+	// (third step: next time the modal is called, new links will be generated)
 	$("#videoModal").on("hidden.bs.modal",function(){
 		$("#iframeYT").attr("src","#");
+		$('#videoModal .panel').collapse('hide');
+		$('#videoModal .panel-body ul').empty();
 	});
-	
-	// $modalTitle = $('#videoModalLabel');
-	// $modalTitle.text(data('naslov'));
-	// console.log(data);
 
 
 

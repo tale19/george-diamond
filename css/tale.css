@@ -1018,13 +1018,31 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 /* *** Modal *** */
+#panel-toggler {
+	font-style: italic;
+}
 #shows-content .modal .modal-footer .panel {
 	margin-top: 15px;
 	text-align: left;
 }
+#shows-content .modal .modal-footer .panel .panel-body {
+	padding-bottom: 0;
+}
 
+#shows-content .modal .modal-footer .panel ul {
+	list-style: none;
+	
+}
+#shows-content .modal .modal-footer .panel a.active {
+	color: red;
+}
 
-
+@media (min-width: 768px) {
+	#panel-toggler {
+		float: left;
+		font-size: 1.4em;
+	}
+}
 
 
 
