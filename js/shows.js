@@ -12,31 +12,52 @@ function main() {
 	});
 
 	// *** YOUTUBE MODAL ***
-	// // assign video to each show
+	// choose a video to play
 	function changeVideo(vId){
 		var iframe=document.getElementById("iframeYT");
 		iframe.src="https://www.youtube.com/embed/"+vId;
-
-		// $("#videoModal").modal("show");
 	}
 
-
+	// open modal to play the video
 	var $videoBtn = $('a.videoButton');
-	// console.log("adsopfa");
-	// $videoBtn.on('click', );
-	// $videoBtn.on("click", console.log('K6M17HSezJg'));
 	$videoBtn.each(function(){
 		$(this).on('click', function(e) {
 			// e.preventDefault;
-			// changeVideo('K6M17HSezJg');
-			console.log($(this).data('target'));
+			// retrieve list of videos from data-video of the button
+			$videoData = $(this).data('video');
+			changeVideo($videoData[0]);
+
+			// show panel toggler only if the invoking button stores more than one video
+			if ($videoData.length < 2) {
+				var $panelToggler = $('#panel-toggler');
+				$panelToggler.hide();
+			}
+
+			var $listOfVideos = $('#videoModal .panel-body ul');
+			console.log($listOfVideos);
+			for (var i = 0; i < $videoData.length; i++) {
+				$listOfVideos.append(
+					'<li><a href="#" class="videoButton" data-video="' 
+					+ $videoData[i] 
+					+ '">' 
+					+ $videoData[i] 
+					+ '</a></li>');
+			}
+			var $panelLink = $('#videoModal a.videoButton');
+			console.log($panelLink);
+			$panelLink.each(function() {
+				$(this).on('click', function() {
+					console.log($(this).data('video'));
+					changeVideo($(this).data('video'));
+				});
+			});
 		});
 	});
 
-	$("#videoModal").on("shown.bs.modal",function(e){
-		var $invoker = e.relatedTarget;
-		console.log($invoker);
-	});
+	// $("#videoModal").on("shown.bs.modal",function(e){
+	// 	var $invoker = e.relatedTarget;
+	// 	console.log($invoker);
+	// });
 
 
 	// stop YouTube video when closing the modal

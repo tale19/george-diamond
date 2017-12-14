@@ -1030,12 +1030,12 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 /* *** Show boxes *** */
-#shows-content .show-box:nth-child(odd) {
+#shows-content .show-box:nth-child(even) {
 	color: #337ab7;
 	background-color: #f8f8f8;
 
 }
-#shows-content .show-box:nth-child(even) {
+#shows-content .show-box:nth-child(odd) {
 	background-color: #337ab7;
 	color: white;
 }
