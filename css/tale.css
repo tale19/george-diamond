@@ -1021,6 +1021,18 @@ This will not affect the contents of the p tag also because it is still just a b
 #panel-toggler {
 	font-style: italic;
 }
+	#panel-toggler.active {
+		/*color: red;*/
+		visibility: hidden;
+	}
+	#panel-toggler.active:after {
+		content: 'Hide videos';
+		visibility: visible;
+		display: block;
+		/*position: absolute;*/
+		top: 0;
+		left: 0;
+	}
 #shows-content .modal .modal-footer .panel {
 	margin-top: 15px;
 	text-align: left;

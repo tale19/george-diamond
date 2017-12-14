@@ -51,7 +51,7 @@ function main() {
 				'<li><a href="#" class="play-video" data-video="' 
 				+ $videoData[i] 
 				+ '">' 
-				+ $videoData[i] 
+				+ 'Video ' + (i+1)
 				+ '</a></li>'
 			);
 		}
