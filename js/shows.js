@@ -44,6 +44,11 @@ function main() {
 			$panelToggler.show();
 		}
 
+		// toggle between "See more videos" and "Hide videos"
+		$panelToggler.on('click', function() {
+			$(this).find('.toggle-group').toggleClass('active');
+		});
+
 		// create links to related videos in the panel
 		var $listOfVideos = $('#videoModal .panel .panel-body ul');
 		for (var i = 0; i < $videoData.length; i++) {

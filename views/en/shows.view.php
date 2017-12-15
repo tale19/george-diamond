@@ -45,7 +45,14 @@
 					</div>
 				</div> <!-- .modal-body -->
 				<div class="modal-footer">
-			        <a id="panel-toggler" data-target=".panel" data-toggle="collapse">See more videos</a>
+					<div id="panel-toggler" class="toggle btn btn-default" data-target=".panel" data-toggle="collapse">
+						<input type="checkbox">
+						<div class="toggle-group">
+							<label class="btn btn-default toggle-on">See more Videos</label>
+							<label class="btn btn-secondary toggle-off">Hide Videos</label>
+							<span class="slider btn btn-default"></span>
+						</div> <!-- .toggle-group -->
+					</div>
 					<a href="/videos" class="btn btn-primary">Serbia's got talent videos</a>
 			        <button id="modal-killer" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 			        <div class="panel panel-default collapse">
@@ -74,7 +81,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-illusion.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["Asm9nud6S_o", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["Asm9nud6S_o", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -91,7 +98,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-stage.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["iD-cTwMkr_8", "m740oo3hK3U", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-success hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["iD-cTwMkr_8", "m740oo3hK3U", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-success">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -109,7 +116,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-private.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["2VvxZqAdrvk"]' class="play-video btn-lg btn-round btn-warning hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["2VvxZqAdrvk"]' class="play-video btn-lg btn-round btn-warning">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -126,7 +133,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-quickchange.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["taO6lPdo7Rc", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["taO6lPdo7Rc", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -143,7 +150,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-chinese.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["U-dSswmewdo", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["U-dSswmewdo", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -160,7 +167,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-short.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["iqzUhXzsHYc", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["iqzUhXzsHYc", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -177,7 +184,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-parlor.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["udLmIeAQ4qQ", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["udLmIeAQ4qQ", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-default">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -194,7 +201,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-kids.webp">
-					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["Asm9nud6S_o", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-warning hidden-xs">Watch video</a>
+					<a href="#" data-target="#videoModal" data-toggle="modal" data-video='["Asm9nud6S_o", "m740oo3hK3U"]' class="play-video btn-lg btn-round btn-warning">Watch video</a>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
