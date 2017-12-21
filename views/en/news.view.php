@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>News | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
+<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/tale.css">
 </head>
 
 <body>
@@ -27,12 +27,22 @@ require 'views/en/partials/navbar.view.php';
 ?>
 
 <div id="news-content">
-<!-- <h3>News</h3> -->
+
 <h3>News</h3>
 
 
 
   <div class="container">
+
+  <div class="searchbox">
+    <form class="input-group" method="GET" action="/search">
+      <input name="search" type="text" class="form-control" placeholder="Search the news">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Go!</button>
+      </span>
+    </form><!-- /input-group -->
+  </div>
+
   <?php foreach ($displayedNews as $news) : ?>
     <section class="news-preview-box row">
       <article class="col-sm-6 col-md-8 col-sm-push-6 col-md-push-4 news-preview-article">

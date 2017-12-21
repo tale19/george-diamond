@@ -18,7 +18,7 @@
         <li <?php echo (Request::uri() == 'home' || Request::uri() == '') ? 'class="active"' : ''; ?> ><a href="/" class="navbar-btn">Home</a></li>
         <li <?php echo (Request::uri() == 'bio') ? 'class="active"' : ''; ?> ><a href="/bio" class="navbar-btn">Bio</a></li>
         <li <?php echo (Request::uri() == 'shows') ? 'class="active"' : ''; ?> ><a href="/shows" class="navbar-btn">Shows</a></li>
-        <li <?php echo (substr(Request::uri(), 0, 4) == 'news') ? 'class="active"' : ''; ?> ><a href="/news/1" class="navbar-btn">News</a></li>
+        <li <?php echo (substr(Request::uri(), 0, 4) == 'news' || Request::uri() == 'search') ? 'class="active"' : ''; ?> ><a href="/news/1" class="navbar-btn">News</a></li>
         <li <?php echo (Request::uri() == 'photos' || Request::uri() == 'videos') ? 'class="active"' : ''; ?>  class="dropdown">
           <a href="#" class="dropdown-toggle navbar-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
           <ul class="dropdown-menu">

@@ -175,7 +175,9 @@ nav .navbar-header h1 {
 #news-content,
 #article-content,
 #contact-content,
-#videos-content {
+#videos-content,
+#search-content
+ {
 	/*position: relative;*/
 	min-height: 100%;
 	width: 100%;
@@ -184,7 +186,7 @@ nav .navbar-header h1 {
 	padding-bottom: 50px;
 	background-color: #f8f8f8;
 	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 
@@ -227,14 +229,16 @@ h3 {
 #bio-content h3, 
 #shows-content h3, 
 #news-content h3,
-#videos-content h3 
+#videos-content h3,
+#search-content h3
 {
 	margin-bottom: .8em;
 	font-family: 'Passion One', cursive;
 }
 
 #shows-content h4,
-#news-content h4
+#news-content h4,
+#search-content h4
 {
 	font-family: 'Patua One', cursive;
 	/*font-family: 'Titan One', cursive;*/
@@ -294,7 +298,8 @@ h3 {
 	#bio-content h3, 
 	#shows-content h3, 
 	#news-content h3, 
-	#videos-content h3
+	#videos-content h3,
+	#search-content h3
 	{
 		font-size: 3em;
 	}
@@ -358,7 +363,8 @@ h3 {
 	#bio-content h3, 
 	#shows-content h3, 
 	#news-content h3, 
-	#videos-content h3
+	#videos-content h3,
+	#search-content h3
 	{
 		font-size: 3.5em;
 	}
@@ -383,7 +389,8 @@ h3 {
 	#bio-content h3, 
 	#shows-content h3, 
 	#news-content h3, 
-	#videos-content h3
+	#videos-content h3,
+	#search-content h3
 	{
 		font-size: 4em;
 	}
@@ -416,7 +423,8 @@ h3 {
 	#bio-content h3, 
 	#shows-content h3, 
 	#news-content h3, 
-	#videos-content h3
+	#videos-content h3,
+	#search-content h3
 	{
 		font-size: 4.8em;
 	}
@@ -1152,12 +1160,16 @@ This will not affect the contents of the p tag also because it is still just a b
 }
 
 #news-content .news-preview-content p:nth-of-type(1),
-#article-content .news-content p:nth-of-type(1) {
+#article-content .news-content p:nth-of-type(1), 
+#search-content .news-preview-content p:nth-of-type(1) 
+{
 	display: inline; /* enables date to be in the same line as the <p> */
 }
 
 #news-content .news-preview-content,
-#article-content .news-content {
+#article-content .news-content 
+#search-content .news-preview-content,
+{
 	font-size: 1.15em;
 	font-weight: 400;
 }
@@ -1181,6 +1193,11 @@ This will not affect the contents of the p tag also because it is still just a b
 	background-color: #337ab7;
 	color: white;*/
 }
+
+#news-content .searchbox {
+	margin: 0 0 30px auto;
+}
+
 .news-preview-box {
 	/*border: 2px solid magenta;*/
 	/*padding: 0.5em auto;*/
@@ -1314,6 +1331,10 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 @media (max-width: 767px) {
+	#news-content .searchbox {
+		width: 100%;
+	}
+
 	.news-preview-box h4 {
 		text-align: center;
 		margin-bottom: 20px;
@@ -1340,12 +1361,11 @@ This will not affect the contents of the p tag also because it is still just a b
 	}
 }
 @media (min-width: 768px) {
+	#news-content .searchbox {
+		width: 250px;
+	}
+
 	.news-preview-box {
-		/*left: 0;*/
-		/*margin: 0;*/
-		/*padding: 0;*/
-		/*margin-right: unset;*/
-		/*padding-right: unset;*/
 		min-height: 250px;
 	}
 }
