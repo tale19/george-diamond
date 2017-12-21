@@ -12,40 +12,120 @@ function main() {
 	});
 
 	// *** YOUTUBE MODAL ***
-	// stop YouTube video when closing the modal
+	var $currentVideoId = 0;
+	function retrieveVideoId(){
+		var $iframe = $('#iframeYT');
+		console.log($iframe.attr('src').substr(-17, 11));
+		return $currentVideoId = $iframe.attr('src').substr(-17, 11);
+	}
+	// choose a video to play
+	function playVideo(vId){
+		var iframe = document.getElementById("iframeYT");
+		iframe.src = "https://www.youtube.com/embed/" + vId + '?rel=0';
+		retrieveVideoId();
+	}
+
+	// open modal to play the video
+	var $videoBtn = $('button.play-video');
+	$videoBtn.on('click', function() {
+		// e.preventDefault;
+
+		// retrieve list of videos from data-video of the button
+		var $videoData = [];
+		$videoData = $(this).data('video');
+		// default video
+		playVideo($videoData[0]);
+
+		// show panel toggler only if the invoking button stores more than one video
+		var $panelToggler = $('#panel-toggler');
+		if ($videoData.length < 2) {
+			$panelToggler.hide();
+		} else {
+			$panelToggler.show();
+		}
+
+		$('#videoModal .toggle-group .toggle-on').on('click', function() {
+			console.log('on');
+			$(this).parent().addClass('active');
+			$(this).parents('.modal-footer').find('.panel').collapse('show');
+		})
+		$('#videoModal .toggle-group .toggle-off').on('click', function() {
+			console.log('off');
+			$(this).parent().removeClass('active');
+			$(this).parents('.modal-footer').find('.panel').collapse('hide');
+		})
+
+		// create links to related videos in the panel
+		var $listOfVideos = $('#videoModal .panel .panel-body ul');
+		for (var i = 0; i < $videoData.length; i++) {
+			$listOfVideos.append(
+				'<li><a href="#" class="play-video" data-video="' 
+				+ $videoData[i] 
+				+ '">' 
+				+ 'Video ' + (i+1)
+				+ '</a></li>'
+			);
+		}
+
+		// add .active to the panel link of the current video
+		var $panelLink = $('#videoModal .modal-footer a.play-video');
+		$panelLink.each(function() {
+			if ($(this).data('video') == $currentVideoId) {
+				$(this).addClass('active');
+			}
+		});
+
+		// play video when link from panel is clicked
+		// also change the .active link
+		$panelLink.on('click', function(e) {
+			e.preventDefault();
+			playVideo($(this).data('video'));
+			if ($(this).data('video') == $currentVideoId) {
+				$panelLink.removeClass('active');
+				$(this).addClass('active');
+			}
+		}); // $panelLink.onclick
+	}); // $videoBtn.onclick
+
+	// stop YouTube video, collapse the panel and remove links when the modal is closed
+	
 	$("#videoModal").on("hidden.bs.modal",function(){
 		$("#iframeYT").attr("src","#");
+		$('#videoModal .toggle-group').removeClass('active');
+		$('#videoModal .panel').collapse('hide');
+		$('#videoModal .panel-body ul').empty(); // next time the modal is called, new links will be generated in empty panel
 	});
-		
-	// $modalTitle = $('#videoModalLabel');
-	// $modalTitle.text(data('naslov'));
-	// console.log(data);
 
 
 
 	// *** PARAGRAPHS AND IMAGES APPEARING ON VIEWPORT ENTRY ***
 	// 	pass each paragraph container to the "in viewport checker" to get its position
-	// var $showTitle = $('#shows-content .show-box .show-article h4');
 	var $showsParagraph = $('#shows-content .show-box .paragraph');
 	var $showsMisc = $('#shows-content .show-box .shows-misc');
-	//  make it work on scroll
+	$showsParagraph.each(function(){
+		if (inPartialViewport($(this), 150)) {
+			$(this).addClass('appear');
+		} 
+	});
+	$showsMisc.each(function(){
+		if (inPartialViewport($(this), 150)) {
+			$(this).find('img').addClass('appear');
+		} 
+	});
+
+	//  make it work on scroll as well
 	$(window).scroll(function() {
 		$showsParagraph.each(function(){
 			if (inPartialViewport($(this), 150)) {
 				$(this).addClass('appear');
 			} 
 		});
-	});
-
-	$(window).scroll(function() {
 		$showsMisc.each(function(){
 			if (inPartialViewport($(this), 150)) {
 				$(this).find('img').addClass('appear');
 			} 
 		});
 	});
-
-
 
 	// *** SCROLLTOP ***
 	

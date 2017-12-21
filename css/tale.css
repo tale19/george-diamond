@@ -1025,13 +1025,98 @@ This will not affect the contents of the p tag also because it is still just a b
 	}
 }
 
+
+
+/* *** Modal *** */
+#panel-toggler {
+	display: block;
+	position: relative;
+	margin-bottom: 10px;
+	width: 130px;
+	height: 36px;
+	overflow: hidden;
+}
+				/* * hide the tick box * */
+				#panel-toggler > input {
+					display: none;
+				}
+
+#panel-toggler .toggle-group {
+	box-sizing: content-box;
+	position: absolute;
+	width: 200%;
+	top: 0;
+	left: 0;
+	padding: 0;
+}
+#panel-toggler .toggle-group label.btn {
+	width: 130px;
+	height: 100%;
+	margin: 0;
+	transition: all 0.35s;
+}
+#panel-toggler .toggle-group.active label.btn {
+	transform: translateX(-130px);
+}
+#panel-toggler .toggle-group label.btn.toggle-on {
+	padding-left: 5px;
+}
+#panel-toggler .toggle-group .slider {
+	position: absolute;
+	left: 118px;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	width: 12px;
+	border-width: 0 1px;
+	background-color: #ccc;
+	border-color: #aaa;
+	transition: all 0.35s;
+}
+#panel-toggler .toggle-group.active .slider {
+	transform: translateX(-118px);
+}
+
+#shows-content .modal .modal-footer .panel {
+	margin-bottom: 10px;
+	text-align: left;
+}
+#shows-content .modal .modal-footer .panel .panel-body {
+	padding-bottom: 0;
+}
+
+#shows-content .modal .modal-footer .panel ul {
+	list-style: none;
+	
+}
+#shows-content .modal .modal-footer .panel a.active {
+	color: red;
+}
+
+#videoModal .modal-footer > .btn-talent /* Link to Talent videos */
+{
+	float: left;
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (min-width: 768px) {
+	
+}
+
+
+
+
 /* *** Show boxes *** */
-#shows-content .show-box:nth-child(odd) {
+#shows-content .show-box:nth-child(even) {
 	color: #337ab7;
 	background-color: #f8f8f8;
 
 }
-#shows-content .show-box:nth-child(even) {
+#shows-content .show-box:nth-child(odd) {
 	background-color: #337ab7;
 	color: white;
 }

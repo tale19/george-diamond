@@ -38,12 +38,6 @@
 	<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
     		<div class="modal-content">
-				<div class="modal-header">
-			        <h4 class="modal-title" id="videoModalLabel">Video</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
 				<div class="modal-body">
 					<!-- 16:9 aspect ratio -->
 					<div class="embed-responsive embed-responsive-16by9">
@@ -51,21 +45,29 @@
 					</div>
 				</div> <!-- .modal-body -->
 				<div class="modal-footer">
-			        <a href="/videos" type="a" class="btn btn-primary">See more videos</a>
-			        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-				</div>
+					<button id="panel-toggler" class="toggle btn btn-default">
+						<input type="checkbox">
+						<div class="toggle-group">
+							<label class="btn btn-secondary toggle-on">See more Videos</label>
+							<label class="btn btn-default toggle-off">Hide Videos</label>
+							<span class="slider btn btn-default"></span>
+						</div> <!-- .toggle-group -->
+					</button>
+			        <div class="panel panel-default collapse">
+						<div class="panel-body">
+							<!-- <a>Basic panel example</a> -->
+							<ul>
+								
+							</ul>
+						</div>
+					</div> <!-- .panel.panel-default -->
+					<a href="/videos" class="btn btn-default btn-talent">Serbia's got talent videos</a>
+			        <button id="modal-killer" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div> <!-- .modal-footer -->
 			</div> <!-- .modal-content -->
   		</div> <!-- .modal-dialog -->
 	</div> <!-- .modal -->
-	<script type="text/javascript">
-	// assign video to each show
-	function changeVideo(vId){
-		var iframe=document.getElementById("iframeYT");
-		iframe.src="https://www.youtube.com/embed/"+vId;
 
-		$("#videoModal").modal("show");
-	}
-	</script>
 
 	<div class="container-fluid show-box">
 		<div class="container">
@@ -79,7 +81,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-illusion.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-default hidden-xs" onclick="changeVideo('Asm9nud6S_o')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["Asm9nud6S_o", "m740oo3hK3U"]' class="play-video btn-lg btn-default">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -96,7 +98,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-stage.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-default hidden-xs" onclick="changeVideo('m740oo3hK3U')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["iD-cTwMkr_8", "m740oo3hK3U", "m740oo3hK3U"]' class="play-video btn-lg btn-success">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -114,7 +116,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-private.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-warning hidden-xs" onclick="changeVideo('udLmIeAQ4qQ')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["2VvxZqAdrvk"]' class="play-video btn-lg btn-warning">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -131,7 +133,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-quickchange.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-default hidden-xs" onclick="changeVideo('taO6lPdo7Rc')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["taO6lPdo7Rc", "m740oo3hK3U"]' class="play-video btn-lg btn-default">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -148,7 +150,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-chinese.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-default hidden-xs" onclick="changeVideo('U-dSswmewdo')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["U-dSswmewdo", "m740oo3hK3U"]' class="play-video btn-lg btn-default">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -165,7 +167,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-short.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-default hidden-xs" onclick="changeVideo('iqzUhXzsHYc')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["iqzUhXzsHYc", "m740oo3hK3U"]' class="play-video btn-lg btn-default">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -182,7 +184,7 @@
 				</div>
 				<div class="col-sm-6 shows-misc odd">
 					<img src="images/shows-parlor.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-default hidden-xs" onclick="changeVideo('udLmIeAQ4qQ')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["udLmIeAQ4qQ", "m740oo3hK3U"]' class="play-video btn-lg btn-default">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
@@ -199,7 +201,7 @@
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 shows-misc even">
 					<img src="images/shows-kids.webp">
-					<a data-toggle="modal" class="btn-lg btn-round btn-warning hidden-xs" onclick="changeVideo('Asm9nud6S_o')">Watch video</a>
+					<button data-target="#videoModal" data-toggle="modal" data-video='["Asm9nud6S_o", "m740oo3hK3U"]' class="play-video btn-lg btn-warning">Watch video</button>
 				</div>
 			</div> <!-- .row -->
 		</div> <!-- .container -->
