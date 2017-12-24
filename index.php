@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+// require Composer autoloader
+require 'vendor/autoload.php';
+
 
 require 'core/bootstrap.php';
 
