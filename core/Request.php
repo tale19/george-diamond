@@ -5,8 +5,12 @@ class Request
 	
 	public static function uri()
 	{
-		// return ltrim(strstr($_SERVER['REQUEST_URI'], '/'), '/');
 		return ltrim(parse_url(strstr($_SERVER['REQUEST_URI'], '/'), PHP_URL_PATH), '/');
+	}
+
+    public static function method()
+    {
+        return $_SERVER['REQUEST_METHOD'];
 	}
 
 	public static function newsPageNumber()
