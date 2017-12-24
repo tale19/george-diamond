@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInite1b2c19d9171953188d9cc458ad6435e
 {
     public static $classMap = array (
+        'App' => __DIR__ . '/../..' . '/core/App.php',
+        'ComposerAutoloaderInite1b2c19d9171953188d9cc458ad6435e' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInite1b2c19d9171953188d9cc458ad6435e' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'ErrorHandler' => __DIR__ . '/../..' . '/composer-setup.php',
         'HttpClient' => __DIR__ . '/../..' . '/composer-setup.php',
