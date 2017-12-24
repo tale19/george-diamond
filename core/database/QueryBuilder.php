@@ -12,7 +12,7 @@ class QueryBuilder
 		$this->pdo = $pdo;
 	}
 
-	public function rowCount($tableName)
+	public function selectAll($tableName)
 	{
 		$statement = $this->pdo->prepare("
 			SELECT * 
@@ -50,7 +50,9 @@ class QueryBuilder
 		$statement = $this->pdo->prepare("
 			SELECT * 
 			FROM {$tableName} 
-			WHERE content COLLATE UTF8_GENERAL_CI 
+			WHERE title COLLATE UTF8_GENERAL_CI 
+			LIKE '%{$searchQuery}%'
+			OR content COLLATE UTF8_GENERAL_CI 
 			LIKE '%{$searchQuery}%'
 			ORDER BY id DESC
 			");

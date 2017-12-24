@@ -43,9 +43,9 @@
       </div> <!-- news body -->
       <div class="news-share">
         <p>Share this news:</p>
-        <a href="http://www.facebook.com/share.php?u=<?= $config['url']?>news/article/<?=$article->getId();?>&title=<?=$article->getTitle() ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="http://twitter.com/intent/tweet?status=<?=$article->getTitle() ?>+<?= $config['url']?>news/article/<?=$article->getId();?>"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
-        <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= $config['url']?>news/article/<?=$article->getId();?>&title=<?=$article->getTitle() ?>&source=<?= $config['url']?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="http://www.facebook.com/share.php?u=<?= App::use('url')?>news/article/<?=$article->getId();?>&title=<?=$article->getTitle() ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="http://twitter.com/intent/tweet?status=<?=$article->getTitle() ?>+<?= App::use('url')?>news/article/<?=$article->getId();?>"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= App::use('url')?>news/article/<?=$article->getId();?>&title=<?=$article->getTitle() ?>&source=<?= App::use('url')?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         <a href="whatsapp://send?text=<?=$article->getTitle() ?>" data-action="share/whatsapp/share" class="hidden-sm hidden-md hidden-lg"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
         <a href="viber://forward?text=<?=$article->getTitle() ?>" class="hidden-sm hidden-md hidden-lg"><img src="/images/viber_icon_white_small.png"></a>
       </div> <!-- .news-share -->
@@ -64,7 +64,7 @@
 
 <!-- <div style="bottom:0; margin-top:50px; text-align: center; background-color: red;">Comment box</div> -->
 
-  <div class="fb-comments" data-href="<?=$config['url']; ?>news/article/<?= Request::articleId(); ?>" data-numposts="5"></div>
+  <div class="fb-comments" data-href="<?=App::use('url'); ?>news/article/<?= Request::articleId(); ?>" data-numposts="5"></div>
 
 </div> <!-- .container -->
 </div> <!-- #article-content -->

@@ -15,6 +15,7 @@ return array(
     'HttpClient' => $baseDir . '/composer-setup.php',
     'Installer' => $baseDir . '/composer-setup.php',
     'News' => $baseDir . '/models/News.php',
+    'PagesController' => $baseDir . '/controllers/en/PagesController.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',

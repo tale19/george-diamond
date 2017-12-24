@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bio | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?=$config['url']?>css/tale.css">
+<link rel="stylesheet" type="text/css" href="<?=App::use('url')?>css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<?=App::use('url')?>css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?=App::use('url')?>css/tale.css">
 
 
 </head>
@@ -153,9 +153,9 @@
  ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/bio.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/bio.js"></script>
 <!-- <script type="text/javascript" src="../js/jquery.particleground.js"></script> -->
 </body>
 </html>

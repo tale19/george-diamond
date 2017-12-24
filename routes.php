@@ -4,14 +4,14 @@ $newsPage =  Request::newsPageNumber();
 $articleId =  Request::articleId();
 
 
-$router->get('', 'controllers/en/index.php');
-$router->get('home', 'controllers/en/index.php');
-$router->get('bio', 'controllers/en/bio.php');
-$router->get('shows', 'controllers/en/shows.php');
-$router->get('news/' . $newsPage, 'controllers/en/news.php');
-$router->get('news/article/' . $articleId, 'controllers/en/article.php');
-$router->get('photos', 'controllers/en/photos.php');
-$router->get('videos', 'controllers/en/videos.php');
-$router->get('contact', 'controllers/en/contact.php');
-$router->get('search', 'controllers/en/search.php');
+$router->get('', 'PagesController@home');
+$router->get('home', 'PagesController@home');
+$router->get('bio', 'PagesController@bio');
+$router->get('shows', 'PagesController@shows');
+$router->get('news/' . $newsPage, 'PagesController@news');
+$router->get('news/article/' . $articleId, 'PagesController@article');
+$router->get('photos', 'controllers/en/PagesController@photos');
+$router->get('videos', 'PagesController@videos');
+$router->get('contact', 'PagesController@contact');
+$router->get('search', 'PagesController@search');
 

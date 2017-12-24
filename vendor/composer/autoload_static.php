@@ -16,6 +16,7 @@ class ComposerStaticInite1b2c19d9171953188d9cc458ad6435e
         'HttpClient' => __DIR__ . '/../..' . '/composer-setup.php',
         'Installer' => __DIR__ . '/../..' . '/composer-setup.php',
         'News' => __DIR__ . '/../..' . '/models/News.php',
+        'PagesController' => __DIR__ . '/../..' . '/controllers/en/PagesController.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',

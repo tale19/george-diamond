@@ -60,15 +60,19 @@ require 'views/en/partials/navbar.view.php';
       </div>  <!-- .news-preview-misc -->
     </section> <!-- news content, row -->
   <?php endforeach; ?>
+
+  <div class="buttons">
+      <a href="/news/1" class="btn btn-primary"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to all news</a>
+  </div>
   </div> <!-- container -->
 
-<div class="container">
+    <div class="container">
 
 
 
 <!-- <div id="scrolltop-container"> -->
     <div class="scrolltop-button"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-<!-- </div> -->
+    <!-- </div> -->
 
 
 </div> <!-- container -->

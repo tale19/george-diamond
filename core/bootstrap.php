@@ -1,7 +1,9 @@
 <?php
+$config =  require 'config.php';
 
-$config = require 'config.php';
-
+// get page main URL
+App::bind('url', $config['url']);
+//var_dump($config);die;
 
 // get settings from config file to pass to PDO
 App::bind('db-settings', $config['database']);
@@ -13,7 +15,7 @@ App::bind('query', new QueryBuilder(
     Connection::make(App::use('db-settings'))
 ));
 $query = App::use('query');
-
+//var_dump($query); die;
 
 // * Connection::make() uses DB settings stored
 // in the config.php['database'] array to create

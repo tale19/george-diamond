@@ -1482,24 +1482,30 @@ This will not affect the contents of the p tag also because it is still just a b
 	/*border: 1px solid darkred;*/
 }
 
-#article-content .buttons {
+#article-content .buttons,
+#search-content .buttons
+{
 	position: relative;
 	height: 35px;
 	margin: 30px auto;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#article-content .buttons a {
+#article-content .buttons a,
+#search-content .buttons a
+{
 	position: absolute;
 	text-align: center;
 }
 
-#article-content .buttons a:nth-child(2) {
+#article-content .buttons a:nth-child(2)
+{
 	background-color: rgb(208,48,108);
 	color: #fff;
 }
 	#article-content .buttons a:nth-child(2):hover,
-	#article-content .buttons a:nth-child(2):active {
+	#article-content .buttons a:nth-child(2):active
+	{
 		border: 2px solid rgb(208,48,108);
 		background-color: #fff;
 		color: rgb(208,48,108);
@@ -1511,7 +1517,8 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 @media (max-width: 767px) {
-	#article-content .buttons a:nth-child(2) {
+	#article-content .buttons a:nth-child(2)
+	{
 		right: 0;
 	}
 }
@@ -1519,13 +1526,18 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 @media (min-width: 768px) {
-	#article-content .buttons a:nth-child(1) i {
+	#article-content .buttons a:nth-child(1) i,
+	#search-content .buttons a:nth-child(1) i
+	{
 		display: none;
 	}
-		#article-content .buttons a:nth-child(1):hover i {
+		#article-content .buttons a:nth-child(1):hover i,
+		#search-content .buttons a:nth-child(1):hover i
+		{
 			display: inline; /* reveal chevron-left on hover */
 		}
-	#article-content .buttons a:nth-child(2) {
+	#article-content .buttons a:nth-child(2)
+	{
 		left: 50%;
 		transform: translateX(-50%);
 	}
