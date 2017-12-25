@@ -36,7 +36,7 @@ require 'views/en/partials/navbar.view.php';
 
   <div class="searchbox">
     <form class="input-group" method="GET" action="/search">
-      <input name="search" type="text" class="form-control" placeholder="Search the news">
+      <input name="q" type="text" class="form-control" placeholder="Search the news">
       <span class="input-group-btn">
         <button class="btn btn-default" type="submit">Go!</button>
       </span>

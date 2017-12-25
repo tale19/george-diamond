@@ -245,6 +245,9 @@ h3 {
 	font-weight: 100;
 }
 
+#search-content h4.no-results {
+	text-align: center;
+}
 
 #header #header-holder {
 /*	border: 2px solid blue;*/
@@ -1279,7 +1282,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	color: white;*/
 }
 
-#news-content .searchbox {
+#news-content .searchbox,
+#search-content .searchbox
+{
 	margin: 0 0 30px auto;
 }
 
@@ -1416,7 +1421,9 @@ This will not affect the contents of the p tag also because it is still just a b
 
 
 @media (max-width: 767px) {
-	#news-content .searchbox {
+	#news-content .searchbox,
+	#search-content .searchbox
+	{
 		width: 100%;
 	}
 
@@ -1446,7 +1453,9 @@ This will not affect the contents of the p tag also because it is still just a b
 	}
 }
 @media (min-width: 768px) {
-	#news-content .searchbox {
+	#news-content .searchbox,
+	#search-content .searchbox
+	{
 		width: 250px;
 	}
 

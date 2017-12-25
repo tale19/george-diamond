@@ -34,6 +34,17 @@ require 'views/en/partials/navbar.view.php';
 
   <div class="container">
 
+  <?php echo (empty($searchResults)) ? '<h4 class="no-results"> No results Found.</h4>' : '' ?>
+
+      <div class="searchbox">
+          <form class="input-group" method="GET" action="/search">
+              <input id="inputName" name="q" type="text" class="form-control" placeholder="Search the news">
+              <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Go!</button>
+      </span>
+          </form><!-- /input-group -->
+      </div>
+
 
   <?php foreach ($searchResults as $searchResult) : ?>
     <section class="news-preview-box row">
@@ -50,9 +61,9 @@ require 'views/en/partials/navbar.view.php';
         </div>  <!-- news preview image container -->
         <div class="news-share">
           <p>Share this news:</p>
-          <a href="http://www.facebook.com/share.php?u=<?= $config['url']?>news/article/<?=$searchResult->getId();?>&title=<?=$searchResult->getTitle() ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="http://twitter.com/intent/tweet?status=<?=$searchResult->getTitle() ?>+<?= $config['url']?>news/article/<?=$searchResult->getId();?>"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
-          <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= $config['url']?>news/article/<?=$searchResult->getId();?>&title=<?=$searchResult->getTitle() ?>&source=<?= $config['url']?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="http://www.facebook.com/share.php?u=<?= App::use('url')?>news/article/<?=$searchResult->getId();?>&title=<?=$searchResult->getTitle() ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="http://twitter.com/intent/tweet?status=<?=$searchResult->getTitle() ?>+<?= App::use('url')?>news/article/<?=$searchResult->getId();?>"><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= App::use('url')?>news/article/<?=$searchResult->getId();?>&title=<?=$searchResult->getTitle() ?>&source=<?= App::use('url')?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
           <a href="whatsapp://send?text=<?=$searchResult->getTitle() ?>" data-action="share/whatsapp/share" class="hidden-sm hidden-md hidden-lg"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
           <a href="viber://forward?text=<?=$searchResult->getTitle() ?>" class="hidden-sm hidden-md hidden-lg"><img src="/images/viber_icon_white_small.png"></a>
         </div>  <!-- news share -->

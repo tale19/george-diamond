@@ -20,3 +20,8 @@ $query = App::use('query');
 // * Connection::make() uses DB settings stored
 // in the config.php['database'] array to create
 // the instance of PDO
+
+function view($page, $data = []) {
+    extract($data);
+    return require "views/en/$page.view.php";
+}
