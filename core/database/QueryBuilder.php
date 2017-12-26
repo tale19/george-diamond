@@ -2,6 +2,8 @@
 /**
 * 
 */
+
+
 class QueryBuilder
 {
 	protected $pdo;

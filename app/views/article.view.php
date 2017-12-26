@@ -1,3 +1,4 @@
+<?php use App\Core\{App, Request} ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,7 @@
 
 
 <?php 
-  require 'views/en/partials/navbar.view.php';
+  require 'app/views/partials/navbar.view.php';
   // require 'page-header.view.php';
  ?>
 
@@ -71,7 +72,7 @@
 
   
 
-<?php require 'views/en/partials/footer.view.php'; ?>
+<?php require 'app/views/partials/footer.view.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js"></script>

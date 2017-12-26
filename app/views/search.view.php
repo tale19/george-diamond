@@ -1,3 +1,4 @@
+<?php use App\Core\App; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 
 
 <?php 
-require 'views/en/partials/navbar.view.php'; 
+require 'app/views/partials/navbar.view.php';
 ?>
 
 <div id="search-content">
@@ -93,7 +94,7 @@ require 'views/en/partials/navbar.view.php';
 
   
 
-<?php require 'views/en/partials/footer.view.php'; ?>
+<?php require 'app/views/partials/footer.view.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>

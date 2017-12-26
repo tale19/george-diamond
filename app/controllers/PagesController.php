@@ -6,6 +6,8 @@
  * Time: 6:31 PM
  */
 
+namespace App\Controllers;
+
 class PagesController
 {
     public function home()

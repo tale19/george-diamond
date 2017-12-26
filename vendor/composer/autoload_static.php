@@ -7,7 +7,11 @@ namespace Composer\Autoload;
 class ComposerStaticInite1b2c19d9171953188d9cc458ad6435e
 {
     public static $classMap = array (
-        'App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/controllers/NewsController.php',
+        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'App\\Models\\News' => __DIR__ . '/../..' . '/app/models/News.php',
         'ComposerAutoloaderInite1b2c19d9171953188d9cc458ad6435e' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInite1b2c19d9171953188d9cc458ad6435e' => __DIR__ . '/..' . '/composer/autoload_static.php',
@@ -15,11 +19,7 @@ class ComposerStaticInite1b2c19d9171953188d9cc458ad6435e
         'ErrorHandler' => __DIR__ . '/../..' . '/composer-setup.php',
         'HttpClient' => __DIR__ . '/../..' . '/composer-setup.php',
         'Installer' => __DIR__ . '/../..' . '/composer-setup.php',
-        'News' => __DIR__ . '/../..' . '/models/News.php',
-        'NewsController' => __DIR__ . '/../..' . '/controllers/en/NewsController.php',
-        'PagesController' => __DIR__ . '/../..' . '/controllers/en/PagesController.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
     );
 

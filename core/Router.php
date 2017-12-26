@@ -55,6 +55,7 @@ class Router
     # ** it is protected because it's always called from within the class **
     protected function callAction($controller, $action)
     {
+        $controller = "App\Controllers\\{$controller}";
         $controller = new $controller;
         if(! method_exists($controller, $action)) {
             throw new Exception(

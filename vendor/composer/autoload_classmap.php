@@ -6,7 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App' => $baseDir . '/core/App.php',
+    'App\\Controllers\\NewsController' => $baseDir . '/app/controllers/NewsController.php',
+    'App\\Controllers\\PagesController' => $baseDir . '/app/controllers/PagesController.php',
+    'App\\Core\\App' => $baseDir . '/core/App.php',
+    'App\\Core\\Request' => $baseDir . '/core/Request.php',
+    'App\\Models\\News' => $baseDir . '/app/models/News.php',
     'ComposerAutoloaderInite1b2c19d9171953188d9cc458ad6435e' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInite1b2c19d9171953188d9cc458ad6435e' => $vendorDir . '/composer/autoload_static.php',
@@ -14,10 +18,6 @@ return array(
     'ErrorHandler' => $baseDir . '/composer-setup.php',
     'HttpClient' => $baseDir . '/composer-setup.php',
     'Installer' => $baseDir . '/composer-setup.php',
-    'News' => $baseDir . '/models/News.php',
-    'NewsController' => $baseDir . '/controllers/en/NewsController.php',
-    'PagesController' => $baseDir . '/controllers/en/PagesController.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
-    'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
 );

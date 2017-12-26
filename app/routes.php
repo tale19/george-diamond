@@ -1,5 +1,7 @@
 <?php 
 
+use App\Core\Request;
+
 $newsPage =  Request::newsPageNumber();
 $articleId =  Request::articleId();
 

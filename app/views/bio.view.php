@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bio | Magic and Illusions of George Diamond</title>
 <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Boogaloo|Dancing+Script|Passion+One|Patua+One|Righteous|Roboto|Satisfy" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<?=App::use('url')?>css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="<?=App::use('url')?>css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?=App::use('url')?>css/tale.css">
+<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/tale.css">
 
 
 </head>

@@ -6,6 +6,11 @@
  * Time: 10:49 PM
  */
 
+namespace App\Controllers;
+use App\Core\App;
+use App\Core\Request;
+use App\Models\News;
+
 class NewsController
 {
     public function news()

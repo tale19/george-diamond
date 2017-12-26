@@ -1,3 +1,4 @@
+<?php use App\Core\App; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 
 
 <?php 
-require 'views/en/partials/navbar.view.php'; 
+require 'app/views/partials/navbar.view.php';
 ?>
 
 <div id="news-content">
@@ -76,7 +77,7 @@ require 'views/en/partials/navbar.view.php';
   <ul class="pagination">
     <!-- FIRST PAGE BUTOON -->
     <li>
-      <a href="1">First</a>
+      <a href="../index.php">First</a>
     </li>
     <!-- PREVIOUS PAGE BUTOON (NOT DISPLAYED ON FIRST PAGE) -->
     <li <?php echo ($pageNumber == 1) ? 'class="hidden"' : ''; ?>>
@@ -129,7 +130,7 @@ require 'views/en/partials/navbar.view.php';
 
   
 
-<?php require 'views/en/partials/footer.view.php'; ?>
+<?php require 'app/views/partials/footer.view.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>

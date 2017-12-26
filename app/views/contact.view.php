@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-	require 'views/en/partials/navbar.view.php';
+	require 'app/views/partials/navbar.view.php';
 ?>
 <div id="contact-content">
 <div class="container">	
@@ -41,7 +41,7 @@
 </div> <!-- #contact-content -->
 
 <?php 
-	require 'views/en/partials/footer.view.php';
+	require 'app/views/partials/footer.view.php';
  ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
