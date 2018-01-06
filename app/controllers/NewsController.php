@@ -15,9 +15,9 @@ class NewsController
 {
     public function news()
     {
-        $pageNumber = Request::newsPageNumber();
+        $pageNumber = round(Request::newsPageNumber());
 
-        // set the maximum number of news to be rendered to a page
+        // set the maximum number of articles to be rendered to a page
         $newsDisplayLimit = 5;
         // determine the number of news in the DB
         $newsCount = count(App::use('query')->selectAll('news2'));
@@ -63,13 +63,13 @@ class NewsController
     public function search()
     {
         $searchQuery = $_GET;
-//        var_dump($searchQuery); die;
+
         if (! isset($searchQuery['q'])) {
             throw new Exception("Search parameter not set.");
         } else {
-            $searchResults = App::use('query')->search($searchQuery['q'], 'news2', News::class);
-//            var_dump($searchResults);die;
-            return view('search', compact('searchResults'));
+            $searchResults = App::use('query')->search('news2', '%' . $searchQuery['q'] . '%', News::class);
+
+            return view('search', compact('searchResults', 'searchQuery'));
         }
 
     }

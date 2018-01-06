@@ -77,7 +77,7 @@ require 'app/views/partials/navbar.view.php';
   <ul class="pagination">
     <!-- FIRST PAGE BUTOON -->
     <li>
-      <a href="../index.php">First</a>
+        <a href="/news/1">First</a>
     </li>
     <!-- PREVIOUS PAGE BUTOON (NOT DISPLAYED ON FIRST PAGE) -->
     <li <?php echo ($pageNumber == 1) ? 'class="hidden"' : ''; ?>>

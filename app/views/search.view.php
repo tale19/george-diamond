@@ -35,7 +35,10 @@ require 'app/views/partials/navbar.view.php';
 
   <div class="container">
 
-  <?php echo (empty($searchResults)) ? '<h4 class="no-results"> No results Found.</h4>' : '' ?>
+  <?php echo (empty($searchResults)) ?
+      '<h4 class="no-results"> No results found for <em>' . $searchQuery['q'] . '</em></h4>' :
+      '<h4 class="no-results"> Search results for <em>' . $searchQuery['q'] . '</em></h4>'
+  ?>
 
       <div class="searchbox">
           <form class="input-group" method="GET" action="/search">
